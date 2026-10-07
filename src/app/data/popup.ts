@@ -1,5 +1,5 @@
 import type { L10n } from "./types";
-import popupImage from "../../assets/popup/popup.jpg";
+import popupImage from "../../assets/popup/popup.webp";
 
 // Promo popup: the image that opens over the menu shortly after the page has loaded.
 // This is the only file you need to edit to turn it on or off, or to change the picture.

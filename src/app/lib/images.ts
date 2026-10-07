@@ -1,15 +1,15 @@
-import blendedCoffee from "../../assets/categories/blended-coffee.jpg";
-import cookies from "../../assets/categories/cookies.jpg";
-import crunchShake from "../../assets/categories/crunch-shake.jpg";
-import desserts from "../../assets/categories/desserts.jpg";
-import hotChocolate from "../../assets/categories/hot-chocolate.jpg";
-import hotCoffee from "../../assets/categories/hot-coffee.jpg";
-import hotMatcha from "../../assets/categories/hot-matcha.jpg";
-import icedCoffee from "../../assets/categories/iced-coffee.jpg";
-import icedMatcha from "../../assets/categories/iced-matcha.jpg";
-import mojitos from "../../assets/categories/mojitos.jpg";
-import pourOver from "../../assets/categories/pour-over.jpg";
-import smoothies from "../../assets/categories/smoothies.jpg";
+import blendedCoffee from "../../assets/categories/blended-coffee.webp";
+import cookies from "../../assets/categories/cookies.webp";
+import crunchShake from "../../assets/categories/crunch-shake.webp";
+import desserts from "../../assets/categories/desserts.webp";
+import hotChocolate from "../../assets/categories/hot-chocolate.webp";
+import hotCoffee from "../../assets/categories/hot-coffee.webp";
+import hotMatcha from "../../assets/categories/hot-matcha.webp";
+import icedCoffee from "../../assets/categories/iced-coffee.webp";
+import icedMatcha from "../../assets/categories/iced-matcha.webp";
+import mojitos from "../../assets/categories/mojitos.webp";
+import pourOver from "../../assets/categories/pour-over.webp";
+import smoothies from "../../assets/categories/smoothies.webp";
 
 const BY_CATEGORY = new Map<string, string>([
   ["iced-coffee", icedCoffee],

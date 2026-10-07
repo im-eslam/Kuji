@@ -10,18 +10,18 @@ Name them exactly like this (lowercase, `.jpg`):
 
 | File | Category |
 |---|---|
-| `iced-coffee.jpg` | Iced Coffee |
-| `iced-matcha.jpg` | Iced Matcha |
-| `hot-coffee.jpg` | Hot Coffee |
-| `blended-coffee.jpg` | Blended Coffee |
-| `crunch-shake.jpg` | Crunch Shake |
-| `mojitos.jpg` | Mojitos |
-| `smoothies.jpg` | Smoothies |
-| `hot-matcha.jpg` | Hot Matcha |
-| `hot-chocolate.jpg` | Hot Chocolate |
-| `pour-over.jpg` | Pour Over |
-| `cookies.jpg` | Cookies |
-| `desserts.jpg` | Desserts |
+| `iced-coffee.webp` | Iced Coffee |
+| `iced-matcha.webp` | Iced Matcha |
+| `hot-coffee.webp` | Hot Coffee |
+| `blended-coffee.webp` | Blended Coffee |
+| `crunch-shake.webp` | Crunch Shake |
+| `mojitos.webp` | Mojitos |
+| `smoothies.webp` | Smoothies |
+| `hot-matcha.webp` | Hot Matcha |
+| `hot-chocolate.webp` | Hot Chocolate |
+| `pour-over.webp` | Pour Over |
+| `cookies.webp` | Cookies |
+| `desserts.webp` | Desserts |
 
 Export each at **1200 x 900 px, JPG**, with the subject centred. The same file shows as a
 square (signature cards), a 4:3 banner (item sheet) and an 80px thumbnail, so keep the subject inside the middle square.

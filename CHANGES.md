@@ -4,7 +4,8 @@ The `src/` changes are already in your project. This drop adds `index.html` and 
 (I could not run Vite, tsc or a browser here; every file passes a syntax check, but please run `npm run build` once.)
 
 ## Category photos: the 12 file names
-Put these in `public/assest/categories/`. One JPG photo per category, used for every product in it.
+Put these in `src/assets/categories/`. One JPG photo per category, used for every product in it. Import each image in
+`src/app/lib/images.ts` and add it to the category map.
 Name them exactly like this (lowercase, `.jpg`):
 
 | File | Category |
@@ -28,8 +29,8 @@ A missing file just keeps the gradient placeholder. Pairings and the order sheet
 category, so they need nothing extra.
 
 ## What changed, and why it is faster
-- **One request per category, not per product.** The 12 category files are loaded directly from `public/assest/`, so 60
-  cards share 12 downloads.
+- **One request per category, not per product.** The 12 category files are imported by Vite, so 60 cards share 12
+  downloads.
 - **Photos are warmed before React renders.** `main.tsx` starts fetching the signature cards' photos immediately, then the
   other categories when the browser is idle, so sheets and search rows open with photos already in memory.
 - **No flash or re-fade.** A photo already loaded this session shows instantly; only a first load fades in.
@@ -55,7 +56,7 @@ before any JS arrives (no white flash). Replace both `index.html` and `src/index
 Self-hosting the two fonts (e.g. `@fontsource`) would remove the third-party request entirely.
 
 ## Server settings that matter as much as the code
-- Serve `/assest/*` with an appropriate `Cache-Control` header.
+- Vite emits imported images with hashed filenames for cache-friendly delivery.
 - Turn on Brotli or gzip, and HTTP/2 or HTTP/3 (most hosts like Netlify, Vercel and Cloudflare do this by default).
 
 ---

@@ -1,22 +1,30 @@
-// Category photos live in public/assest/categories as <category-id>.jpg.
-const CATEGORY_IDS = [
-  "iced-coffee",
-  "iced-matcha",
-  "hot-coffee",
-  "blended-coffee",
-  "crunch-shake",
-  "mojitos",
-  "smoothies",
-  "hot-matcha",
-  "hot-chocolate",
-  "pour-over",
-  "cookies",
-  "desserts",
-] as const;
+import blendedCoffee from "../../assets/categories/blended-coffee.jpg";
+import cookies from "../../assets/categories/cookies.jpg";
+import crunchShake from "../../assets/categories/crunch-shake.jpg";
+import desserts from "../../assets/categories/desserts.jpg";
+import hotChocolate from "../../assets/categories/hot-chocolate.jpg";
+import hotCoffee from "../../assets/categories/hot-coffee.jpg";
+import hotMatcha from "../../assets/categories/hot-matcha.jpg";
+import icedCoffee from "../../assets/categories/iced-coffee.jpg";
+import icedMatcha from "../../assets/categories/iced-matcha.jpg";
+import mojitos from "../../assets/categories/mojitos.jpg";
+import pourOver from "../../assets/categories/pour-over.jpg";
+import smoothies from "../../assets/categories/smoothies.jpg";
 
-const BY_CATEGORY = new Map(
-  CATEGORY_IDS.map((id) => [id, `/assest/categories/${id}.jpg`]),
-);
+const BY_CATEGORY = new Map<string, string>([
+  ["iced-coffee", icedCoffee],
+  ["iced-matcha", icedMatcha],
+  ["hot-coffee", hotCoffee],
+  ["blended-coffee", blendedCoffee],
+  ["crunch-shake", crunchShake],
+  ["mojitos", mojitos],
+  ["smoothies", smoothies],
+  ["hot-matcha", hotMatcha],
+  ["hot-chocolate", hotChocolate],
+  ["pour-over", pourOver],
+  ["cookies", cookies],
+  ["desserts", desserts],
+]);
 
 // URLs that have finished loading (or pre-loading) this session.
 const loadedUrls = new Set<string>();

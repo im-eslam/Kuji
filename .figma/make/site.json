@@ -1,0 +1,10 @@
+{
+  "description": "Explore and customize a digital menu for a specialty coffee cafe, allowing customers to easily build and manage their orders through NFC or QR access.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

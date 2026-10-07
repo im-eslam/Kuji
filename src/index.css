@@ -1,0 +1,155 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-navy: #0c1b27;
+  --color-yellow: #e8e87a;
+  --color-arctic: #c4d7de;
+  --color-mist: #f3f7f8;
+  --color-navy-65: rgb(12 27 39 / 0.65);
+  --color-scrim: rgb(12 27 39 / 0.55);
+
+  /* Font families: one variable per script. Arabic face is an assumption (Cairo). */
+  --font-latin: 'Montserrat', system-ui, sans-serif;
+  --font-arabic: 'Cairo', 'Montserrat', system-ui, sans-serif;
+
+  /* Type: rem, so text follows the user's font-size setting. Title and heading flex between 320 and 480px wide
+     (a 1.2x range, so browser zoom still reaches 200%); body, small and caption hold steady. Line heights are
+     unitless so they follow the size. Arabic gets taller lines below. 22/18 land on the original sizes at ~390px. */
+  --text-title: clamp(1.25rem, 0.75rem + 2.5vw, 1.5rem);
+  --text-title--line-height: 1.3;
+  --text-heading: clamp(1.0625rem, 0.8125rem + 1.25vw, 1.1875rem);
+  --text-heading--line-height: 1.33;
+  --text-body: 1rem;
+  --text-body--line-height: 1.5;
+  --text-small: 0.875rem;
+  --text-small--line-height: 1.43;
+  --text-caption: 0.75rem;
+  --text-caption--line-height: 1.34;
+
+  /* Breakpoint for roomier phones. Below it, cards trade a little padding for more content width. */
+  --breakpoint-xs: 24rem;
+
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-sheet: 24px;
+
+  /* Motion scale: 150ms press / colour, 250ms height changes, 260ms sheets in, 200ms sheets out.
+     One easing in (--ease-smooth), one out (--ease-exit). Any transition without an explicit curve uses --ease-smooth. */
+  --default-transition-duration: 150ms;
+  --default-transition-timing-function: var(--ease-smooth);
+  /* `backwards` (not `both`): the end state must not be pinned, so transitions and inline transforms still work afterwards. */
+  --animate-fade-in: fade-in 150ms ease-out backwards;
+  --animate-slide-up: slide-up 260ms var(--ease-smooth) backwards;
+  /* The scrim runs the same length as the sheet it sits behind, so both land together. */
+  --animate-scrim-in: fade-in 260ms var(--ease-smooth) backwards;
+  /* Cards that join a list (Show all) rise in one after another; see the `stagger` utility. */
+  --animate-reveal: reveal 240ms var(--ease-smooth) backwards;
+  /* Changing text: digits slide on a strip (see Rolling); a new digit column pops in; an icon swap pops in (see Swap). */
+  --animate-digit-in: digit-in 220ms var(--ease-smooth) backwards;
+  --animate-swap-in: swap-in 170ms var(--ease-smooth) backwards;
+
+  @keyframes digit-in {
+    from { opacity: 0; transform: scale(0.7); }
+    to { opacity: 1; transform: none; }
+  }
+  @keyframes swap-in {
+    from { opacity: 0; transform: scale(0.55); }
+    to { opacity: 1; transform: none; }
+  }
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes slide-up {
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
+  }
+  @keyframes reveal {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: none; }
+  }
+
+}
+
+/* Sheet footer: content dissolves into white above it, no shadow. */
+.footer-fade { position: relative; }
+.footer-fade::before {
+  content: '';
+  position: absolute;
+  inset-inline: 0;
+  bottom: 100%;
+  height: 24px;
+  background: linear-gradient(to top, #fff, rgb(255 255 255 / 0));
+  pointer-events: none;
+}
+
+/* Sequencing: set --i (0, 1, 2...) on each child. 40ms apart; callers cap --i so a long list never drags. */
+@utility stagger {
+  animation-delay: calc(var(--i, 0) * 40ms);
+}
+
+@utility no-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar { display: none; }
+}
+
+@layer base {
+  :root {
+    --ease-smooth: cubic-bezier(0.2, 0.8, 0.2, 1);
+    /* Things leaving speed up as they go and take ~25% less time than they took to arrive. */
+    --ease-exit: cubic-bezier(0.4, 0, 1, 1);
+    /* Carousel card widths: a share of the rail, clamped. Next card always peeks, from 320px phones up to the 480px column. */
+    --card-signature: clamp(14rem, 78%, 22rem);
+    --card-offer: clamp(13rem, 70%, 18rem);
+  }
+  /* Arabic glyphs need more line height than Latin (Doc B 3.8); the same five styles, taller lines. */
+  [lang='ar'] {
+    --text-title--line-height: 1.5;
+    --text-heading--line-height: 1.5;
+    --text-body--line-height: 1.7;
+    --text-small--line-height: 1.6;
+    --text-caption--line-height: 1.5;
+  }
+  /* Stops iOS from re-inflating text in landscape; user font-size settings still apply. */
+  html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+  /* Keeps the page from shifting sideways when a sheet locks body scroll on desktop. */
+  html { scrollbar-gutter: stable; overscroll-behavior-y: none; }
+  html { font-family: var(--font-latin); color: var(--color-navy); -webkit-tap-highlight-color: transparent; }
+  html[lang='ar'], [lang='ar'] { font-family: var(--font-arabic); }
+  body { background: var(--color-mist); font-weight: 500; }
+  button { cursor: pointer; font: inherit; color: inherit; text-align: start; }
+  :focus-visible { outline: 2px solid var(--color-navy); outline-offset: 2px; }
+  /* Text inputs show focus through their own surface change, not a black ring. */
+  input:focus-visible { outline: none; }
+}
+
+/* Header bottom separator: a half-pixel, very low-contrast hairline instead of a 1px arctic border. */
+/* No `position` here on purpose: an unlayered rule would override Tailwind's `sticky` and un-pin the header. */
+.header-line::after {
+  content: '';
+  position: absolute;
+  inset-inline: 0;
+  bottom: 0;
+  height: 1px;
+  background: rgb(12 27 39 / 0.07);
+  transform: scaleY(0.5);
+  transform-origin: bottom;
+  pointer-events: none;
+}
+
+/* Sliding thumb for the segmented control. --i is the selected index, --n the option count. */
+.seg-thumb {
+  inset-inline-start: 4px;
+  width: calc((100% - 8px - 4px * (var(--n) - 1)) / var(--n));
+  transform: translateX(calc(var(--i) * (100% + 4px)));
+  transition: transform 220ms var(--ease-smooth);
+}
+[dir='rtl'] .seg-thumb { transform: translateX(calc(var(--i) * (100% + 4px) * -1)); }
+
+.img-placeholder {
+  background: linear-gradient(135deg, var(--color-arctic), color-mix(in srgb, var(--color-yellow) 40%, transparent));
+  isolation: isolate;
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 1ms !important; animation-delay: 0ms !important; transition-duration: 1ms !important; transition-delay: 0ms !important; scroll-behavior: auto !important; }
+}

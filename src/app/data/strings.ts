@@ -1,0 +1,61 @@
+import type { L10n } from './types'
+
+// Arabic strings are DRAFT copy pending native review. Brand lines stay English.
+export const BRAND = {
+  signaturesLine: 'Romanticize your coffee.',
+  emptyLine: 'Brewed for souls that feel too much.',
+}
+
+export const STRINGS = {
+  priceOnSelection: { en: 'Price on Selection', ar: 'السعر حسب الاختيار' },
+  badgeTop: { en: 'Top Rated', ar: 'الأعلى تقييمًا' },
+  badgeNew: { en: 'New', ar: 'جديد' },
+  saveChip: { en: 'Save {price}', ar: 'وفّر {price}' },
+  offerSaveChip: { en: 'Offer · Save {price}', ar: 'عرض · وفّر {price}' },
+  offerChip: { en: 'Offer', ar: 'عرض' },
+  quickAdded: { en: '{n} added', ar: 'تمت إضافة {n}' },
+  baristaSub: { en: '{names} · {price}', ar: '{names} · {price}' },
+  size: { en: 'Size', ar: 'الحجم' },
+  addOns: { en: 'Add-ons', ar: 'الإضافات' },
+  includes: { en: 'Includes', ar: 'يشمل' },
+  oftenOrdered: { en: 'Often Ordered With', ar: 'يُطلب غالبًا معه' },
+  addToOrder: { en: 'Add Item', ar: 'أضف الصنف' },
+  updateOrder: { en: 'Update Order', ar: 'حدّث الطلب' },
+  viewOrder: { en: 'View Order', ar: 'عرض الطلب' },
+  yourOrder: { en: 'Your Order', ar: 'طلبك' },
+  itemsCount: { en: '{n} items', ar: '{n} أصناف' },
+  itemsCountOne: { en: '1 item', ar: 'صنف واحد' },
+  subtotal: { en: 'Subtotal', ar: 'المجموع' },
+  clearOrder: { en: 'Clear order', ar: 'امسح الطلب' },
+  keepOrder: { en: 'Keep order', ar: 'أبقِ الطلب' },
+  clearQuestion: { en: 'Clear your whole order?', ar: 'تمسح الطلب كله؟' },
+  unpricedNote: { en: 'Excludes items priced on selection.', ar: 'لا يشمل الأصناف التي يحدد سعرها عند الاختيار.' },
+  emptyOrder: { en: 'Your order is empty.', ar: 'طلبك فارغ.' },
+  browseMenu: { en: 'Browse the menu', ar: 'تصفّح المنيو' },
+  categoriesTitle: { en: 'Categories', ar: 'الأقسام' },
+  searchPlaceholder: { en: 'Search the menu', ar: 'ابحث في المنيو' },
+  searchPrompt: { en: 'Search drinks, desserts, offers and categories.', ar: 'ابحث عن مشروبات وحلويات وعروض وأقسام.' },
+  searchNoMatch: { en: 'Nothing matches "{q}".', ar: 'لا نتائج تطابق "{q}".' },
+  groupCategories: { en: 'Categories', ar: 'الأقسام' },
+  groupOffers: { en: 'Offers', ar: 'العروض' },
+  groupItems: { en: 'Items', ar: 'الأصناف' },
+  showAll: { en: 'Show all {category} ({count})', ar: 'عرض كل {category} ({count})' },
+  // accessible names
+  a11yEdit: { en: 'Edit {title}', ar: 'تعديل {title}' },
+  a11yIncrease: { en: 'Increase {title}', ar: 'زيادة {title}' },
+  a11yDecrease: { en: 'Decrease {title}', ar: 'تقليل {title}' },
+  a11yRemove: { en: 'Remove {title}', ar: 'حذف {title}' },
+  a11yQuickAdd: { en: 'Add {title} to order', ar: 'أضف {title} إلى الطلب' },
+  a11yClose: { en: 'Close', ar: 'إغلاق' },
+  a11ySearch: { en: 'Search', ar: 'بحث' },
+  a11yCategories: { en: 'Categories', ar: 'الأقسام' },
+  a11yLanguage: { en: 'Switch language', ar: 'تغيير اللغة' },
+  a11yAvatar: { en: 'Kuji', ar: 'Kuji' },
+  a11yWordmark: { en: 'Kuji', ar: 'Kuji' },
+  a11yOrderUpdated: { en: 'Order updated', ar: 'تم تحديث الطلب' },
+  a11yAdded: { en: '{title} added to order', ar: 'تمت إضافة {title} إلى الطلب' },
+  a11yViewOrder: { en: 'View order, {n} items, {price}', ar: 'عرض الطلب، {n} أصناف، {price}' },
+  a11yPlaceholderMark: { en: 'wordmark image', ar: 'صورة العلامة' },
+} satisfies Record<string, L10n>
+
+export type StringKey = keyof typeof STRINGS

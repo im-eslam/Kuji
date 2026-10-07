@@ -1,0 +1,3690 @@
+{
+  "_readme": [
+    "KUJI MENU DESIGN REFERENCE: THIS JSON IS THE SINGLE SOURCE OF TRUTH.",
+    "Edit text, numbers, lists, the component registry, the screens and page structure here. The script below only renders it.",
+    "Sections: app (navigation), strings (interface text, Doc E section 3), data (menu, options, offers), tokens, samples (example content used by sheets), icons, registry (every component and its drawing), screens, pages.",
+    "Drawings are written as nodes. {\"fn\":\"Name\",\"args\":[...]} calls a component from the library in the script. {\"el\":\"div\",\"style\":{},\"cls\":\"\",\"children\":[]} is a plain element. {\"links\":[names]} is a list of links to component cards. {\"tok\":\"path.to.value\"} reads another value in this JSON. {\"offer\":0} or {\"offer\":\"name\"} points at an offer.",
+    "JSON allows no comments and no trailing commas. If this block has an error the page shows the error message instead of the reference."
+  ],
+  "app": {
+    "brand": "Kuji Menu",
+    "themeLabel": "Chrome: {mode}",
+    "themeAuto": "auto",
+    "pages": [
+      {
+        "route": "/design",
+        "label": "Design System",
+        "page": "design"
+      },
+      {
+        "route": "/components",
+        "label": "Components",
+        "page": "components"
+      },
+      {
+        "route": "/screens",
+        "label": "Screens",
+        "page": "screens"
+      },
+      {
+        "route": "/map",
+        "label": "Map",
+        "page": "map"
+      }
+    ]
+  },
+  "strings": {
+    "currency": "EGP",
+    "priceOnSelection": "Price on Selection",
+    "badgeTop": "Top Rated",
+    "badgeNew": "New",
+    "saveChip": "Save EGP {n}",
+    "quickAdded": "{n} added",
+    "wordmark": "wordmark image asset",
+    "langEN": "EN",
+    "langAR": "ع",
+    "quantity": "Quantity",
+    "size": "Size",
+    "addOns": "Add-ons",
+    "oftenOrdered": "Often Ordered With",
+    "addToOrder": "Add to Order",
+    "updateOrder": "Update Order",
+    "viewOrder": "View Order",
+    "yourOrder": "Your Order",
+    "itemsCount": "{n} items",
+    "subtotal": "Subtotal",
+    "clearOrder": "Clear order",
+    "keepOrder": "Keep order",
+    "clearQuestion": "Clear your whole order?",
+    "clearHelper": "This removes {n} items.",
+    "emptyOrder": "Your order is empty.",
+    "browseMenu": "Browse the menu",
+    "searchPlaceholder": "Search the menu",
+    "searchPrompt": "Search drinks, desserts, offers and categories.",
+    "searchNoMatch": "Nothing matches \"{q}\".",
+    "groupCategories": "Categories",
+    "groupOffers": "Offers",
+    "groupItems": "Items",
+    "categoriesTitle": "Categories",
+    "showAll": "Show all {category} ({count}) ⌄",
+    "none": "none"
+  },
+  "data": {
+    "items": [
+      {
+        "id": "iced-latte",
+        "name": "Iced Latte",
+        "desc": "Made with rich espresso, milk, and ice.",
+        "price": 110,
+        "kind": "drink",
+        "profile": {
+          "sizes": [
+            "regular",
+            "large"
+          ],
+          "addOns": [
+            "oat-milk",
+            "vanilla",
+            "extra-coffee-shot",
+            "caramel",
+            "hazelnut"
+          ],
+          "baristaWay": true
+        }
+      },
+      {
+        "id": "latte",
+        "name": "Latte",
+        "desc": "Smooth coffee with warm milk for a balanced taste.",
+        "price": 110,
+        "kind": "drink",
+        "profile": {
+          "sizes": [
+            "regular",
+            "large"
+          ],
+          "addOns": [
+            "oat-milk",
+            "vanilla",
+            "extra-coffee-shot",
+            "caramel",
+            "hazelnut"
+          ],
+          "baristaWay": true
+        }
+      },
+      {
+        "id": "ube-matcha",
+        "name": "Ube Matcha",
+        "desc": "Ube with a light sweet taste and rich antioxidants.",
+        "price": 150,
+        "kind": "drink",
+        "badge": "top",
+        "profile": {
+          "sizes": [
+            "regular",
+            "large"
+          ],
+          "addOns": [
+            "oat-milk",
+            "vanilla",
+            "extra-coffee-shot",
+            "caramel",
+            "hazelnut"
+          ],
+          "baristaWay": true
+        }
+      },
+      {
+        "id": "matcha-apple-pie",
+        "name": "Matcha Apple Pie",
+        "desc": "Japanese matcha with sweet apple flavor, served cold with ice.",
+        "price": 150,
+        "kind": "drink",
+        "badge": "new",
+        "profile": {
+          "sizes": [
+            "regular",
+            "large"
+          ],
+          "addOns": [
+            "oat-milk",
+            "vanilla",
+            "extra-coffee-shot",
+            "caramel",
+            "hazelnut"
+          ],
+          "baristaWay": true
+        }
+      },
+      {
+        "id": "oreo-cookies",
+        "name": "Oreo Cookies",
+        "desc": "Cookies filled with Oreo cream and topped with crunchy Oreo cookie pieces.",
+        "price": 70,
+        "kind": "food",
+        "profile": {
+          "sizes": [],
+          "addOns": [],
+          "baristaWay": false
+        }
+      },
+      {
+        "id": "brownies",
+        "name": "Brownies",
+        "desc": "Rich dark chocolate brownies with a moist, soft texture.",
+        "price": 160,
+        "kind": "food",
+        "badge": "top",
+        "profile": {
+          "sizes": [],
+          "addOns": [],
+          "baristaWay": false
+        }
+      },
+      {
+        "id": "iced-spanish-latte",
+        "name": "Iced Spanish Latte",
+        "desc": "Rich espresso with cold milk, ice, and sweetened condensed milk.",
+        "price": 130,
+        "kind": "drink",
+        "badge": "top",
+        "profile": {
+          "sizes": [
+            "regular",
+            "large"
+          ],
+          "addOns": [
+            "oat-milk",
+            "vanilla",
+            "extra-coffee-shot",
+            "caramel",
+            "hazelnut"
+          ],
+          "baristaWay": true
+        }
+      },
+      {
+        "id": "v60",
+        "name": "V60",
+        "desc": "Brewed filtered coffee with a pure, balanced flavor.",
+        "price": null,
+        "kind": "drink",
+        "profile": {
+          "sizes": [
+            "regular",
+            "large"
+          ],
+          "addOns": [
+            "oat-milk",
+            "vanilla",
+            "extra-coffee-shot",
+            "caramel",
+            "hazelnut"
+          ],
+          "baristaWay": true
+        }
+      },
+      {
+        "id": "iced-matcha-latte",
+        "name": "Iced Matcha Latte",
+        "desc": "Classic matcha latte with a rich matcha tea flavor.",
+        "price": 125,
+        "kind": "drink",
+        "profile": {
+          "sizes": [
+            "regular",
+            "large"
+          ],
+          "addOns": [
+            "oat-milk",
+            "vanilla",
+            "extra-coffee-shot",
+            "caramel",
+            "hazelnut"
+          ],
+          "baristaWay": true
+        }
+      }
+    ],
+    "addons": [
+      {
+        "id": "oat-milk",
+        "name": "Oat Milk",
+        "price": 35
+      },
+      {
+        "id": "vanilla",
+        "name": "Vanilla",
+        "price": 20
+      },
+      {
+        "id": "extra-coffee-shot",
+        "name": "Extra Coffee Shot",
+        "price": 35
+      },
+      {
+        "id": "caramel",
+        "name": "Caramel",
+        "price": 20
+      },
+      {
+        "id": "hazelnut",
+        "name": "Hazelnut",
+        "price": 25
+      }
+    ],
+    "sizes": [
+      {
+        "id": "regular",
+        "name": "Regular",
+        "upcharge": 0
+      },
+      {
+        "id": "large",
+        "name": "Large",
+        "upcharge": 15
+      }
+    ],
+    "presets": {
+      "baristaWay": {
+        "id": "baristas-way",
+        "name": "Make it the Barista's Way",
+        "addOns": [
+          "oat-milk",
+          "vanilla"
+        ]
+      }
+    },
+    "offers": [
+      {
+        "items": [
+          "Iced Latte",
+          "Oreo Cookies"
+        ],
+        "offerPrice": 150,
+        "regular": 180
+      },
+      {
+        "items": [
+          "Latte",
+          "Brownies"
+        ],
+        "offerPrice": null,
+        "regular": 270
+      },
+      {
+        "items": [
+          "Iced Spanish Latte",
+          "Tiramisu Cake"
+        ],
+        "offerPrice": 220,
+        "regular": 250
+      },
+      {
+        "items": [
+          "Cappuccino",
+          "Kinder Cookies"
+        ],
+        "offerPrice": null,
+        "regular": 185
+      },
+      {
+        "items": [
+          "Iced Matcha Latte",
+          "San Sebastian Cheesecake"
+        ],
+        "offerPrice": 240,
+        "regular": 265
+      }
+    ],
+    "sections": [
+      {
+        "name": "Signatures",
+        "count": 5
+      },
+      {
+        "name": "Pairings",
+        "count": 5
+      },
+      {
+        "name": "Iced Coffee",
+        "count": 9
+      },
+      {
+        "name": "Iced Matcha",
+        "count": 10
+      },
+      {
+        "name": "Hot Coffee",
+        "count": 10
+      },
+      {
+        "name": "Blended Coffee",
+        "count": 6
+      },
+      {
+        "name": "Crunch Shake",
+        "count": 4
+      },
+      {
+        "name": "Mojitos",
+        "count": 6
+      },
+      {
+        "name": "Smoothies",
+        "count": 4
+      },
+      {
+        "name": "Hot Matcha",
+        "count": 2
+      },
+      {
+        "name": "Hot Chocolate",
+        "count": 4
+      },
+      {
+        "name": "Pour Over",
+        "count": 1
+      },
+      {
+        "name": "Cookies",
+        "count": 7
+      },
+      {
+        "name": "Desserts",
+        "count": 5
+      }
+    ]
+  },
+  "tokens": {
+    "coreColors": [
+      {
+        "name": "navy",
+        "hex": "#0C1B27"
+      },
+      {
+        "name": "yellow",
+        "hex": "#E8E87A"
+      },
+      {
+        "name": "arctic",
+        "hex": "#C4D7DE"
+      },
+      {
+        "name": "mist",
+        "hex": "#F3F7F8"
+      },
+      {
+        "name": "white",
+        "hex": "#FFFFFF"
+      }
+    ],
+    "type": [
+      {
+        "name": "title",
+        "size": 22,
+        "line": 28,
+        "weights": "700",
+        "use": "Sheet and section titles",
+        "example": "The Signatures",
+        "usedBy": [
+          "Section head",
+          "Bottom sheet shell"
+        ]
+      },
+      {
+        "name": "heading",
+        "size": 18,
+        "line": 24,
+        "weights": "700",
+        "use": "Card titles, primary button",
+        "example": "Matcha Apple Pie",
+        "usedBy": [
+          "Signature card",
+          "Primary button"
+        ]
+      },
+      {
+        "name": "body",
+        "size": 16,
+        "line": 24,
+        "weights": "500 / 600 / 700",
+        "use": "Item names, labels",
+        "example": "Ube Matcha",
+        "usedBy": [
+          "Order line",
+          "Size picker"
+        ]
+      },
+      {
+        "name": "small",
+        "size": 14,
+        "line": 20,
+        "weights": "500-700",
+        "use": "Buttons, card prices, pills",
+        "example": "EGP 150",
+        "usedBy": [
+          "Category pill",
+          "Secondary button"
+        ]
+      },
+      {
+        "name": "caption",
+        "size": 12,
+        "line": 16,
+        "weights": "500 / 600",
+        "use": "Descriptions, helper, chips, badges",
+        "example": "Made with rich espresso, milk, and ice.",
+        "usedBy": [
+          "Chip",
+          "Badge",
+          "List card"
+        ]
+      }
+    ],
+    "space": [
+      [
+        "space-1",
+        4,
+        "Tight gaps"
+      ],
+      [
+        "space-2",
+        8,
+        "Small gaps, chip padding"
+      ],
+      [
+        "space-3",
+        12,
+        "Sheet close inset, row padding"
+      ],
+      [
+        "space-4",
+        16,
+        "Screen gutter, card gap"
+      ],
+      [
+        "space-6",
+        24,
+        "Sheet bottom padding"
+      ],
+      [
+        "space-8",
+        32,
+        "Section padding, empty state"
+      ]
+    ],
+    "radius": [
+      [
+        "md",
+        12,
+        "Thumbnails, rows"
+      ],
+      [
+        "lg",
+        16,
+        "Cards"
+      ],
+      [
+        "sheet",
+        24,
+        "Sheet top corners"
+      ],
+      [
+        "full",
+        9999,
+        "Pills, buttons, chips"
+      ]
+    ],
+    "shadow": "0 -8px 24px rgba(12,27,39,0.08)",
+    "layers": [
+      [
+        "Sticky header",
+        30
+      ],
+      [
+        "Order bar",
+        35
+      ],
+      [
+        "Scrim",
+        40
+      ],
+      [
+        "Search overlay",
+        45
+      ],
+      [
+        "Bottom sheet",
+        50
+      ]
+    ]
+  },
+  "samples": {
+    "offerSheetChip": "Offer · Save EGP 30",
+    "offers": {
+      "twoDrinks": {
+        "items": [
+          "Iced Latte",
+          "Iced Spanish Latte"
+        ],
+        "offerPrice": 240,
+        "regular": 260
+      }
+    },
+    "oftenOrdered": [
+      "Oreo Cookies",
+      "Brownies"
+    ],
+    "orderBar": {
+      "count": 2,
+      "total": "EGP 260"
+    },
+    "order": {
+      "itemCount": 3,
+      "subtotal": "EGP 335",
+      "lines": [
+        {
+          "title": "Latte",
+          "details": [
+            [
+              "Size",
+              [
+                "Large"
+              ]
+            ],
+            [
+              "Add-ons",
+              [
+                "Oat Milk",
+                "Vanilla"
+              ]
+            ]
+          ],
+          "price": 185,
+          "was": 0,
+          "qty": 1
+        },
+        {
+          "title": "Iced Latte + Oreo Cookies",
+          "details": [
+            [
+              "Includes",
+              [
+                "Iced Latte",
+                "Oreo Cookies"
+              ]
+            ]
+          ],
+          "price": 150,
+          "was": 180,
+          "qty": 1
+        }
+      ]
+    },
+    "search": {
+      "query": "matcha",
+      "noMatchQuery": "xyz",
+      "categories": [
+        "Iced Matcha",
+        "Hot Matcha"
+      ],
+      "offers": [
+        4
+      ],
+      "items": [
+        "Iced Matcha Latte",
+        "Matcha Apple Pie",
+        "Ube Matcha"
+      ]
+    },
+    "categorySheet": {
+      "active": "Iced Coffee"
+    }
+  },
+  "icons": [
+    {
+      "name": "search",
+      "path": "M11 4a7 7 0 1 0 0 14 7 7 0 0 0 0-14zM21 21l-4.3-4.3",
+      "usedBy": [
+        "Icon button"
+      ]
+    },
+    {
+      "name": "plus",
+      "path": "M12 5v14M5 12h14",
+      "usedBy": [
+        "Plus button",
+        "Stepper"
+      ]
+    },
+    {
+      "name": "minus",
+      "path": "M5 12h14",
+      "usedBy": [
+        "Stepper"
+      ]
+    },
+    {
+      "name": "x",
+      "path": "M6 6l12 12M18 6L6 18",
+      "usedBy": [
+        "Close button"
+      ]
+    },
+    {
+      "name": "check",
+      "path": "M5 12l5 5L20 7",
+      "usedBy": [
+        "Plus button",
+        "Checkbox row"
+      ]
+    },
+    {
+      "name": "arrow",
+      "path": "M5 12h14M13 6l6 6-6 6",
+      "usedBy": [
+        "Chevron"
+      ]
+    },
+    {
+      "name": "trash",
+      "path": "M4 7h16M9 7V4h6v3M6 7l1 13h10l1-13",
+      "usedBy": [
+        "Stepper"
+      ]
+    },
+    {
+      "name": "menu",
+      "path": "M4 7h16M4 12h16M4 17h16",
+      "usedBy": [
+        "Icon button"
+      ]
+    },
+    {
+      "name": "chev",
+      "path": "M6 9l6 6 6-6",
+      "usedBy": [
+        "Secondary button"
+      ]
+    },
+    {
+      "name": "sparkle",
+      "path": "M12 3l2 6 6 2-6 2-2 6-2-6-6-2 6-2z",
+      "usedBy": [
+        "Barista's Way toggle"
+      ]
+    },
+    {
+      "name": "star",
+      "path": "M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z",
+      "usedBy": [
+        "Badge"
+      ]
+    }
+  ],
+  "registry": [
+    {
+      "name": "Icon button",
+      "level": "A",
+      "builtFrom": [],
+      "usedIn": "Header, Search overlay",
+      "rule": "48x48 hit area, 24 px icon",
+      "source": "Doc C §1",
+      "specimen": {
+        "fn": "Ico",
+        "args": [
+          "search",
+          24
+        ]
+      }
+    },
+    {
+      "name": "Language pill",
+      "level": "A",
+      "builtFrom": [],
+      "usedIn": "Header",
+      "rule": "Switches the whole app between English and Arabic; both always shown, the active one bold",
+      "source": "Doc C §1",
+      "specimen": {
+        "fn": "LangPill"
+      }
+    },
+    {
+      "name": "Category pill",
+      "level": "A",
+      "builtFrom": [],
+      "usedIn": "Header",
+      "rule": "Active: yellow, 600. Inactive: navy 65%",
+      "source": "Doc C §1",
+      "specimen": [
+        {
+          "fn": "Pill",
+          "args": [
+            "Iced Coffee",
+            1
+          ]
+        },
+        {
+          "fn": "Pill",
+          "args": [
+            "Iced Matcha"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Chevron",
+      "level": "A",
+      "builtFrom": [],
+      "usedIn": "Signature card, Offer card, List card, Order line",
+      "rule": "Decorative; mirrors in RTL; not a button",
+      "source": "Doc C §1",
+      "specimen": [
+        {
+          "fn": "Chev",
+          "args": [
+            20
+          ]
+        },
+        {
+          "fn": "Chev",
+          "args": [
+            16
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Plus button",
+      "level": "A",
+      "builtFrom": [],
+      "usedIn": "Often Ordered card",
+      "rule": "40 circle in 48 hit area; done = navy + yellow check",
+      "source": "Doc C §1",
+      "specimen": [
+        {
+          "fn": "PlusBtn"
+        },
+        {
+          "fn": "PlusBtn",
+          "args": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Badge",
+      "level": "A",
+      "builtFrom": [],
+      "usedIn": "Signature card, List card, Item sheet",
+      "rule": "Top Rated arctic + star; New navy; never yellow",
+      "source": "Doc C §1",
+      "specimen": [
+        {
+          "fn": "Badge",
+          "args": [
+            "top"
+          ]
+        },
+        {
+          "fn": "Badge",
+          "args": [
+            "new"
+          ]
+        },
+        {
+          "fn": "Badge",
+          "args": [
+            "top",
+            1
+          ]
+        },
+        {
+          "fn": "Badge",
+          "args": [
+            "new",
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Price",
+      "level": "A",
+      "builtFrom": [],
+      "usedIn": "All cards, sheets, order lines",
+      "rule": "Always bold; struck-through = caption navy 65%",
+      "source": "Doc C §1",
+      "specimen": [
+        {
+          "fn": "Price",
+          "args": [
+            130,
+            {
+              "sz": 16
+            }
+          ]
+        },
+        {
+          "fn": "Struck",
+          "args": [
+            180
+          ]
+        },
+        {
+          "fn": "Price",
+          "args": [
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Stepper",
+      "level": "A",
+      "builtFrom": [],
+      "usedIn": "Item sheet, Offer sheet, Order line",
+      "rule": "48 tall; minus becomes trash at 1 in order sheet",
+      "source": "Doc C §1",
+      "specimen": [
+        {
+          "fn": "Stepper",
+          "args": [
+            2
+          ]
+        },
+        {
+          "fn": "Stepper",
+          "args": [
+            1,
+            1
+          ]
+        },
+        {
+          "el": "span",
+          "children": [
+            {
+              "fn": "Stepper",
+              "args": [
+                1,
+                0,
+                1
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Chip",
+      "level": "A",
+      "builtFrom": [],
+      "usedIn": "Order line, Offer sheet",
+      "rule": "Detail: mist. Savings: arctic. Never yellow",
+      "source": "Doc C §1",
+      "specimen": [
+        {
+          "fn": "Chip",
+          "args": [
+            "Large"
+          ]
+        },
+        {
+          "fn": "Chip",
+          "args": [
+            "Save EGP 30",
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Section divider",
+      "level": "A",
+      "builtFrom": [],
+      "usedIn": "Pairings, Category section",
+      "rule": "8 tall mist",
+      "source": "Doc C §1",
+      "specimen": {
+        "el": "i",
+        "style": {
+          "display": "block",
+          "width": 240,
+          "height": 8,
+          "background": "#F3F7F8"
+        }
+      }
+    },
+    {
+      "name": "Hairline",
+      "level": "A",
+      "builtFrom": [],
+      "usedIn": "Rows, Header bottom",
+      "rule": "1 px mist; no vertical variant",
+      "source": "Doc C §1",
+      "specimen": {
+        "el": "i",
+        "style": {
+          "display": "block",
+          "width": 240,
+          "height": 1,
+          "background": "#F3F7F8",
+          "outline": "1px solid #eee"
+        }
+      }
+    },
+    {
+      "name": "Edge fade",
+      "level": "A",
+      "builtFrom": [],
+      "usedIn": "Header (pill row start)",
+      "rule": "16 px white to transparent",
+      "source": "Doc C §1",
+      "specimen": {
+        "el": "div",
+        "style": {
+          "position": "relative",
+          "display": "flex",
+          "overflow": "hidden",
+          "width": 240
+        },
+        "children": [
+          {
+            "fn": "Pill",
+            "args": [
+              "Iced Coffee"
+            ]
+          },
+          {
+            "fn": "Pill",
+            "args": [
+              "Iced Matcha"
+            ]
+          },
+          {
+            "el": "i",
+            "style": {
+              "position": "absolute",
+              "left": 0,
+              "top": 0,
+              "bottom": 0,
+              "width": 16,
+              "background": "linear-gradient(90deg,#fff,transparent)"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Image",
+      "level": "A",
+      "builtFrom": [],
+      "usedIn": "Every card, sheets, order lines",
+      "rule": "Placeholder per Doc B 8.3",
+      "source": "Doc C §1",
+      "specimen": [
+        {
+          "fn": "Img",
+          "args": [
+            88,
+            88
+          ]
+        },
+        {
+          "fn": "Img",
+          "args": [
+            160,
+            90,
+            16
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Logo",
+      "level": "A",
+      "builtFrom": [],
+      "usedIn": "Header",
+      "rule": "Avatar hidden if its file fails",
+      "source": "Doc C §1",
+      "specimen": [
+        {
+          "el": "span",
+          "style": {
+            "width": 40,
+            "height": 40,
+            "borderRadius": "50%",
+            "background": "#C4D7DE",
+            "display": "inline-block"
+          }
+        },
+        {
+          "el": "span",
+          "style": {
+            "border": "1px dashed #0C1B27",
+            "padding": "8px 16px",
+            "borderRadius": 8,
+            "font": "500 12px Montserrat"
+          },
+          "children": [
+            {
+              "tok": "strings.wordmark"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Segmented control",
+      "level": "A",
+      "builtFrom": [],
+      "usedIn": "Size picker",
+      "rule": "Selected: navy fill, white, 600",
+      "source": "Doc C §1",
+      "specimen": [
+        {
+          "el": "div",
+          "style": {
+            "width": 200
+          },
+          "children": [
+            {
+              "fn": "Seg",
+              "args": [
+                [
+                  "Regular",
+                  "Large +15"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "el": "div",
+          "style": {
+            "width": 260
+          },
+          "children": [
+            {
+              "fn": "Seg",
+              "args": [
+                [
+                  "Small",
+                  "Regular",
+                  "Large"
+                ]
+              ]
+            },
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Checkbox row",
+      "level": "A",
+      "builtFrom": [],
+      "usedIn": "Add-on list",
+      "rule": "56 tall; checked = yellow + check",
+      "source": "Doc C §1",
+      "specimen": [
+        {
+          "el": "div",
+          "style": {
+            "width": 260
+          },
+          "children": [
+            {
+              "fn": "Cbx",
+              "args": [
+                "Oat Milk",
+                35
+              ]
+            }
+          ]
+        },
+        {
+          "el": "div",
+          "style": {
+            "width": 260
+          },
+          "children": [
+            {
+              "fn": "Cbx",
+              "args": [
+                "Vanilla",
+                20,
+                1
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Primary button",
+      "level": "A",
+      "builtFrom": [],
+      "usedIn": "Item sheet, Offer sheet, Empty order",
+      "rule": "56 tall, yellow",
+      "source": "Doc C §1",
+      "specimen": [
+        {
+          "el": "div",
+          "style": {
+            "width": 260
+          },
+          "children": [
+            {
+              "fn": "Pri",
+              "args": [
+                "Add to Order · EGP 185"
+              ]
+            }
+          ]
+        },
+        {
+          "el": "div",
+          "style": {
+            "width": 200
+          },
+          "children": [
+            {
+              "fn": "Pri",
+              "args": [
+                "Update Order"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Secondary button",
+      "level": "A",
+      "builtFrom": [],
+      "usedIn": "Category section, Order sheet",
+      "rule": "48 tall, arctic border",
+      "source": "Doc C §1",
+      "specimen": [
+        {
+          "fn": "Sec",
+          "args": [
+            "Clear order"
+          ]
+        },
+        {
+          "fn": "Sec",
+          "args": [
+            "Clear order",
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Confirm button",
+      "level": "A",
+      "builtFrom": [],
+      "usedIn": "Clear confirmation",
+      "rule": "Navy, destructive only",
+      "source": "Doc C §1",
+      "specimen": {
+        "fn": "Conf",
+        "args": [
+          "Clear order"
+        ]
+      }
+    },
+    {
+      "name": "Carousel dot",
+      "level": "A",
+      "builtFrom": [],
+      "usedIn": "Signatures section",
+      "rule": "Active navy, inactive arctic",
+      "source": "Doc C §1",
+      "specimen": [
+        {
+          "fn": "Dot",
+          "args": [
+            1
+          ]
+        },
+        {
+          "fn": "Dot"
+        },
+        {
+          "fn": "Dot"
+        }
+      ]
+    },
+    {
+      "name": "Drag handle",
+      "level": "A",
+      "builtFrom": [],
+      "usedIn": "Bottom sheet shell",
+      "rule": "40x4 in 32 zone",
+      "source": "Doc C §1",
+      "specimen": {
+        "el": "div",
+        "style": {
+          "width": 200,
+          "border": "1px solid #eee"
+        },
+        "children": [
+          {
+            "fn": "Handle"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Close button",
+      "level": "A",
+      "builtFrom": [],
+      "usedIn": "Sheets with image header",
+      "rule": "40 white circle in 48 hit area",
+      "source": "Doc C §1",
+      "specimen": {
+        "fn": "Close"
+      }
+    },
+    {
+      "name": "List card",
+      "level": "M",
+      "builtFrom": [
+        "Image",
+        "Price",
+        "Chevron",
+        "Badge"
+      ],
+      "usedIn": "Category section, Search",
+      "rule": "One card, one tap target",
+      "source": "Doc C §2",
+      "specimen": {
+        "el": "div",
+        "style": {
+          "width": 350
+        },
+        "children": [
+          {
+            "fn": "ListCard",
+            "args": [
+              "Ube Matcha"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Signature card",
+      "level": "M",
+      "builtFrom": [
+        "Badge",
+        "Image",
+        "Price",
+        "Chevron"
+      ],
+      "usedIn": "Signatures section",
+      "rule": "280 wide, image 248",
+      "source": "Doc C §2",
+      "specimen": {
+        "fn": "SigCard",
+        "args": [
+          "Matcha Apple Pie"
+        ]
+      }
+    },
+    {
+      "name": "Offer card",
+      "level": "M",
+      "builtFrom": [
+        "Image",
+        "Chip",
+        "Price",
+        "Chevron"
+      ],
+      "usedIn": "Pairings section",
+      "rule": "Decorative plus is navy, not yellow",
+      "source": "Doc C §2",
+      "specimen": [
+        {
+          "fn": "OfferCard",
+          "args": [
+            {
+              "offer": 0
+            }
+          ]
+        },
+        {
+          "fn": "OfferCard",
+          "args": [
+            {
+              "offer": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Often Ordered card",
+      "level": "M",
+      "builtFrom": [
+        "Image",
+        "Price",
+        "Plus button",
+        "Badge"
+      ],
+      "usedIn": "Item sheet",
+      "rule": "NOT a button; only the plus is",
+      "source": "Doc C §2",
+      "specimen": [
+        {
+          "fn": "Often",
+          "args": [
+            "Oreo Cookies"
+          ]
+        },
+        {
+          "fn": "Often",
+          "args": [
+            "Brownies",
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Search result row (item)",
+      "level": "M",
+      "builtFrom": [
+        "Image",
+        "Price"
+      ],
+      "usedIn": "Search overlay",
+      "rule": "Min height 72",
+      "source": "Doc C §2",
+      "specimen": {
+        "el": "div",
+        "style": {
+          "width": 360
+        },
+        "children": [
+          {
+            "fn": "SRItem",
+            "args": [
+              "Ube Matcha"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Search result row (offer)",
+      "level": "M",
+      "builtFrom": [
+        "Image",
+        "Price"
+      ],
+      "usedIn": "Search overlay",
+      "rule": "Two 32 px thumbnails",
+      "source": "Doc C §2",
+      "specimen": {
+        "el": "div",
+        "style": {
+          "width": 360
+        },
+        "children": [
+          {
+            "fn": "SROffer",
+            "args": [
+              {
+                "offer": 0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Search result row (category)",
+      "level": "M",
+      "builtFrom": [
+        "Hairline"
+      ],
+      "usedIn": "Search overlay",
+      "rule": "No thumbnail",
+      "source": "Doc C §2",
+      "specimen": {
+        "el": "div",
+        "style": {
+          "width": 360
+        },
+        "children": [
+          {
+            "fn": "SRCat",
+            "args": [
+              "Iced Coffee",
+              9
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Search group heading",
+      "level": "M",
+      "builtFrom": [],
+      "usedIn": "Search overlay",
+      "rule": "Fades in with group",
+      "source": "Doc C §2",
+      "specimen": {
+        "fn": "GroupHead",
+        "args": [
+          "Categories"
+        ]
+      }
+    },
+    {
+      "name": "Order line",
+      "level": "M",
+      "builtFrom": [
+        "Image",
+        "Chevron",
+        "Chip",
+        "Price",
+        "Stepper"
+      ],
+      "usedIn": "Order sheet",
+      "rule": "Stepper never triggers edit",
+      "source": "Doc C §2",
+      "specimen": {
+        "el": "div",
+        "style": {
+          "width": 350
+        },
+        "children": [
+          {
+            "fn": "OrderLine",
+            "args": [
+              "Latte",
+              [
+                [
+                  "Size",
+                  [
+                    "Large"
+                  ]
+                ],
+                [
+                  "Add-ons",
+                  [
+                    "Oat Milk"
+                  ]
+                ]
+              ],
+              160,
+              0,
+              1
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Order line (bundle)",
+      "level": "M",
+      "builtFrom": [
+        "Order line"
+      ],
+      "usedIn": "Order sheet",
+      "rule": "Options listed per product",
+      "source": "Doc C §2",
+      "specimen": {
+        "el": "div",
+        "style": {
+          "width": 350
+        },
+        "children": [
+          {
+            "fn": "OrderLine",
+            "args": [
+              "Iced Latte + Oreo Cookies",
+              [
+                [
+                  "Includes",
+                  [
+                    "Iced Latte",
+                    "Oreo Cookies"
+                  ]
+                ]
+              ],
+              150,
+              180,
+              2
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Category row",
+      "level": "M",
+      "builtFrom": [],
+      "usedIn": "Category sheet",
+      "rule": "Active: yellow fill",
+      "source": "Doc C §2",
+      "specimen": {
+        "el": "div",
+        "style": {
+          "width": 260
+        },
+        "children": [
+          {
+            "fn": "CatRow",
+            "args": [
+              "Iced Coffee",
+              9,
+              1
+            ]
+          },
+          {
+            "fn": "CatRow",
+            "args": [
+              "Hot Coffee",
+              10
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Section head",
+      "level": "M",
+      "builtFrom": [],
+      "usedIn": "Signatures section, Pairings section",
+      "rule": "Title + optional sub-line",
+      "source": "Doc C §2",
+      "specimen": {
+        "el": "div",
+        "style": {
+          "width": 300
+        },
+        "children": [
+          {
+            "fn": "SecHead",
+            "args": [
+              "The Signatures",
+              "Romanticize your coffee."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Barista's Way toggle",
+      "level": "M",
+      "builtFrom": [],
+      "usedIn": "Option block",
+      "rule": "On: yellow + navy ring + check. Offered only if the profile enables it and the item has every preset add-on",
+      "source": "Doc C §2",
+      "specimen": {
+        "el": "div",
+        "style": {
+          "width": 340
+        },
+        "children": [
+          {
+            "fn": "Barista"
+          },
+          {
+            "el": "br"
+          },
+          {
+            "fn": "Barista",
+            "args": [
+              1
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Quantity row",
+      "level": "M",
+      "builtFrom": [
+        "Stepper"
+      ],
+      "usedIn": "Item sheet, Offer sheet",
+      "rule": "Min 1, max 20 when adding",
+      "source": "Doc C §2",
+      "specimen": {
+        "el": "div",
+        "style": {
+          "width": 300
+        },
+        "children": [
+          {
+            "fn": "QtyRow",
+            "args": [
+              1
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Size picker",
+      "level": "M",
+      "builtFrom": [
+        "Segmented control"
+      ],
+      "usedIn": "Option block",
+      "rule": "One segment per size in data; any number of sizes; absent with fewer than two",
+      "source": "Doc C §2",
+      "specimen": {
+        "el": "div",
+        "style": {
+          "width": 300
+        },
+        "children": [
+          {
+            "fn": "SizePick",
+            "args": [
+              "Latte"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Add-on list",
+      "level": "M",
+      "builtFrom": [
+        "Checkbox row"
+      ],
+      "usedIn": "Option block",
+      "rule": "Multi-select",
+      "source": "Doc C §2",
+      "specimen": {
+        "el": "div",
+        "style": {
+          "width": 300
+        },
+        "children": [
+          {
+            "fn": "Addons",
+            "args": [
+              [
+                "vanilla"
+              ],
+              "Latte"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Option block",
+      "level": "M",
+      "builtFrom": [
+        "Image",
+        "Barista's Way toggle",
+        "Size picker",
+        "Add-on list"
+      ],
+      "usedIn": "Item sheet, Offer sheet",
+      "rule": "Each block absent unless the item's profile allows it; any item, drink or dessert, can have any mix",
+      "source": "Doc C §2",
+      "specimen": {
+        "el": "div",
+        "style": {
+          "width": 340
+        },
+        "children": [
+          {
+            "fn": "OptBlock",
+            "args": [
+              "Iced Latte"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Clear confirmation",
+      "level": "M",
+      "builtFrom": [
+        "Secondary button",
+        "Confirm button"
+      ],
+      "usedIn": "Order sheet",
+      "rule": "Fade-in; focus on Keep order",
+      "source": "Doc C §2",
+      "specimen": {
+        "el": "div",
+        "style": {
+          "width": 300
+        },
+        "children": [
+          {
+            "fn": "ClearConf"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Header",
+      "level": "O",
+      "builtFrom": [
+        "Logo",
+        "Icon button",
+        "Language pill",
+        "Category pill",
+        "Edge fade"
+      ],
+      "usedIn": "",
+      "rule": "Fixed 104 tall; no divider beside hamburger",
+      "source": "Doc C §3",
+      "specimen": {
+        "el": "div",
+        "style": {
+          "width": 390
+        },
+        "children": [
+          {
+            "fn": "Header",
+            "args": [
+              2
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Signatures section",
+      "level": "O",
+      "builtFrom": [
+        "Section head",
+        "Signature card",
+        "Carousel dot"
+      ],
+      "usedIn": "Main page",
+      "rule": "Snap carousel",
+      "source": "Doc C §3",
+      "specimen": {
+        "el": "div",
+        "style": {
+          "width": 390,
+          "display": "flex",
+          "flexDirection": "column",
+          "gap": 16,
+          "padding": "24px 0"
+        },
+        "children": [
+          {
+            "fn": "SecHead",
+            "args": [
+              "The Signatures",
+              "Romanticize your coffee."
+            ]
+          },
+          {
+            "el": "div",
+            "style": {
+              "display": "flex",
+              "gap": 16,
+              "padding": "0 16px",
+              "overflow": "hidden"
+            },
+            "children": [
+              {
+                "fn": "SigCard",
+                "args": [
+                  "Matcha Apple Pie"
+                ]
+              },
+              {
+                "fn": "SigCard",
+                "args": [
+                  "Ube Matcha"
+                ]
+              }
+            ]
+          },
+          {
+            "el": "div",
+            "style": {
+              "textAlign": "center"
+            },
+            "children": [
+              {
+                "fn": "Dot",
+                "args": [
+                  1
+                ]
+              },
+              " ",
+              {
+                "fn": "Dot"
+              },
+              " ",
+              {
+                "fn": "Dot"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Pairings section",
+      "level": "O",
+      "builtFrom": [
+        "Section head",
+        "Offer card",
+        "Section divider"
+      ],
+      "usedIn": "Main page",
+      "rule": "Free scroll",
+      "source": "Doc C §3",
+      "specimen": {
+        "el": "div",
+        "style": {
+          "width": 390,
+          "padding": "32px 0",
+          "borderTop": "8px solid #F3F7F8",
+          "display": "flex",
+          "flexDirection": "column",
+          "gap": 16
+        },
+        "children": [
+          {
+            "fn": "SecHead",
+            "args": [
+              "Perfect Pairings",
+              "Pair a drink with a treat. Some pairs are on offer."
+            ]
+          },
+          {
+            "el": "div",
+            "style": {
+              "display": "flex",
+              "gap": 16,
+              "padding": "0 16px",
+              "overflow": "hidden"
+            },
+            "children": [
+              {
+                "fn": "OfferCard",
+                "args": [
+                  {
+                    "offer": 0
+                  }
+                ]
+              },
+              {
+                "fn": "OfferCard",
+                "args": [
+                  {
+                    "offer": 1
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Category section",
+      "level": "O",
+      "builtFrom": [
+        "Section head",
+        "List card",
+        "Secondary button"
+      ],
+      "usedIn": "Main page",
+      "rule": "First five after badge sort",
+      "source": "Doc C §3",
+      "specimen": {
+        "el": "div",
+        "style": {
+          "width": 390
+        },
+        "children": [
+          {
+            "fn": "CatSection",
+            "args": [
+              "Iced Coffee",
+              [
+                "Iced Latte"
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Bottom sheet shell",
+      "level": "O",
+      "builtFrom": [
+        "Drag handle",
+        "Close button"
+      ],
+      "usedIn": "All sheets",
+      "rule": "88% item/offer, 72% category/order",
+      "source": "Doc C §3",
+      "specimen": {
+        "el": "div",
+        "cls": "phone k",
+        "style": {
+          "height": 300
+        },
+        "children": [
+          {
+            "el": "div",
+            "cls": "scr"
+          },
+          {
+            "fn": "Shell",
+            "args": [
+              200,
+              [
+                {
+                  "fn": "SecHead",
+                  "args": [
+                    "Sheet content"
+                  ]
+                }
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Item sheet",
+      "level": "O",
+      "builtFrom": [
+        "Bottom sheet shell",
+        "Option block",
+        "Quantity row",
+        "Often Ordered card",
+        "Primary button",
+        "Badge",
+        "Price",
+        "Close button",
+        "Image"
+      ],
+      "usedIn": "Main page",
+      "rule": "Edit mode hides Often Ordered",
+      "source": "Doc C §3",
+      "specimen": {
+        "fn": "Phone",
+        "args": [
+          null,
+          {
+            "fn": "ItemSheet",
+            "args": [
+              "Latte"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Offer sheet",
+      "level": "O",
+      "builtFrom": [
+        "Bottom sheet shell",
+        "Option block",
+        "Quantity row",
+        "Primary button",
+        "Chip",
+        "Price",
+        "Image"
+      ],
+      "usedIn": "Main page",
+      "rule": "One option block per product",
+      "source": "Doc C §3",
+      "specimen": {
+        "fn": "Phone",
+        "args": [
+          null,
+          {
+            "fn": "OfferSheet",
+            "args": [
+              {
+                "offer": 0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Category sheet",
+      "level": "O",
+      "builtFrom": [
+        "Bottom sheet shell",
+        "Category row"
+      ],
+      "usedIn": "Main page",
+      "rule": "No footer",
+      "source": "Doc C §3",
+      "specimen": {
+        "el": "div",
+        "cls": "phone k",
+        "children": [
+          {
+            "el": "div",
+            "cls": "scr"
+          },
+          {
+            "fn": "CatSheet"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Order sheet",
+      "level": "O",
+      "builtFrom": [
+        "Bottom sheet shell",
+        "Order line",
+        "Order line (bundle)",
+        "Clear confirmation",
+        "Secondary button"
+      ],
+      "usedIn": "Order bar",
+      "rule": "No line above subtotal",
+      "source": "Doc C §3",
+      "specimen": {
+        "fn": "Phone",
+        "args": [
+          null,
+          {
+            "fn": "OrderSheet"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Order bar",
+      "level": "O",
+      "builtFrom": [
+        "Price"
+      ],
+      "usedIn": "Main page",
+      "rule": "Hidden when any overlay is open",
+      "source": "Doc C §3",
+      "specimen": {
+        "el": "div",
+        "style": {
+          "width": 390
+        },
+        "children": [
+          {
+            "fn": "OrderBar"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Search overlay",
+      "level": "O",
+      "builtFrom": [
+        "Icon button",
+        "Search result row (item)",
+        "Search result row (offer)",
+        "Search result row (category)",
+        "Search group heading"
+      ],
+      "usedIn": "Main page",
+      "rule": "Full screen",
+      "source": "Doc C §3",
+      "specimen": {
+        "fn": "Phone",
+        "args": [
+          {
+            "fn": "Search"
+          }
+        ]
+      }
+    }
+  ],
+  "screens": [
+    {
+      "name": "Main page",
+      "uses": [
+        "Header",
+        "Signatures section",
+        "Pairings section",
+        "Category section",
+        "Order bar"
+      ]
+    },
+    {
+      "name": "Item sheet",
+      "uses": [
+        "Item sheet"
+      ]
+    },
+    {
+      "name": "Offer sheet",
+      "uses": [
+        "Offer sheet"
+      ]
+    },
+    {
+      "name": "Category sheet",
+      "uses": [
+        "Category sheet"
+      ]
+    },
+    {
+      "name": "Order sheet",
+      "uses": [
+        "Order sheet"
+      ]
+    },
+    {
+      "name": "Search overlay",
+      "uses": [
+        "Search overlay"
+      ]
+    }
+  ],
+  "pages": {
+    "design": {
+      "title": "Design System",
+      "intro": "Doc B. Every table cell is from the docs unless labelled computed.",
+      "useCasesLabel": "Use cases",
+      "bands": [
+        {
+          "title": "Color palette",
+          "purpose": "Five core colors, their opacity variants, effects and reserved colors.",
+          "specimen": {
+            "fn": "SwatchCards"
+          },
+          "tables": [
+            {
+              "head": [
+                "",
+                "token",
+                "brand name",
+                "value",
+                "CSS variable",
+                "role",
+                "used by",
+                "never used for"
+              ],
+              "rows": [
+                [
+                  {
+                    "fn": "Sw",
+                    "args": [
+                      "#0C1B27"
+                    ]
+                  },
+                  "navy",
+                  "Oxford Navy",
+                  "#0C1B27",
+                  "--color-navy",
+                  "All text and icons, dark fills, scrim",
+                  {
+                    "links": [
+                      "Order bar",
+                      "Confirm button"
+                    ]
+                  },
+                  "Decoration; backgrounds of cards"
+                ],
+                [
+                  {
+                    "fn": "Sw",
+                    "args": [
+                      "#E8E87A"
+                    ]
+                  },
+                  "yellow",
+                  "Luminance",
+                  "#E8E87A",
+                  "--color-yellow",
+                  "Yellow means act here, or this is selected.",
+                  {
+                    "links": [
+                      "Primary button",
+                      "Plus button",
+                      "Category pill",
+                      "Category row",
+                      "Checkbox row",
+                      "Barista's Way toggle",
+                      "Order bar (Doc C §4.3 only)"
+                    ]
+                  },
+                  "Badges, chevrons, chips, text, decoration, a lone shape on white"
+                ],
+                [
+                  {
+                    "fn": "Sw",
+                    "args": [
+                      "#C4D7DE"
+                    ]
+                  },
+                  "arctic",
+                  "Arctic Blue",
+                  "#C4D7DE",
+                  "--color-arctic",
+                  "Borders, soft fills, handles, inactive dots, Top Rated badge",
+                  {
+                    "links": [
+                      "Badge",
+                      "Drag handle",
+                      "Carousel dot",
+                      "Chip"
+                    ]
+                  },
+                  "Text"
+                ],
+                [
+                  {
+                    "fn": "Sw",
+                    "args": [
+                      "#F3F7F8"
+                    ]
+                  },
+                  "mist",
+                  "UI neutral",
+                  "#F3F7F8",
+                  "--color-mist",
+                  "Dividers, pressed state, quiet fills",
+                  {
+                    "links": [
+                      "Hairline",
+                      "Section divider",
+                      "Chip"
+                    ]
+                  },
+                  "Page background"
+                ],
+                [
+                  {
+                    "fn": "Sw",
+                    "args": [
+                      "#FFFFFF"
+                    ]
+                  },
+                  "white",
+                  "White",
+                  "#FFFFFF",
+                  "(page default)",
+                  "Page and surfaces",
+                  {
+                    "links": [
+                      "Image",
+                      "Close button"
+                    ]
+                  },
+                  "-"
+                ],
+                [
+                  {
+                    "fn": "Sw",
+                    "args": [
+                      "rgba(12,27,39,.65)"
+                    ]
+                  },
+                  "navy 65%",
+                  "variant",
+                  "rgba(12,27,39,0.65) · on white {over:#0C1B27:0.65:#FFFFFF} · on mist {over:#0C1B27:0.65:#F3F7F8} (computed)",
+                  "(opacity of navy)",
+                  "Secondary text, inactive controls, chevrons",
+                  {
+                    "links": [
+                      "Chevron",
+                      "Category pill",
+                      "Price"
+                    ]
+                  },
+                  "New color"
+                ],
+                [
+                  {
+                    "fn": "Sw",
+                    "args": [
+                      "rgba(12,27,39,.55)"
+                    ]
+                  },
+                  "navy 55%",
+                  "variant",
+                  "on white {over:#0C1B27:0.55:#FFFFFF} (computed)",
+                  "(opacity of navy)",
+                  "Scrim behind sheets",
+                  {
+                    "links": [
+                      "Bottom sheet shell"
+                    ]
+                  },
+                  "Anything but the scrim"
+                ],
+                [
+                  {
+                    "fn": "Sw",
+                    "args": [
+                      "rgba(12,27,39,.2)"
+                    ]
+                  },
+                  "navy 20%",
+                  "variant",
+                  "on white {over:#0C1B27:0.2:#FFFFFF} (computed)",
+                  "(opacity of navy)",
+                  "Placeholder k mark only",
+                  {
+                    "links": [
+                      "Image"
+                    ]
+                  },
+                  "Everything else"
+                ],
+                [
+                  {
+                    "fn": "Sw",
+                    "args": [
+                      "rgba(232,232,122,.4)"
+                    ]
+                  },
+                  "yellow 40%",
+                  "variant",
+                  "on white {over:#E8E87A:0.4:#FFFFFF} (computed)",
+                  "(opacity of yellow)",
+                  "End of placeholder gradient only",
+                  {
+                    "links": [
+                      "Image"
+                    ]
+                  },
+                  "Everything else"
+                ],
+                [
+                  {
+                    "fn": "Sw",
+                    "args": [
+                      "linear-gradient(135deg,#C4D7DE,rgba(232,232,122,.4))"
+                    ]
+                  },
+                  "placeholder gradient",
+                  "gradient",
+                  "135deg, arctic to yellow 40%",
+                  "-",
+                  "Item without a photo",
+                  {
+                    "links": [
+                      "Image"
+                    ]
+                  },
+                  "-"
+                ],
+                [
+                  {
+                    "fn": "Sw",
+                    "args": [
+                      "linear-gradient(90deg,#E8E87A,#fff,#2B7C80)"
+                    ]
+                  },
+                  "brand gradient",
+                  "gradient",
+                  "yellow, white, teal",
+                  "-",
+                  "Imagery and hero moments only",
+                  {
+                    "links": [],
+                    "empty": "-"
+                  },
+                  "Behind text, on buttons"
+                ],
+                [
+                  {
+                    "fn": "Sw",
+                    "args": [
+                      "#fff"
+                    ]
+                  },
+                  "footer shadow",
+                  "effect",
+                  "0 -8px 24px rgba(12,27,39,0.08) (navy 8%)",
+                  "-",
+                  "The one shadow: pinned sheet footer",
+                  {
+                    "links": [
+                      "Bottom sheet shell"
+                    ]
+                  },
+                  "Anything else"
+                ],
+                [
+                  {
+                    "fn": "Sw",
+                    "args": [
+                      "#fff"
+                    ]
+                  },
+                  "badge ring",
+                  "effect",
+                  "1 px white ring",
+                  "-",
+                  "Separates a badge from the image",
+                  {
+                    "links": [
+                      "Badge"
+                    ]
+                  },
+                  "-"
+                ],
+                [
+                  {
+                    "fn": "Sw",
+                    "args": [
+                      "#2B7C80"
+                    ]
+                  },
+                  "teal (reserved)",
+                  "Success",
+                  "#2B7C80",
+                  "(not defined)",
+                  "Not used by any screen",
+                  {
+                    "links": [],
+                    "empty": "-"
+                  },
+                  "Everything today"
+                ],
+                [
+                  {
+                    "fn": "Sw",
+                    "args": [
+                      "#A8412C"
+                    ]
+                  },
+                  "clay (reserved)",
+                  "Error",
+                  "#A8412C",
+                  "(not defined)",
+                  "Not used by any screen",
+                  {
+                    "links": [],
+                    "empty": "-"
+                  },
+                  "Everything today"
+                ],
+                [
+                  {
+                    "fn": "Sw",
+                    "args": [
+                      "#CFCBAE"
+                    ]
+                  },
+                  "Dark Champagne",
+                  "print only",
+                  "#CFCBAE",
+                  "-",
+                  "Print and signage; not in the app",
+                  {
+                    "links": [],
+                    "empty": "-"
+                  },
+                  "The app"
+                ]
+              ]
+            }
+          ],
+          "uses": [
+            "Yellow marks the place to act or what is selected. Doc B §2.5",
+            "Opacity variants are never new colors. Doc B §2.3",
+            "Teal and clay are added only when a screen needs one. Doc B §2.2"
+          ]
+        },
+        {
+          "title": "Contrast",
+          "purpose": "Whether each text and background pair is readable. Computed with the WCAG formula.",
+          "specimen": {
+            "el": "div",
+            "cls": "src",
+            "children": [
+              "Computed ratios can differ slightly from the approximate Doc B §2.4 numbers."
+            ]
+          },
+          "tables": [
+            {
+              "type": "contrastPairs",
+              "head": [
+                "pair",
+                "Doc B",
+                "computed",
+                "verdict",
+                "where it occurs"
+              ],
+              "rows": [
+                [
+                  "navy on white",
+                  "#0C1B27",
+                  "#FFFFFF",
+                  "16:1",
+                  "Body text"
+                ],
+                [
+                  "navy 65% on white",
+                  {
+                    "over": [
+                      "#0C1B27",
+                      0.65,
+                      "#FFFFFF"
+                    ]
+                  },
+                  "#FFFFFF",
+                  "5.4:1",
+                  "Descriptions, helper text"
+                ],
+                [
+                  "navy 65% on mist",
+                  {
+                    "over": [
+                      "#0C1B27",
+                      0.65,
+                      "#F3F7F8"
+                    ]
+                  },
+                  "#F3F7F8",
+                  "5.1:1",
+                  "Pressed rows, chips"
+                ],
+                [
+                  "navy on yellow",
+                  "#0C1B27",
+                  "#E8E87A",
+                  "13:1",
+                  "Primary button, active pill"
+                ],
+                [
+                  "navy on arctic",
+                  "#0C1B27",
+                  "#C4D7DE",
+                  "12:1",
+                  "Top Rated badge"
+                ],
+                [
+                  "white on navy",
+                  "#FFFFFF",
+                  "#0C1B27",
+                  "17:1",
+                  "Order bar, New badge"
+                ],
+                [
+                  "yellow on white",
+                  "#E8E87A",
+                  "#FFFFFF",
+                  "1.3:1",
+                  "Never text"
+                ]
+              ]
+            },
+            {
+              "type": "spacer"
+            },
+            {
+              "type": "contrastMatrix",
+              "head": [
+                "text \\ background",
+                "intended use"
+              ],
+              "fg": [
+                {
+                  "label": "navy",
+                  "hex": "#0C1B27",
+                  "alpha": null,
+                  "use": "All text"
+                },
+                {
+                  "label": "navy 65%",
+                  "hex": "#0C1B27",
+                  "alpha": 0.65,
+                  "use": "Secondary text, inactive"
+                },
+                {
+                  "label": "white",
+                  "hex": "#FFFFFF",
+                  "alpha": null,
+                  "use": "On navy"
+                },
+                {
+                  "label": "yellow",
+                  "hex": "#E8E87A",
+                  "alpha": null,
+                  "use": "Never text"
+                },
+                {
+                  "label": "arctic",
+                  "hex": "#C4D7DE",
+                  "alpha": null,
+                  "use": "Not used as text"
+                },
+                {
+                  "label": "mist",
+                  "hex": "#F3F7F8",
+                  "alpha": null,
+                  "use": "Not used as text"
+                }
+              ],
+              "bg": [
+                {
+                  "label": "white",
+                  "hex": "#FFFFFF"
+                },
+                {
+                  "label": "mist",
+                  "hex": "#F3F7F8"
+                },
+                {
+                  "label": "arctic",
+                  "hex": "#C4D7DE"
+                },
+                {
+                  "label": "yellow",
+                  "hex": "#E8E87A"
+                },
+                {
+                  "label": "navy",
+                  "hex": "#0C1B27"
+                }
+              ]
+            }
+          ],
+          "uses": [
+            "Normal text needs 4.5:1. Doc B §2.4",
+            "Yellow on white fails, so yellow is never text",
+            "Navy 65% passes at 12 px and up"
+          ]
+        },
+        {
+          "title": "Typography",
+          "purpose": "Montserrat for Latin text and one Arabic typeface for Arabic text; five styles.",
+          "specimen": {
+            "el": "div",
+            "cls": "spec k",
+            "style": {
+              "flexDirection": "column",
+              "alignItems": "flex-start"
+            },
+            "children": [
+              {
+                "el": "div",
+                "children": [
+                  "Weights 500, 600, 700. 400 only for the tagline. Light and Black unused. Wordmark and k mark are images and never change with language. Arabic typeface: not decided yet (F-03); it uses the same weights."
+                ]
+              },
+              {
+                "el": "div",
+                "style": {
+                  "fontWeight": 400
+                },
+                "children": [
+                  "Romanticize your ",
+                  {
+                    "el": "b",
+                    "children": [
+                      "coffee."
+                    ]
+                  }
+                ]
+              },
+              {
+                "el": "div",
+                "cls": "cl2",
+                "style": {
+                  "width": 200
+                },
+                "children": [
+                  "Descriptions clamp at two lines and text never goes below 12 px anywhere in the interface."
+                ]
+              }
+            ]
+          },
+          "tables": [
+            {
+              "type": "typeRows",
+              "head": [
+                "style",
+                "specimen",
+                "size / line",
+                "weights",
+                "use case",
+                "example (Doc E)",
+                "used by"
+              ],
+              "specimenText": "Iced Latte"
+            }
+          ],
+          "uses": [
+            "Prices are always bold",
+            "Text wraps, never truncates, except two-line descriptions",
+            "Tagline is regular with its last word bold",
+            "Arabic text uses the same five styles; check each line height with the chosen Arabic typeface (Doc B §3.8)"
+          ]
+        },
+        {
+          "title": "Spacing",
+          "purpose": "Six steps on an 8-point grid.",
+          "specimen": {
+            "el": "div",
+            "cls": "row k",
+            "children": [
+              {
+                "fn": "SpaceSquares"
+              },
+              {
+                "el": "span",
+                "style": {
+                  "width": 48,
+                  "height": 48,
+                  "border": "1px dashed #0C1B27",
+                  "display": "inline-flex",
+                  "alignItems": "center",
+                  "justifyContent": "center"
+                },
+                "children": [
+                  {
+                    "fn": "PlusBtn"
+                  }
+                ]
+              }
+            ]
+          },
+          "tables": [
+            {
+              "head": [
+                "token",
+                "px",
+                "used for"
+              ],
+              "rowsFrom": "tokens.space"
+            }
+          ],
+          "uses": [
+            "Component sizes (40, 48, 56, 88, 104) are not spacing tokens",
+            "Touch target is 48 x 48 for every tappable element"
+          ]
+        },
+        {
+          "title": "Shape",
+          "purpose": "Four radii.",
+          "specimen": {
+            "el": "div",
+            "cls": "row k",
+            "children": [
+              {
+                "el": "div",
+                "children": [
+                  {
+                    "fn": "Img",
+                    "args": [
+                      48,
+                      48,
+                      12
+                    ]
+                  },
+                  "md 12"
+                ]
+              },
+              {
+                "el": "div",
+                "style": {
+                  "width": 120
+                },
+                "children": [
+                  {
+                    "el": "div",
+                    "cls": "lc",
+                    "style": {
+                      "padding": 8,
+                      "borderRadius": 16
+                    },
+                    "children": [
+                      "lg 16"
+                    ]
+                  }
+                ]
+              },
+              {
+                "el": "div",
+                "style": {
+                  "width": 96,
+                  "height": 48,
+                  "background": "#C4D7DE",
+                  "borderRadius": "24px 24px 0 0"
+                }
+              },
+              {
+                "fn": "Pill",
+                "args": [
+                  "full",
+                  1
+                ]
+              }
+            ]
+          },
+          "tables": [
+            {
+              "head": [
+                "token",
+                "px",
+                "use"
+              ],
+              "rowsFrom": "tokens.radius"
+            }
+          ],
+          "uses": [
+            "Everything interactive and pill-shaped uses radius-full"
+          ]
+        },
+        {
+          "title": "Borders and depth",
+          "purpose": "Outlines before shadows.",
+          "specimen": {
+            "el": "div",
+            "cls": "spec k",
+            "style": {
+              "flexDirection": "column",
+              "alignItems": "stretch"
+            },
+            "children": [
+              {
+                "el": "div",
+                "style": {
+                  "border": "1px solid #C4D7DE",
+                  "borderRadius": 16,
+                  "padding": 8
+                },
+                "children": [
+                  "arctic 1 px outline"
+                ]
+              },
+              {
+                "el": "div",
+                "style": {
+                  "borderTop": "1px solid #F3F7F8",
+                  "paddingTop": 8
+                },
+                "children": [
+                  "mist 1 px divider"
+                ]
+              },
+              {
+                "el": "div",
+                "style": {
+                  "boxShadow": {
+                    "tok": "tokens.shadow"
+                  },
+                  "padding": 8
+                },
+                "children": [
+                  "footer shadow"
+                ]
+              },
+              {
+                "fn": "Spec",
+                "args": [
+                  "Edge fade"
+                ]
+              }
+            ]
+          },
+          "tables": [
+            {
+              "head": [
+                "item",
+                "value",
+                "where"
+              ],
+              "rows": [
+                [
+                  "Border",
+                  "1 px arctic",
+                  "Surfaces"
+                ],
+                [
+                  "Divider",
+                  "1 px mist",
+                  "Rows, header bottom"
+                ],
+                [
+                  "Shadow",
+                  {
+                    "tok": "tokens.shadow"
+                  },
+                  "Pinned footer"
+                ],
+                [
+                  "Edge fade",
+                  "16 px white to transparent",
+                  "Start edge of pill row (left in English, right in Arabic)"
+                ],
+                [
+                  "No line",
+                  "-",
+                  "Beside hamburger; above order subtotal"
+                ]
+              ]
+            }
+          ],
+          "uses": [
+            "Do not add hairlines beside the hamburger or above the subtotal"
+          ]
+        },
+        {
+          "title": "Layers",
+          "purpose": "Five z-index layers.",
+          "specimen": {
+            "fn": "LayerStack"
+          },
+          "tables": [
+            {
+              "head": [
+                "layer",
+                "z-index",
+                "contains",
+                "visible",
+                "components"
+              ],
+              "rows": [
+                [
+                  "Sticky header",
+                  30,
+                  "Search, language, hamburger, pills",
+                  "Always",
+                  {
+                    "links": [
+                      "Header"
+                    ]
+                  }
+                ],
+                [
+                  "Order bar",
+                  35,
+                  "Count, View Order, subtotal",
+                  "When the order has items and no overlay is open",
+                  {
+                    "links": [
+                      "Order bar"
+                    ]
+                  }
+                ],
+                [
+                  "Scrim",
+                  40,
+                  "Navy 55% dim",
+                  "While a sheet is open",
+                  {
+                    "links": [
+                      "Bottom sheet shell"
+                    ]
+                  }
+                ],
+                [
+                  "Search overlay",
+                  45,
+                  "Full-screen search",
+                  "While searching",
+                  {
+                    "links": [
+                      "Search overlay"
+                    ]
+                  }
+                ],
+                [
+                  "Bottom sheet",
+                  50,
+                  "Item, offer, category, order sheets",
+                  "While open",
+                  {
+                    "links": [
+                      "Bottom sheet shell"
+                    ]
+                  }
+                ]
+              ]
+            }
+          ],
+          "uses": [
+            "Sheets sit above everything; the scrim dims the page and the order bar"
+          ]
+        },
+        {
+          "title": "Iconography",
+          "purpose": "11 icons, 24 viewBox, 2 px stroke, round caps, currentColor; only the star is filled.",
+          "specimen": {
+            "fn": "RtlToggle",
+            "args": [
+              "RTL mirror"
+            ]
+          },
+          "tables": [
+            {
+              "type": "iconRows",
+              "head": [
+                "icon",
+                "16",
+                "20",
+                "24",
+                "used by"
+              ]
+            }
+          ],
+          "uses": [
+            "Directional icons (arrow-right, sideways chevrons) mirror in RTL; non-directional icons never mirror"
+          ]
+        },
+        {
+          "title": "Motion",
+          "purpose": "Functional only. Values here; triggers are Doc D §8.",
+          "specimen": {
+            "el": "div",
+            "cls": "src",
+            "children": [
+              "Doc B §9"
+            ]
+          },
+          "tables": [
+            {
+              "head": [
+                "token",
+                "value",
+                "example component",
+                "use case"
+              ],
+              "rows": [
+                [
+                  "duration-base",
+                  "300 ms",
+                  "Bottom sheet shell",
+                  "Sheet slides up and scrim fades in"
+                ],
+                [
+                  "easing",
+                  "ease-out",
+                  "Bottom sheet shell",
+                  "Every transition"
+                ],
+                [
+                  "press-small",
+                  "scale 0.9",
+                  "Plus button",
+                  "Press a round button"
+                ],
+                [
+                  "press-large",
+                  "scale 0.98",
+                  "Primary button",
+                  "Press a wide button"
+                ],
+                [
+                  "bump",
+                  "1 to 1.3 to 1, 300 ms",
+                  "Order bar count",
+                  "Order count changes"
+                ],
+                [
+                  "confirm-hold",
+                  "1.2 s",
+                  "Often Ordered card",
+                  "Quick add: plus becomes a check"
+                ],
+                [
+                  "fade-in",
+                  "opacity 0 to 1, 300 ms",
+                  "Clear confirmation",
+                  "Confirmation and search groups appear"
+                ]
+              ]
+            }
+          ],
+          "triggers": "Triggers (Doc D §8): duration-base and easing run when a sheet opens or closes. press-small runs when a round button is pressed and press-large when a wide button is pressed. bump runs each time the order count changes. confirm-hold runs after a quick add, while the plus shows a check. fade-in runs when the clear confirmation or the search groups appear.",
+          "uses": [
+            "Motion is functional, never decorative"
+          ]
+        }
+      ]
+    },
+    "components": {
+      "title": "Components",
+      "intro": "Doc C. Tokens, then {atoms} atoms, {molecules} molecules, {organisms} organisms. Each drawing below is built by calling the smaller functions.",
+      "missing": "Missing drawings: ",
+      "levels": {
+        "A": "Atom",
+        "M": "Molecule",
+        "O": "Organism"
+      },
+      "levelsPlural": {
+        "A": "Atoms",
+        "M": "Molecules",
+        "O": "Organisms"
+      },
+      "all": "All",
+      "searchPlaceholder": "Search components",
+      "builtFrom": "Built from: ",
+      "usedInComponents": "Used in components: ",
+      "usedInScreens": "Used in screens: ",
+      "rule": "Rule: "
+    },
+    "screens": {
+      "title": "Screens",
+      "intro": "Doc A, with Doc D and Doc E for states and content. Only one overlay is open at a time; the order bar hides while any overlay is open (Doc A §6).",
+      "navMap": {
+        "title": "Navigation map (Doc A §6)",
+        "text": "Main page\n |- search ------> Search overlay -> category (scroll) | offer sheet | item sheet\n |- hamburger ---> Category sheet -> scroll to section\n |- pill --------> scroll to section\n |- signature / list card -> Item sheet      |- offer card -> Offer sheet\n |- order bar ---> Order sheet -> line -> Item/Offer sheet (edit) -> Update Order -> Order sheet\n '- Clear order -> confirmation in footer -> empty state"
+      },
+      "cards": [
+        {
+          "title": "Main page",
+          "sections": [
+            "Header tier 1",
+            "Header tier 2 (pills, edge fade)",
+            "The Signatures + dots",
+            "Perfect Pairings",
+            "Category sections (5 + Show all)",
+            "End spacer",
+            "Order bar"
+          ],
+          "render": {
+            "el": "div",
+            "cls": "phone k",
+            "style": {
+              "overflowY": "auto"
+            },
+            "children": [
+              {
+                "fn": "Header",
+                "args": [
+                  0
+                ]
+              },
+              {
+                "el": "div",
+                "style": {
+                  "padding": "24px 0",
+                  "display": "flex",
+                  "flexDirection": "column",
+                  "gap": 16
+                },
+                "children": [
+                  {
+                    "fn": "SecHead",
+                    "args": [
+                      "The Signatures",
+                      "Romanticize your coffee."
+                    ]
+                  },
+                  {
+                    "el": "div",
+                    "style": {
+                      "display": "flex",
+                      "gap": 16,
+                      "padding": "0 16px",
+                      "overflowX": "auto"
+                    },
+                    "children": [
+                      {
+                        "fn": "SigCard",
+                        "args": [
+                          "Matcha Apple Pie"
+                        ]
+                      },
+                      {
+                        "fn": "SigCard",
+                        "args": [
+                          "Ube Matcha"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "el": "div",
+                    "style": {
+                      "textAlign": "center"
+                    },
+                    "children": [
+                      {
+                        "fn": "Dot",
+                        "args": [
+                          1
+                        ]
+                      },
+                      " ",
+                      {
+                        "fn": "Dot"
+                      },
+                      " ",
+                      {
+                        "fn": "Dot"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "el": "div",
+                "style": {
+                  "padding": "32px 0",
+                  "borderTop": "8px solid #F3F7F8",
+                  "display": "flex",
+                  "flexDirection": "column",
+                  "gap": 16
+                },
+                "children": [
+                  {
+                    "fn": "SecHead",
+                    "args": [
+                      "Perfect Pairings",
+                      "Pair a drink with a treat. Some pairs are on offer."
+                    ]
+                  },
+                  {
+                    "el": "div",
+                    "style": {
+                      "display": "flex",
+                      "gap": 16,
+                      "padding": "0 16px",
+                      "overflowX": "auto"
+                    },
+                    "children": [
+                      {
+                        "fn": "OfferCard",
+                        "args": [
+                          {
+                            "offer": 0
+                          }
+                        ]
+                      },
+                      {
+                        "fn": "OfferCard",
+                        "args": [
+                          {
+                            "offer": 1
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "fn": "CatSection",
+                "args": [
+                  "Iced Coffee",
+                  [
+                    "Matcha Apple Pie",
+                    "Ube Matcha",
+                    "Iced Latte"
+                  ]
+                ]
+              },
+              {
+                "el": "div",
+                "style": {
+                  "height": 88
+                }
+              },
+              {
+                "el": "div",
+                "style": {
+                  "position": "sticky",
+                  "bottom": 0
+                },
+                "children": [
+                  {
+                    "fn": "OrderBar"
+                  }
+                ]
+              }
+            ]
+          },
+          "facts": [
+            "Opened by: NFC / QR landing",
+            "Badged items first: New, then Top Rated (Doc D §6)",
+            "Order bar shows only after something is added",
+            "Arabic mode: the whole page switches to Arabic and right-to-left and the layout mirrors; the order of elements inside cards and sheets does not change (Doc A §2)",
+            "Uses: Header, Signatures section, Pairings section, Category section, Order bar"
+          ]
+        },
+        {
+          "title": "Item sheet",
+          "wrap": true,
+          "tabs": [
+            "Drink",
+            "Food (no options)",
+            "Edit mode",
+            "Price on selection"
+          ],
+          "sections": [
+            "Handle",
+            "Image + close",
+            "Title, badge, description, price",
+            "Barista's Way",
+            "Size",
+            "Quantity",
+            "Add-ons",
+            "Often Ordered With",
+            "Pinned footer"
+          ],
+          "renders": [
+            {
+              "fn": "Phone",
+              "args": [
+                null,
+                {
+                  "fn": "ItemSheet",
+                  "args": [
+                    "Latte",
+                    {}
+                  ]
+                }
+              ]
+            },
+            {
+              "fn": "Phone",
+              "args": [
+                null,
+                {
+                  "fn": "ItemSheet",
+                  "args": [
+                    "Brownies",
+                    {
+                      "height": 560
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "fn": "Phone",
+              "args": [
+                null,
+                {
+                  "fn": "ItemSheet",
+                  "args": [
+                    "Latte",
+                    {
+                      "edit": true
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "fn": "Phone",
+              "args": [
+                null,
+                {
+                  "fn": "ItemSheet",
+                  "args": [
+                    "V60",
+                    {}
+                  ]
+                }
+              ]
+            }
+          ],
+          "facts": [
+            "Opened by: signature card, list card, search item, order line (edit)",
+            "Absent blocks are not disabled; blocks follow the item's profile, never drink or dessert (Doc A §5.1)",
+            "Edit mode hides Often Ordered and says Update Order",
+            "Price on Selection: footer says only Add to Order (Doc D §4.7)",
+            "Uses: Item sheet, Option block, Quantity row, Often Ordered card"
+          ]
+        },
+        {
+          "title": "Offer sheet",
+          "tabs": [
+            "Drink + treat",
+            "Two drinks (hypothetical)"
+          ],
+          "sections": [
+            "Handle",
+            "Two-image header + close",
+            "Savings chip, title, prices",
+            "Included products",
+            "Option block per product",
+            "Quantity (whole bundle)",
+            "Pinned footer"
+          ],
+          "renders": [
+            {
+              "fn": "Phone",
+              "args": [
+                null,
+                {
+                  "fn": "OfferSheet",
+                  "args": [
+                    {
+                      "offer": 0
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "fn": "Phone",
+              "args": [
+                null,
+                {
+                  "fn": "OfferSheet",
+                  "args": [
+                    {
+                      "offer": "twoDrinks"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "facts": [
+            "Each product has independent options (Doc D §3.3)",
+            "A product with no options shows no block, drink or dessert (Doc D §3.3)",
+            "Two-drinks pair is example only, not in Doc E"
+          ]
+        },
+        {
+          "title": "Order sheet",
+          "tabs": [
+            "Lines",
+            "Clear confirmation",
+            "Empty"
+          ],
+          "sections": [
+            "Handle",
+            "Title + count",
+            "Order lines",
+            "Footer: subtotal, note, Clear order"
+          ],
+          "renders": [
+            {
+              "fn": "Phone",
+              "args": [
+                null,
+                {
+                  "fn": "OrderSheet",
+                  "args": [
+                    "lines"
+                  ]
+                }
+              ]
+            },
+            {
+              "fn": "Phone",
+              "args": [
+                null,
+                {
+                  "fn": "OrderSheet",
+                  "args": [
+                    "confirm"
+                  ]
+                }
+              ]
+            },
+            {
+              "fn": "Phone",
+              "args": [
+                null,
+                {
+                  "fn": "OrderSheet",
+                  "args": [
+                    "empty"
+                  ]
+                }
+              ]
+            }
+          ],
+          "facts": [
+            "Opened by: order bar",
+            "Line opens its edit sheet; stepper changes quantity only",
+            "No line above subtotal; footer shadow separates",
+            "Uses: Order line, Clear confirmation, Secondary button"
+          ]
+        },
+        {
+          "title": "Category sheet",
+          "sections": [
+            "Handle",
+            "Title + close",
+            "Rows with real counts (14)"
+          ],
+          "render": {
+            "el": "div",
+            "cls": "phone k",
+            "children": [
+              {
+                "fn": "CatSheet"
+              }
+            ]
+          },
+          "facts": [
+            "Opened by: hamburger button",
+            "Row tap closes sheet then scrolls to section"
+          ]
+        },
+        {
+          "title": "Search overlay",
+          "tabs": [
+            "Prompt",
+            "Results: matcha",
+            "No match"
+          ],
+          "sections": [
+            "Top bar: input + close",
+            "Categories",
+            "Offers",
+            "Items",
+            "Helper messages"
+          ],
+          "renders": [
+            {
+              "fn": "Phone",
+              "args": [
+                {
+                  "fn": "Search",
+                  "args": [
+                    0
+                  ]
+                }
+              ]
+            },
+            {
+              "fn": "Phone",
+              "args": [
+                {
+                  "fn": "Search",
+                  "args": [
+                    1
+                  ]
+                }
+              ]
+            },
+            {
+              "fn": "Phone",
+              "args": [
+                {
+                  "fn": "Search",
+                  "args": [
+                    2
+                  ]
+                }
+              ]
+            }
+          ],
+          "facts": [
+            "Opened by: search icon",
+            "Empty groups hidden; matching rules Doc D §7",
+            "Matching runs on English and Arabic text whatever the display language (Doc D §7)",
+            "Groups in order: Categories, Offers, Items"
+          ]
+        }
+      ]
+    },
+    "map": {
+      "title": "Map",
+      "intro": "Atoms, Molecules, Organisms, Screens, generated from the registries. Click a node to highlight its chain. Red outline = used by nothing. Derived sections: none added in this pass.",
+      "btnYellow": "Only yellow users",
+      "btnInteractive": "Only interactive",
+      "yellowUsers": [
+        "Primary button",
+        "Plus button",
+        "Category pill",
+        "Category row",
+        "Checkbox row",
+        "Barista's Way toggle",
+        "Order bar"
+      ],
+      "interactive": [
+        "Icon button",
+        "Language pill",
+        "Category pill",
+        "Plus button",
+        "Stepper",
+        "Segmented control",
+        "Checkbox row",
+        "Primary button",
+        "Secondary button",
+        "Confirm button",
+        "Close button",
+        "List card",
+        "Signature card",
+        "Offer card",
+        "Order line",
+        "Category row",
+        "Barista's Way toggle"
+      ],
+      "cols": {
+        "A": "Atoms",
+        "M": "Molecules",
+        "O": "Organisms",
+        "S": "Screens"
+      },
+      "labels": {
+        "builtFrom": "Built from: ",
+        "usedIn": "Used in: ",
+        "screens": "Screens: ",
+        "openCard": "Open card",
+        "select": "Select a node",
+        "direct": "Direct: ",
+        "total": "Total components: "
+      },
+      "build": {
+        "title": "Build order (React): tokens, then",
+        "counts": "Atoms {A} · Molecules {M} · Organisms {O} · Screens {S}",
+        "then": "Then screens: "
+      }
+    }
+  }
+}

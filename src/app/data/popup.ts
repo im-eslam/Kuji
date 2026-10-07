@@ -7,7 +7,7 @@ export const POPUP: {
   enabled: boolean;
   /**
    * Which picture to show. Either:
-   *  - a file name inside src/assets/popup/, e.g. 'popup.webp' (drop the file in that folder), or
+   *  - a file name inside public/assest/popup/, e.g. 'popup.jpg', or
    *  - a full link ('https://...') or a path in /public ('/promo.jpg').
    * Change this one value (and/or replace the file) to change the picture.
    */
@@ -18,26 +18,15 @@ export const POPUP: {
   delayMs: number;
 } = {
   enabled: true,
-  image: "popup.webp",
+  image: "/assest/popup/popup.jpg",
   alt: { en: "Kuji special offer", ar: "عرض خاص من Kuji" },
   delayMs: 1000,
 };
 
-// Same drop-in idea as the category photos (see lib/images.ts), but in its own folder: Logo.tsx treats any image
-// sitting directly in src/assets/ as the wordmark, so the popup picture must not go there.
-const FILES = import.meta.glob(
-  "../../assets/popup/*.{webp,jpg,jpeg,png,avif,gif,svg}",
-  {
-    eager: true,
-    query: "?url",
-    import: "default",
-  },
-) as Record<string, string>;
-
-/** The URL to show, or undefined when `POPUP.image` points at a file that is not in src/assets/popup/. */
+/** Resolves a popup filename in public/assest/popup/ or passes through a public/remote URL. */
 export function popupImageUrl(): string | undefined {
   const img = POPUP.image.trim();
   if (!img) return undefined;
   if (/^(https?:)?\/\//.test(img) || img.startsWith("/")) return img;
-  return Object.entries(FILES).find(([path]) => path.endsWith(`/${img}`))?.[1];
+  return `/assest/popup/${img}`;
 }

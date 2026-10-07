@@ -26,7 +26,7 @@ export function PromoPopup() {
   useEffect(() => {
     if (!POPUP.enabled) return
     if (!url) {
-      if (import.meta.env.DEV) console.warn(`PromoPopup: "${POPUP.image}" not found in src/assets/popup/, so the popup is skipped.`)
+      if (import.meta.env.DEV) console.warn(`PromoPopup: "${POPUP.image}" is empty, so the popup is skipped.`)
       return
     }
     let alive = true

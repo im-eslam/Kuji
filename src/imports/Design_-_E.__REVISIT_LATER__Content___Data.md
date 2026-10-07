@@ -102,7 +102,7 @@ OrderLine { key, kind (item | bundle), title, qty, unit (number or none), was?,
 5. A `Section` groups items under an id, a pill label and a title.
 6. Everything on the page (pills, sections, signatures, offers, add-ons, the Barista's Way preset, size lists, profiles) is driven by this data, managed through the dashboard. Adding or changing a menu item or its options is a data change only. `src/data.ts` is the MVP seed copy of this data.
 7. Menu order is the order in data. Badge sorting is derived at display time (Doc D §6) and never stored.
-8. Photos: `public/images/{id}.jpg | .webp | .png`, tried in that order.
+8. Photos: `public/assest/categories/{id}.jpg`.
 
 ## 5. Menu structure
 

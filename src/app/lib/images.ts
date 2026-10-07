@@ -1,23 +1,22 @@
-// Category photos: drop one file per category into src/assets/categories/ named exactly <category-id>.webp
-// (see CHANGES.md for the list). Vite hashes each file's name, so the browser may cache it forever, and a
-// category without a file simply has no entry here (no 404 request, the card keeps its placeholder).
-const FILES = import.meta.glob(
-  "../../assets/categories/*.{webp,jpg,jpeg,png,avif}",
-  {
-    eager: true,
-    query: "?url",
-    import: "default",
-  },
-) as Record<string, string>;
+// Category photos live in public/assest/categories as <category-id>.jpg.
+const CATEGORY_IDS = [
+  "iced-coffee",
+  "iced-matcha",
+  "hot-coffee",
+  "blended-coffee",
+  "crunch-shake",
+  "mojitos",
+  "smoothies",
+  "hot-matcha",
+  "hot-chocolate",
+  "pour-over",
+  "cookies",
+  "desserts",
+] as const;
 
-const BY_CATEGORY = new Map<string, string>();
-for (const [path, url] of Object.entries(FILES)) {
-  const id = path
-    .split("/")
-    .pop()!
-    .replace(/\.[^.]+$/, "");
-  BY_CATEGORY.set(id, url);
-}
+const BY_CATEGORY = new Map(
+  CATEGORY_IDS.map((id) => [id, `/assest/categories/${id}.jpg`]),
+);
 
 // URLs that have finished loading (or pre-loading) this session.
 const loadedUrls = new Set<string>();

@@ -4,33 +4,32 @@ The `src/` changes are already in your project. This drop adds `index.html` and 
 (I could not run Vite, tsc or a browser here; every file passes a syntax check, but please run `npm run build` once.)
 
 ## Category photos: the 12 file names
-Put these in `src/assets/categories/`. One photo per category, used for every product in it.
-Name them exactly like this (lowercase, `.webp`):
+Put these in `public/assest/categories/`. One JPG photo per category, used for every product in it.
+Name them exactly like this (lowercase, `.jpg`):
 
 | File | Category |
 |---|---|
-| `iced-coffee.webp` | Iced Coffee |
-| `iced-matcha.webp` | Iced Matcha |
-| `hot-coffee.webp` | Hot Coffee |
-| `blended-coffee.webp` | Blended Coffee |
-| `crunch-shake.webp` | Crunch Shake |
-| `mojitos.webp` | Mojitos |
-| `smoothies.webp` | Smoothies |
-| `hot-matcha.webp` | Hot Matcha |
-| `hot-chocolate.webp` | Hot Chocolate |
-| `pour-over.webp` | Pour Over |
-| `cookies.webp` | Cookies |
-| `desserts.webp` | Desserts |
+| `iced-coffee.jpg` | Iced Coffee |
+| `iced-matcha.jpg` | Iced Matcha |
+| `hot-coffee.jpg` | Hot Coffee |
+| `blended-coffee.jpg` | Blended Coffee |
+| `crunch-shake.jpg` | Crunch Shake |
+| `mojitos.jpg` | Mojitos |
+| `smoothies.jpg` | Smoothies |
+| `hot-matcha.jpg` | Hot Matcha |
+| `hot-chocolate.jpg` | Hot Chocolate |
+| `pour-over.jpg` | Pour Over |
+| `cookies.jpg` | Cookies |
+| `desserts.jpg` | Desserts |
 
-Export each at **1200 x 900 px, WebP, quality about 75, under 80 KB**, with the subject centred. The same file shows as a
+Export each at **1200 x 900 px, JPG**, with the subject centred. The same file shows as a
 square (signature cards), a 4:3 banner (item sheet) and an 80px thumbnail, so keep the subject inside the middle square.
-`.jpg`, `.png` and `.avif` also work if you name them the same way. A missing file just keeps the gradient placeholder.
-Pairings and the order sheet use the photo of each product's category, so they need nothing extra.
+A missing file just keeps the gradient placeholder. Pairings and the order sheet use the photo of each product's
+category, so they need nothing extra.
 
 ## What changed, and why it is faster
-- **One request per category, not per product.** Before, every product asked for `/images/<product>.jpg|webp|png`, probing up
-  to three extensions (404s) each. Now the 12 category files are bundled by Vite with hashed names, so they are cached
-  forever, there are no 404 probes, and 60 cards share 12 downloads.
+- **One request per category, not per product.** The 12 category files are loaded directly from `public/assest/`, so 60
+  cards share 12 downloads.
 - **Photos are warmed before React renders.** `main.tsx` starts fetching the signature cards' photos immediately, then the
   other categories when the browser is idle, so sheets and search rows open with photos already in memory.
 - **No flash or re-fade.** A photo already loaded this session shows instantly; only a first load fades in.
@@ -56,7 +55,7 @@ before any JS arrives (no white flash). Replace both `index.html` and `src/index
 Self-hosting the two fonts (e.g. `@fontsource`) would remove the third-party request entirely.
 
 ## Server settings that matter as much as the code
-- Serve `/assets/*` with `Cache-Control: public, max-age=31536000, immutable` (the hashed files are safe to cache forever).
+- Serve `/assest/*` with an appropriate `Cache-Control` header.
 - Turn on Brotli or gzip, and HTTP/2 or HTTP/3 (most hosts like Netlify, Vercel and Cloudflare do this by default).
 
 ---

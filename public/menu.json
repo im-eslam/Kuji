@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-11T00:46:19.689Z",
+  "updatedAt": "2026-10-11T00:46:57.195Z",
   "categories": [
     {
       "id": "smoothies",
@@ -1230,7 +1230,7 @@
         }
       ],
       "baristaWay": {
-        "enabled": true,
+        "enabled": false,
         "addOns": [
           "oat-milk",
           "vanilla"

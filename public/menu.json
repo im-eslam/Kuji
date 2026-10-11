@@ -1,7 +1,25 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-11T00:42:34.327Z",
+  "updatedAt": "2026-10-11T00:46:19.689Z",
   "categories": [
+    {
+      "id": "smoothies",
+      "kind": "drink",
+      "pill": {
+        "en": "Smoothies",
+        "ar": "سموذي"
+      },
+      "title": {
+        "en": "Smoothies",
+        "ar": "سموذي"
+      },
+      "sub": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "src/assets/categories/smoothies.webp",
+      "isPopular": true
+    },
     {
       "id": "crunch-shake",
       "kind": "drink",
@@ -18,7 +36,7 @@
         "ar": ""
       },
       "image": "src/assets/categories/crunch-shake.webp",
-      "isPopular": true
+      "isPopular": false
     },
     {
       "id": "hot-coffee",
@@ -108,24 +126,6 @@
         "ar": ""
       },
       "image": "src/assets/categories/mojitos.webp",
-      "isPopular": false
-    },
-    {
-      "id": "smoothies",
-      "kind": "drink",
-      "pill": {
-        "en": "Smoothies",
-        "ar": "سموذي"
-      },
-      "title": {
-        "en": "Smoothies",
-        "ar": "سموذي"
-      },
-      "sub": {
-        "en": "",
-        "ar": ""
-      },
-      "image": "src/assets/categories/smoothies.webp",
       "isPopular": false
     },
     {
@@ -3745,7 +3745,7 @@
         "iced-latte",
         "oreo-cookies"
       ],
-      "bundlePrice": 150
+      "bundlePrice": 175
     },
     {
       "id": "latte-brownies",
@@ -3761,7 +3761,7 @@
         "iced-spanish-latte",
         "tiramisu-cake"
       ],
-      "bundlePrice": 220
+      "bundlePrice": 245
     },
     {
       "id": "cappuccino-kinder-cookies",

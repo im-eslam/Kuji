@@ -1,7 +1,25 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "1970-01-01T00:00:00.000Z",
+  "updatedAt": "2026-10-11T01:10:52.964Z",
   "categories": [
+    {
+      "id": "crunch-shake",
+      "kind": "drink",
+      "pill": {
+        "en": "Crunch Shake",
+        "ar": "كرنش شيك"
+      },
+      "title": {
+        "en": "Crunch Shake",
+        "ar": "كرنش شيك"
+      },
+      "sub": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "src/assets/categories/crunch-shake.webp",
+      "isPopular": false
+    },
     {
       "id": "iced-coffee",
       "kind": "drink",
@@ -72,24 +90,6 @@
         "ar": ""
       },
       "image": "src/assets/categories/blended-coffee.webp",
-      "isPopular": false
-    },
-    {
-      "id": "crunch-shake",
-      "kind": "drink",
-      "pill": {
-        "en": "Crunch Shake",
-        "ar": "كرنش شيك"
-      },
-      "title": {
-        "en": "Crunch Shake",
-        "ar": "كرنش شيك"
-      },
-      "sub": {
-        "en": "",
-        "ar": ""
-      },
-      "image": "src/assets/categories/crunch-shake.webp",
       "isPopular": false
     },
     {

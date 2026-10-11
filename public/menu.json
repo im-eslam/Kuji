@@ -1,25 +1,7 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-11T00:46:57.195Z",
+  "updatedAt": "2026-10-11T01:00:15.410Z",
   "categories": [
-    {
-      "id": "smoothies",
-      "kind": "drink",
-      "pill": {
-        "en": "Smoothies",
-        "ar": "سموذي"
-      },
-      "title": {
-        "en": "Smoothies",
-        "ar": "سموذي"
-      },
-      "sub": {
-        "en": "",
-        "ar": ""
-      },
-      "image": "src/assets/categories/smoothies.webp",
-      "isPopular": true
-    },
     {
       "id": "crunch-shake",
       "kind": "drink",
@@ -37,6 +19,24 @@
       },
       "image": "src/assets/categories/crunch-shake.webp",
       "isPopular": false
+    },
+    {
+      "id": "smoothies",
+      "kind": "drink",
+      "pill": {
+        "en": "Smoothies",
+        "ar": "سموذي"
+      },
+      "title": {
+        "en": "Smoothies",
+        "ar": "سموذي"
+      },
+      "sub": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "src/assets/categories/smoothies.webp",
+      "isPopular": true
     },
     {
       "id": "hot-coffee",

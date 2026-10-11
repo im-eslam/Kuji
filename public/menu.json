@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-11T01:00:15.410Z",
+  "updatedAt": "2026-10-11T01:01:25.181Z",
   "categories": [
     {
       "id": "crunch-shake",
@@ -1208,7 +1208,7 @@
         "en": "Ube with a light sweet taste and rich antioxidants.",
         "ar": "أوبي بطعم حلو خفيف وغني بمضادات الأكسدة."
       },
-      "price": 150,
+      "price": 500,
       "sizes": [
         {
           "id": "regular",

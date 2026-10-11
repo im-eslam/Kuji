@@ -120,12 +120,29 @@ async function loadMenu(): Promise<Snapshot> {
 const isMenuDocument = (raw: unknown): raw is Partial<MenuData> =>
   typeof raw === 'object' && raw !== null && Array.isArray((raw as MenuData).categories) && Array.isArray((raw as MenuData).products)
 
-/** The published menu, fetched with a cache-buster so a fresh commit is never hidden behind the CDN. */
+async function fetchMenuFrom(url: string, init: RequestInit): Promise<MenuData | null> {
+  try {
+    const res = await fetch(url, { cache: 'no-store', ...init })
+    if (!res.ok) return null
+    const raw: unknown = await res.json()
+    return isMenuDocument(raw) ? normalizeMenu(raw) : null
+  } catch (e) {
+    if (e instanceof DOMException && e.name === 'AbortError') throw e
+    return null
+  }
+}
+
+/**
+ * The published menu. The live file in the GitHub repo wins, so an admin save shows up on the
+ * site immediately instead of waiting for a redeploy. The copy shipped with the site is the fallback.
+ */
 async function fetchPublishedMenu(signal: AbortSignal): Promise<MenuData | null> {
-  const res = await fetch(`${import.meta.env.BASE_URL}menu.json?t=${Date.now()}`, { cache: 'no-store', signal })
-  if (!res.ok) return null
-  const raw: unknown = await res.json()
-  return isMenuDocument(raw) ? normalizeMenu(raw) : null
+  const live = await fetchMenuFrom(`${CONTENTS_URL}?ref=${encodeURIComponent(GITHUB_BRANCH)}&t=${Date.now()}`, {
+    signal,
+    headers: { Accept: 'application/vnd.github.raw+json', 'X-GitHub-Api-Version': '2022-11-28' },
+  })
+  if (live) return live
+  return fetchMenuFrom(`${import.meta.env.BASE_URL}menu.json?t=${Date.now()}`, { signal })
 }
 
 async function saveMenu(menu: MenuData, sha: string | null, message: string): Promise<string> {

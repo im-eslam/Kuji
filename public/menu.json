@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-11T01:12:46.543Z",
+  "updatedAt": "2026-10-11T01:12:54.468Z",
   "categories": [
     {
       "id": "crunch-shake",
@@ -3782,7 +3782,7 @@
     }
   ],
   "popup": {
-    "enabled": false,
+    "enabled": true,
     "image": "src/assets/popup/popup.webp",
     "title": {
       "en": "",

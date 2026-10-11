@@ -1,7 +1,25 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-11T01:12:54.468Z",
+  "updatedAt": "2026-10-11T12:14:00.401Z",
   "categories": [
+    {
+      "id": "smoothies",
+      "kind": "drink",
+      "pill": {
+        "en": "Smoothies",
+        "ar": "سموذي"
+      },
+      "title": {
+        "en": "Smoothies",
+        "ar": "سموذي"
+      },
+      "sub": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "src/assets/categories/smoothies.webp",
+      "isPopular": false
+    },
     {
       "id": "crunch-shake",
       "kind": "drink",
@@ -108,24 +126,6 @@
         "ar": ""
       },
       "image": "src/assets/categories/mojitos.webp",
-      "isPopular": false
-    },
-    {
-      "id": "smoothies",
-      "kind": "drink",
-      "pill": {
-        "en": "Smoothies",
-        "ar": "سموذي"
-      },
-      "title": {
-        "en": "Smoothies",
-        "ar": "سموذي"
-      },
-      "sub": {
-        "en": "",
-        "ar": ""
-      },
-      "image": "src/assets/categories/smoothies.webp",
       "isPopular": false
     },
     {

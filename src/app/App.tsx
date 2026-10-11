@@ -1,7 +1,8 @@
 import { memo } from 'react'
-import { SECTIONS } from './data/menu'
+import { useCatalog } from './lib/catalog'
 import { sectionDomId, useScrollSpy } from './hooks/useScrollSpy'
 import { LangProvider, useLang } from './state/LangContext'
+import { MenuProvider, useMenu } from './state/MenuContext'
 import { OrderProvider } from './state/OrderContext'
 import { UIProvider, useUI } from './state/UIContext'
 import { SectionDivider } from './components/atoms/SectionDivider'
@@ -17,15 +18,14 @@ import { PromoPopup } from './components/organisms/PromoPopup'
 import { SearchOverlay } from './components/organisms/SearchOverlay'
 import { SignaturesSection } from './components/organisms/SignaturesSection'
 
-const IDS = SECTIONS.map((s) => s.id)
-
 // The whole menu body. It reads nothing that changes while scrolling, so the scroll-spy updating `activeId`
 // (several times a second) re-renders only the header, never the ~60 cards.
 const Sections = memo(function Sections() {
   const { lang } = useLang()
+  const { sections } = useCatalog()
   return (
     <main>
-      {SECTIONS.map((s, i) => (
+      {sections.map((s, i) => (
         <section key={s.id} id={sectionDomId(s.id)} aria-label={s.title[lang]}>
           {i > 0 && <SectionDivider />}
           {s.kind === 'signatures' ? <SignaturesSection /> : s.kind === 'pairings' ? <PairingsSection /> : <CategorySection section={s} />}
@@ -38,7 +38,8 @@ const Sections = memo(function Sections() {
 function Shell() {
   const { lang, dir } = useLang()
   const { overlay, liveMessage } = useUI()
-  const { activeId, goTo } = useScrollSpy(IDS)
+  const { sections } = useCatalog()
+  const { activeId, goTo } = useScrollSpy(sections.map((s) => s.id))
 
   return (
     <div dir={dir} lang={lang} className="mx-auto min-h-dvh w-full max-w-120 bg-white text-navy">
@@ -59,14 +60,23 @@ function Shell() {
   )
 }
 
+// Waits for the published menu.json so the page never flashes the bundled copy before the live one.
+function MenuGate() {
+  const { isLoading } = useMenu()
+  if (isLoading) return <div className="min-h-dvh bg-white" role="status" aria-label="Loading menu" />
+  return <Shell />
+}
+
 export default function App() {
   return (
-    <LangProvider>
-      <OrderProvider>
-        <UIProvider>
-          <Shell />
-        </UIProvider>
-      </OrderProvider>
-    </LangProvider>
+    <MenuProvider>
+      <LangProvider>
+        <OrderProvider>
+          <UIProvider>
+            <MenuGate />
+          </UIProvider>
+        </OrderProvider>
+      </LangProvider>
+    </MenuProvider>
   )
 }

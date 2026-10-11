@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react'
-import { SECTIONS } from '../../data/menu'
+import { useCatalog } from '../../lib/catalog'
 import { useLang } from '../../state/LangContext'
 import { useUI } from '../../state/UIContext'
 import { CategoryPill } from '../atoms/CategoryPill'
@@ -11,6 +11,7 @@ import { Logo } from '../atoms/Logo'
 export function Header({ activeId, onPill }: { activeId: string; onPill: (id: string) => void }) {
   const { t, pick, lang } = useLang()
   const ui = useUI()
+  const { sections } = useCatalog()
   const rail = useRef<HTMLDivElement>(null)
   const centered = useRef(false)
   const [thumb, setThumb] = useState<{ x: number; w: number } | null>(null)
@@ -83,7 +84,7 @@ export function Header({ activeId, onPill }: { activeId: string; onPill: (id: st
               className={`absolute top-1 left-0 h-10 rounded-full bg-yellow ${animated ? 'transition-[transform,width] duration-250 ease-(--ease-smooth)' : ''}`}
               style={{ width: thumb?.w ?? 0, transform: `translateX(${thumb?.x ?? 0}px)`, opacity: thumb ? 1 : 0 }}
             />
-            {SECTIONS.map((s) => (
+            {sections.map((s) => (
               <CategoryPill key={s.id} id={s.id} label={pick(s.pill)} active={s.id === activeId} onClick={() => onPill(s.id)} />
             ))}
           </div>

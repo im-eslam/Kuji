@@ -1,23 +1,24 @@
-import { ADDONS, BARISTAS_WAY, SIZES } from '../data/addons'
 import type { AddOn, AddOnId, Profile, Size } from '../data/types'
+import { getCatalog } from './catalog'
 
-const ADDON_ORDER = new Map(ADDONS.map((a, i) => [a.id, i]))
-export const ADDON_BY_ID = new Map(ADDONS.map((a) => [a.id, a]))
-export const SIZE_BY_ID = new Map(SIZES.map((s) => [s.id, s]))
+export const getAddOn = (id: AddOnId): AddOn | undefined => getCatalog().addOnById.get(id)
 
-export const sortAddOns = (ids: AddOnId[]): AddOnId[] =>
-  [...ids].sort((a, b) => (ADDON_ORDER.get(a) ?? 0) - (ADDON_ORDER.get(b) ?? 0))
+export const sortAddOns = (ids: AddOnId[]): AddOnId[] => {
+  const order = new Map(getCatalog().addOns.map((a, i) => [a.id, i]))
+  return [...ids].sort((a, b) => (order.get(a) ?? 0) - (order.get(b) ?? 0))
+}
 
-export const profileSizes = (p: Profile): Size[] =>
-  p.sizes.map((id) => SIZE_BY_ID.get(id)).filter((s): s is Size => !!s)
+export const profileSizes = (p: Profile): Size[] => p.sizeDefs ?? []
 
 export const profileAddOns = (p: Profile): AddOn[] =>
-  p.addOns.map((id) => ADDON_BY_ID.get(id)).filter((a): a is AddOn => !!a)
+  p.addOns.map(getAddOn).filter((a): a is AddOn => !!a)
+
+const baristaIds = (p: Profile): AddOnId[] => p.baristaAddOns ?? []
 
 export const showSizeBlock = (p: Profile): boolean => p.sizes.length >= 2
 export const showAddOnBlock = (p: Profile): boolean => p.addOns.length > 0
 export const showBaristaBlock = (p: Profile): boolean =>
-  p.baristaWay && BARISTAS_WAY.addOns.every((id) => p.addOns.includes(id))
+  p.baristaWay && baristaIds(p).length > 0 && baristaIds(p).every((id) => p.addOns.includes(id))
 export const profileHasOptions = (p: Profile): boolean =>
   showSizeBlock(p) || showAddOnBlock(p) || showBaristaBlock(p)
 
@@ -26,13 +27,20 @@ export const defaultSizeId = (p: Profile): string | undefined => p.sizes[0]
 export const toggleAddOn = (selected: AddOnId[], id: AddOnId): AddOnId[] =>
   selected.includes(id) ? selected.filter((x) => x !== id) : sortAddOns([...selected, id])
 
-export const isBaristaOn = (selected: AddOnId[]): boolean =>
-  BARISTAS_WAY.addOns.every((id) => selected.includes(id))
+export const isBaristaOn = (selected: AddOnId[], p: Profile): boolean =>
+  baristaIds(p).length > 0 && baristaIds(p).every((id) => selected.includes(id))
 
-export function toggleBarista(selected: AddOnId[]): AddOnId[] {
-  if (isBaristaOn(selected)) return selected.filter((id) => !BARISTAS_WAY.addOns.includes(id))
-  return sortAddOns([...new Set([...selected, ...BARISTAS_WAY.addOns])])
+export function toggleBarista(selected: AddOnId[], p: Profile): AddOnId[] {
+  const preset = baristaIds(p)
+  if (isBaristaOn(selected, p)) return selected.filter((id) => !preset.includes(id))
+  return sortAddOns([...new Set([...selected, ...preset])])
 }
 
-export const baristaPrice = (): number =>
-  BARISTAS_WAY.addOns.reduce((sum, id) => sum + (ADDON_BY_ID.get(id)?.price ?? 0), 0)
+export const baristaPrice = (p: Profile): number =>
+  baristaIds(p).reduce((sum, id) => sum + (getAddOn(id)?.price ?? 0), 0)
+
+export const baristaNames = (p: Profile) =>
+  baristaIds(p).flatMap((id) => {
+    const a = getAddOn(id)
+    return a ? [a.name] : []
+  })

@@ -1,7 +1,7 @@
 import { memo } from 'react'
-import { ITEM_BY_ID } from '../../data/menu'
 import type { Offer } from '../../data/types'
 import { useLang } from '../../state/LangContext'
+import { getItem } from '../../lib/catalog'
 import { offerBase, offerRegularBase, offerSavings } from '../../lib/pricing'
 import { Chevron } from '../atoms/Chevron'
 import { Chip } from '../atoms/Chip'
@@ -19,7 +19,7 @@ import { Price } from '../atoms/Price'
 //  - Cards in the rail are as tall as the tallest; the price row is pinned to the bottom edge.
 export const OfferCard = memo(function OfferCard({ offer, onOpen }: { offer: Offer; onOpen: (id: string) => void }) {
   const { pick, t, money } = useLang()
-  const [a, b] = offer.items.map((id) => ITEM_BY_ID[id])
+  const [a, b] = offer.items.map((id) => getItem(id)!)
   const savings = offerSavings(offer)
   return (
     <button

@@ -26,6 +26,14 @@ const BY_CATEGORY = new Map<string, string>([
   ["desserts", desserts],
 ]);
 
+/** Lets menu.json point a category at a remote or public-folder photo (bundled paths keep their hashed build URL). */
+export function registerCategoryImages(categories: { id: string; image: string }[]): void {
+  for (const c of categories) {
+    const value = c.image.trim();
+    if (/^(https?:)?\/\//.test(value) || value.startsWith("/")) BY_CATEGORY.set(c.id, value);
+  }
+}
+
 // URLs that have finished loading (or pre-loading) this session.
 const loadedUrls = new Set<string>();
 export const isLoaded = (url: string) => loadedUrls.has(url);

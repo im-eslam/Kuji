@@ -1,12 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
-import { ITEM_BY_ID, SIGNATURE_IDS } from "./app/data/menu";
+import { getCatalog } from "./app/lib/catalog";
 import { warmCategoryImages } from "./app/lib/images";
 import "./index.css";
 
 warmCategoryImages([
-  ...new Set(SIGNATURE_IDS.map((id) => ITEM_BY_ID[id].categoryId)),
+  ...new Set(getCatalog().signatureIds.map((id) => getCatalog().itemById[id].categoryId)),
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(

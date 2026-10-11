@@ -1,6 +1,6 @@
-import { ITEM_BY_ID } from '../../data/menu'
 import { useLang } from '../../state/LangContext'
-import { ADDON_BY_ID, SIZE_BY_ID, showSizeBlock } from '../../lib/options'
+import { getItem } from '../../lib/catalog'
+import { getAddOn, showSizeBlock } from '../../lib/options'
 import type { OrderLine as Line } from '../../data/types'
 import { Chip } from '../atoms/Chip'
 import { Img } from '../atoms/Image'
@@ -16,9 +16,9 @@ interface Props {
 export function OrderLineItem({ line, ...handlers }: Props) {
   const { pick } = useLang()
   const part = line.parts[0]
-  const item = ITEM_BY_ID[part.itemId]
-  const size = part.sizeId && showSizeBlock(item.profile) ? SIZE_BY_ID.get(part.sizeId) : undefined
-  const chips = [...(size ? [size.name] : []), ...part.addOnIds.map((id) => ADDON_BY_ID.get(id)!.name)]
+  const item = getItem(part.itemId)!
+  const size = part.sizeId && showSizeBlock(item.profile) ? item.profile.sizeDefs?.find((s) => s.id === part.sizeId) : undefined
+  const chips = [...(size ? [size.name] : []), ...part.addOnIds.flatMap((id) => { const a = getAddOn(id); return a ? [a.name] : [] })]
   return (
     <OrderLineFrame
       line={line}

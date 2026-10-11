@@ -1,6 +1,6 @@
-import { ITEM_BY_ID } from '../../data/menu'
 import { useLang } from '../../state/LangContext'
-import { ADDON_BY_ID, SIZE_BY_ID, showSizeBlock } from '../../lib/options'
+import { getItem } from '../../lib/catalog'
+import { getAddOn, showSizeBlock } from '../../lib/options'
 import type { OrderLine as Line } from '../../data/types'
 import { Chip } from '../atoms/Chip'
 import { Img } from '../atoms/Image'
@@ -15,12 +15,12 @@ interface Props {
 
 export function OrderLineBundle({ line, ...handlers }: Props) {
   const { pick } = useLang()
-  const items = line.parts.map((p) => ITEM_BY_ID[p.itemId])
+  const items = line.parts.map((p) => getItem(p.itemId)!)
   const names = items.map((i) => pick(i.name))
   // The title already names both products, so only a product that has chips gets a line of its own.
   const rows = line.parts.flatMap((p, i) => {
-    const size = p.sizeId && showSizeBlock(items[i].profile) ? SIZE_BY_ID.get(p.sizeId) : undefined
-    const chips = [...(size ? [size.name] : []), ...p.addOnIds.map((id) => ADDON_BY_ID.get(id)!.name)]
+    const size = p.sizeId && showSizeBlock(items[i].profile) ? items[i].profile.sizeDefs?.find((s) => s.id === p.sizeId) : undefined
+    const chips = [...(size ? [size.name] : []), ...p.addOnIds.flatMap((id) => { const a = getAddOn(id); return a ? [a.name] : [] })]
     return chips.length > 0 ? [{ name: names[i], chips }] : []
   })
   return (

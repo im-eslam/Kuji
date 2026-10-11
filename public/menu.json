@@ -1,0 +1,3801 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "1970-01-01T00:00:00.000Z",
+  "categories": [
+    {
+      "id": "iced-coffee",
+      "kind": "drink",
+      "pill": {
+        "en": "Iced Coffee",
+        "ar": "قهوة مثلجة"
+      },
+      "title": {
+        "en": "Iced Coffee",
+        "ar": "قهوة مثلجة"
+      },
+      "sub": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "src/assets/categories/iced-coffee.webp",
+      "isPopular": false
+    },
+    {
+      "id": "iced-matcha",
+      "kind": "drink",
+      "pill": {
+        "en": "Iced Matcha",
+        "ar": "ماتشا مثلجة"
+      },
+      "title": {
+        "en": "Iced Matcha",
+        "ar": "ماتشا مثلجة"
+      },
+      "sub": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "src/assets/categories/iced-matcha.webp",
+      "isPopular": false
+    },
+    {
+      "id": "hot-coffee",
+      "kind": "drink",
+      "pill": {
+        "en": "Hot Coffee",
+        "ar": "قهوة ساخنة"
+      },
+      "title": {
+        "en": "Hot Coffee",
+        "ar": "قهوة ساخنة"
+      },
+      "sub": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "src/assets/categories/hot-coffee.webp",
+      "isPopular": false
+    },
+    {
+      "id": "blended-coffee",
+      "kind": "drink",
+      "pill": {
+        "en": "Blended Coffee",
+        "ar": "قهوة بليندد"
+      },
+      "title": {
+        "en": "Blended Coffee",
+        "ar": "قهوة بليندد"
+      },
+      "sub": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "src/assets/categories/blended-coffee.webp",
+      "isPopular": false
+    },
+    {
+      "id": "crunch-shake",
+      "kind": "drink",
+      "pill": {
+        "en": "Crunch Shake",
+        "ar": "كرنش شيك"
+      },
+      "title": {
+        "en": "Crunch Shake",
+        "ar": "كرنش شيك"
+      },
+      "sub": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "src/assets/categories/crunch-shake.webp",
+      "isPopular": false
+    },
+    {
+      "id": "mojitos",
+      "kind": "drink",
+      "pill": {
+        "en": "Mojitos",
+        "ar": "موهيتو"
+      },
+      "title": {
+        "en": "Mojitos",
+        "ar": "موهيتو"
+      },
+      "sub": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "src/assets/categories/mojitos.webp",
+      "isPopular": false
+    },
+    {
+      "id": "smoothies",
+      "kind": "drink",
+      "pill": {
+        "en": "Smoothies",
+        "ar": "سموذي"
+      },
+      "title": {
+        "en": "Smoothies",
+        "ar": "سموذي"
+      },
+      "sub": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "src/assets/categories/smoothies.webp",
+      "isPopular": false
+    },
+    {
+      "id": "hot-matcha",
+      "kind": "drink",
+      "pill": {
+        "en": "Hot Matcha",
+        "ar": "ماتشا ساخنة"
+      },
+      "title": {
+        "en": "Hot Matcha",
+        "ar": "ماتشا ساخنة"
+      },
+      "sub": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "src/assets/categories/hot-matcha.webp",
+      "isPopular": false
+    },
+    {
+      "id": "hot-chocolate",
+      "kind": "drink",
+      "pill": {
+        "en": "Hot Chocolate",
+        "ar": "شوكولاتة ساخنة"
+      },
+      "title": {
+        "en": "Hot Chocolate",
+        "ar": "شوكولاتة ساخنة"
+      },
+      "sub": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "src/assets/categories/hot-chocolate.webp",
+      "isPopular": false
+    },
+    {
+      "id": "pour-over",
+      "kind": "drink",
+      "pill": {
+        "en": "Pour Over",
+        "ar": "بور أوفر"
+      },
+      "title": {
+        "en": "Pour Over Coffee",
+        "ar": "قهوة بور أوفر"
+      },
+      "sub": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "src/assets/categories/pour-over.webp",
+      "isPopular": false
+    },
+    {
+      "id": "cookies",
+      "kind": "food",
+      "pill": {
+        "en": "Cookies",
+        "ar": "كوكيز"
+      },
+      "title": {
+        "en": "Cookies",
+        "ar": "كوكيز"
+      },
+      "sub": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "src/assets/categories/cookies.webp",
+      "isPopular": false
+    },
+    {
+      "id": "desserts",
+      "kind": "food",
+      "pill": {
+        "en": "Desserts",
+        "ar": "حلويات"
+      },
+      "title": {
+        "en": "Sweeten Your Coffee Break With Delicious Desserts",
+        "ar": "حلّي استراحة قهوتك بألذ الحلويات"
+      },
+      "sub": {
+        "en": "",
+        "ar": ""
+      },
+      "image": "src/assets/categories/desserts.webp",
+      "isPopular": false
+    }
+  ],
+  "addOns": [
+    {
+      "id": "oat-milk",
+      "name": {
+        "en": "Oat Milk",
+        "ar": "حليب الشوفان"
+      },
+      "price": 35,
+      "scope": "drinks"
+    },
+    {
+      "id": "almond-milk",
+      "name": {
+        "en": "Almond Milk",
+        "ar": "حليب اللوز"
+      },
+      "price": 35,
+      "scope": "drinks"
+    },
+    {
+      "id": "coconut-milk",
+      "name": {
+        "en": "Coconut Milk",
+        "ar": "حليب جوز الهند"
+      },
+      "price": 35,
+      "scope": "drinks"
+    },
+    {
+      "id": "extra-coffee-shot",
+      "name": {
+        "en": "Extra Coffee Shot",
+        "ar": "شوت قهوة إضافي"
+      },
+      "price": 35,
+      "scope": "drinks"
+    },
+    {
+      "id": "vanilla",
+      "name": {
+        "en": "Vanilla",
+        "ar": "فانيليا"
+      },
+      "price": 20,
+      "scope": "drinks"
+    },
+    {
+      "id": "caramel",
+      "name": {
+        "en": "Caramel",
+        "ar": "كراميل"
+      },
+      "price": 20,
+      "scope": "drinks"
+    },
+    {
+      "id": "hazelnut",
+      "name": {
+        "en": "Hazelnut",
+        "ar": "بندق"
+      },
+      "price": 25,
+      "scope": "drinks"
+    },
+    {
+      "id": "nutella",
+      "name": {
+        "en": "Nutella",
+        "ar": "نوتيلا"
+      },
+      "price": 25,
+      "scope": "bakery"
+    },
+    {
+      "id": "white-sauce",
+      "name": {
+        "en": "White Sauce",
+        "ar": "صوص أبيض"
+      },
+      "price": 30,
+      "scope": "bakery"
+    },
+    {
+      "id": "chocolate-sauce",
+      "name": {
+        "en": "Chocolate Sauce",
+        "ar": "صوص شوكولاتة"
+      },
+      "price": 25,
+      "scope": "all"
+    },
+    {
+      "id": "salted-caramel-sauce",
+      "name": {
+        "en": "Salted Caramel Sauce",
+        "ar": "صوص كراميل مملح"
+      },
+      "price": 25,
+      "scope": "all"
+    },
+    {
+      "id": "strawberry",
+      "name": {
+        "en": "Strawberry",
+        "ar": "فراولة"
+      },
+      "price": 20,
+      "scope": "all"
+    },
+    {
+      "id": "berries",
+      "name": {
+        "en": "Berries",
+        "ar": "توت"
+      },
+      "price": 25,
+      "scope": "all"
+    },
+    {
+      "id": "blueberry-sauce",
+      "name": {
+        "en": "Blueberry Sauce",
+        "ar": "صوص توت أزرق"
+      },
+      "price": 20,
+      "scope": "all"
+    }
+  ],
+  "products": [
+    {
+      "id": "iced-latte",
+      "categoryId": "iced-coffee",
+      "name": {
+        "en": "Iced Latte",
+        "ar": "آيس لاتيه"
+      },
+      "desc": {
+        "en": "Made with rich espresso, milk, and ice.",
+        "ar": "إسبريسو غني مع الحليب والثلج."
+      },
+      "price": 110,
+      "sizes": [
+        {
+          "id": "regular",
+          "name": {
+            "en": "Regular",
+            "ar": "عادي"
+          },
+          "mode": "delta",
+          "value": 0
+        },
+        {
+          "id": "large",
+          "name": {
+            "en": "Large",
+            "ar": "كبير"
+          },
+          "mode": "delta",
+          "value": 15
+        }
+      ],
+      "baristaWay": {
+        "enabled": true,
+        "addOns": [
+          "oat-milk",
+          "vanilla"
+        ]
+      },
+      "oftenOrderedWith": [
+        "classic-cookies",
+        "kinder-cookies",
+        "tiramisu-cake"
+      ],
+      "excludedAddOns": [
+        "strawberry",
+        "berries",
+        "blueberry-sauce"
+      ],
+      "inStock": true
+    },
+    {
+      "id": "iced-spanish-latte",
+      "categoryId": "iced-coffee",
+      "name": {
+        "en": "Iced Spanish Latte",
+        "ar": "آيس سبانش لاتيه"
+      },
+      "desc": {
+        "en": "Rich espresso with cold milk, ice, and sweetened condensed milk.",
+        "ar": "إسبريسو غني مع حليب بارد وثلج وحليب مكثف محلى."
+      },
+      "price": 130,
+      "sizes": [
+        {
+          "id": "regular",
+          "name": {
+            "en": "Regular",
+            "ar": "عادي"
+          },
+          "mode": "delta",
+          "value": 0
+        },
+        {
+          "id": "large",
+          "name": {
+            "en": "Large",
+            "ar": "كبير"
+          },
+          "mode": "delta",
+          "value": 15
+        }
+      ],
+      "baristaWay": {
+        "enabled": true,
+        "addOns": [
+          "oat-milk",
+          "vanilla"
+        ]
+      },
+      "oftenOrderedWith": [
+        "classic-cookies",
+        "kinder-cookies",
+        "tiramisu-cake"
+      ],
+      "excludedAddOns": [
+        "strawberry",
+        "berries",
+        "blueberry-sauce"
+      ],
+      "inStock": true,
+      "badge": "top"
+    },
+    {
+      "id": "iced-salted-caramel-latte",
+      "categoryId": "iced-coffee",
+      "name": {
+        "en": "Iced Salted Caramel Latte",
+        "ar": "آيس سولتد كراميل لاتيه"
+      },
+      "desc": {
+        "en": "Iced latte combining coffee, smooth milk, and salted caramel sauce.",
+        "ar": "لاتيه مثلج يجمع القهوة والحليب الناعم وصوص الكراميل المملح."
+      },
+      "price": 130,
+      "sizes": [
+        {
+          "id": "regular",
+          "name": {
+            "en": "Regular",
+            "ar": "عادي"
+          },
+          "mode": "delta",
+          "value": 0
+        },
+        {
+          "id": "large",
+          "name": {
+            "en": "Large",
+            "ar": "كبير"
+          },
+          "mode": "delta",
+          "value": 15
+        }
+      ],
+      "baristaWay": {
+        "enabled": true,
+        "addOns": [
+          "oat-milk",
+          "vanilla"
+        ]
+      },
+      "oftenOrderedWith": [
+        "classic-cookies",
+        "kinder-cookies",
+        "tiramisu-cake"
+      ],
+      "excludedAddOns": [
+        "caramel",
+        "salted-caramel-sauce",
+        "strawberry",
+        "berries",
+        "blueberry-sauce"
+      ],
+      "inStock": true
+    },
+    {
+      "id": "iced-mocha",
+      "categoryId": "iced-coffee",
+      "name": {
+        "en": "Iced Mocha",
+        "ar": "آيس موكا"
+      },
+      "desc": {
+        "en": "Coffee, luxurious chocolate, and cold creamy milk.",
+        "ar": "قهوة وشوكولاتة فاخرة وحليب بارد كريمي."
+      },
+      "price": 130,
+      "sizes": [
+        {
+          "id": "regular",
+          "name": {
+            "en": "Regular",
+            "ar": "عادي"
+          },
+          "mode": "delta",
+          "value": 0
+        },
+        {
+          "id": "large",
+          "name": {
+            "en": "Large",
+            "ar": "كبير"
+          },
+          "mode": "delta",
+          "value": 15
+        }
+      ],
+      "baristaWay": {
+        "enabled": true,
+        "addOns": [
+          "oat-milk",
+          "vanilla"
+        ]
+      },
+      "oftenOrderedWith": [
+        "classic-cookies",
+        "kinder-cookies",
+        "tiramisu-cake"
+      ],
+      "excludedAddOns": [
+        "chocolate-sauce",
+        "strawberry",
+        "berries",
+        "blueberry-sauce"
+      ],
+      "inStock": true
+    },
+    {
+      "id": "iced-white-mocha",
+      "categoryId": "iced-coffee",
+      "name": {
+        "en": "Iced White Mocha",
+        "ar": "آيس وايت موكا"
+      },
+      "desc": {
+        "en": "Coffee and cold fresh milk with a creamy white mocha flavor.",
+        "ar": "قهوة وحليب طازج بارد بنكهة الموكا البيضاء الكريمية."
+      },
+      "price": 130,
+      "sizes": [
+        {
+          "id": "regular",
+          "name": {
+            "en": "Regular",
+            "ar": "عادي"
+          },
+          "mode": "delta",
+          "value": 0
+        },
+        {
+          "id": "large",
+          "name": {
+            "en": "Large",
+            "ar": "كبير"
+          },
+          "mode": "delta",
+          "value": 15
+        }
+      ],
+      "baristaWay": {
+        "enabled": true,
+        "addOns": [
+          "oat-milk",
+          "vanilla"
+        ]
+      },
+      "oftenOrderedWith": [
+        "classic-cookies",
+        "kinder-cookies",
+        "tiramisu-cake"
+      ],
+      "excludedAddOns": [
+        "chocolate-sauce",
+        "strawberry",
+        "berries",
+        "blueberry-sauce"
+      ],
+      "inStock": true
+    },
+    {
+      "id": "iced-coconut-latte",
+      "categoryId": "iced-coffee",
+      "name": {
+        "en": "Iced Coconut Latte",
+        "ar": "آيس كوكونت لاتيه"
+      },
+      "desc": {
+        "en": "Rich coffee with fresh milk and natural coconut flavor.",
+        "ar": "قهوة غنية مع حليب طازج ونكهة جوز الهند الطبيعية."
+      },
+      "price": 125,
+      "sizes": [
+        {
+          "id": "regular",
+          "name": {
+            "en": "Regular",
+            "ar": "عادي"
+          },
+          "mode": "delta",
+          "value": 0
+        },
+        {
+          "id": "large",
+          "name": {
+            "en": "Large",
+            "ar": "كبير"
+          },
+          "mode": "delta",
+          "value": 15
+        }
+      ],
+      "baristaWay": {
+        "enabled": true,
+        "addOns": [
+          "oat-milk",
+          "vanilla"
+        ]
+      },
+      "oftenOrderedWith": [
+        "classic-cookies",
+        "kinder-cookies",
+        "tiramisu-cake"
+      ],
+      "excludedAddOns": [
+        "coconut-milk",
+        "strawberry",
+        "berries",
+        "blueberry-sauce"
+      ],
+      "inStock": true
+    },
+    {
+      "id": "cinnamon-latte",
+      "categoryId": "iced-coffee",
+      "name": {
+        "en": "Cinnamon Latte",
+        "ar": "سينامون لاتيه"
+      },
+      "desc": {
+        "en": "Creamy milk and espresso with aromatic cinnamon.",
+        "ar": "حليب كريمي وإسبريسو مع القرفة العطرية."
+      },
+      "price": 110,
+      "sizes": [
+        {
+          "id": "regular",
+          "name": {
+            "en": "Regular",
+            "ar": "عادي"
+          },
+          "mode": "delta",
+          "value": 0
+        },
+        {
+          "id": "large",
+          "name": {
+            "en": "Large",
+            "ar": "كبير"
+          },
+          "mode": "delta",
+          "value": 15
+        }
+      ],
+      "baristaWay": {
+        "enabled": true,
+        "addOns": [
+          "oat-milk",
+          "vanilla"
+        ]
+      },
+      "oftenOrderedWith": [
+        "classic-cookies",
+        "kinder-cookies",
+        "tiramisu-cake"
+      ],
+      "excludedAddOns": [
+        "strawberry",
+        "berries",
+        "blueberry-sauce"
+      ],
+      "inStock": true
+    },
+    {
+      "id": "up-iced-latte",
+      "categoryId": "iced-coffee",
+      "name": {
+        "en": "UP Iced Latte",
+        "ar": "يو بي آيس لاتيه"
+      },
+      "desc": {
+        "en": "Premium espresso, iced milk, and creamy foam.",
+        "ar": "إسبريسو فاخر وحليب مثلج ورغوة كريمية."
+      },
+      "price": 150,
+      "sizes": [
+        {
+          "id": "regular",
+          "name": {
+            "en": "Regular",
+            "ar": "عادي"
+          },
+          "mode": "delta",
+          "value": 0
+        },
+        {
+          "id": "large",
+          "name": {
+            "en": "Large",
+            "ar": "كبير"
+          },
+          "mode": "delta",
+          "value": 15
+        }
+      ],
+      "baristaWay": {
+        "enabled": true,
+        "addOns": [
+          "oat-milk",
+          "vanilla"
+        ]
+      },
+      "oftenOrderedWith": [
+        "classic-cookies",
+        "kinder-cookies",
+        "tiramisu-cake"
+      ],
+      "excludedAddOns": [
+        "strawberry",
+        "berries",
+        "blueberry-sauce"
+      ],
+      "inStock": true,
+      "badge": "top"
+    },
+    {
+      "id": "sea-salt-latte",
+      "categoryId": "iced-coffee",
+      "name": {
+        "en": "Sea Salt Latte",
+        "ar": "سي سولت لاتيه"
+      },
+      "desc": {
+        "en": "Iced latte with a touch of sea salt balancing the coffee flavor.",
+        "ar": "لاتيه مثلج بلمسة ملح البحر توازن نكهة القهوة."
+      },
+      "price": 140,
+      "sizes": [
+        {
+          "id": "regular",
+          "name": {
+            "en": "Regular",
+            "ar": "عادي"
+          },
+          "mode": "delta",
+          "value": 0
+        },
+        {
+          "id": "large",
+          "name": {
+            "en": "Large",
+            "ar": "كبير"
+          },
+          "mode": "delta",
+          "value": 15
+        }
+      ],
+      "baristaWay": {
+        "enabled": true,
+        "addOns": [
+          "oat-milk",
+          "vanilla"
+        ]
+      },
+      "oftenOrderedWith": [
+        "classic-cookies",
+        "kinder-cookies",
+        "tiramisu-cake"
+      ],
+      "excludedAddOns": [
+        "strawberry",
+        "berries",
+        "blueberry-sauce"
+      ],
+      "inStock": true
+    },
+    {
+      "id": "iced-matcha-latte",
+      "categoryId": "iced-matcha",
+      "name": {
+        "en": "Iced Matcha Latte",
+        "ar": "آيس ماتشا لاتيه"
+      },
+      "desc": {
+        "en": "Classic matcha latte with a rich matcha tea flavor.",
+        "ar": "ماتشا لاتيه كلاسيكي بنكهة شاي الماتشا الغنية."
+      },
+      "price": 125,
+      "sizes": [
+        {
+          "id": "regular",
+          "name": {
+            "en": "Regular",
+            "ar": "عادي"
+          },
+          "mode": "delta",
+          "value": 0
+        },
+        {
+          "id": "large",
+          "name": {
+            "en": "Large",
+            "ar": "كبير"
+          },
+          "mode": "delta",
+          "value": 15
+        }
+      ],
+      "baristaWay": {
+        "enabled": true,
+        "addOns": [
+          "oat-milk",
+          "vanilla"
+        ]
+      },
+      "oftenOrderedWith": [
+        "classic-cookies",
+        "kinder-cookies",
+        "tiramisu-cake"
+      ],
+      "excludedAddOns": [
+        "extra-coffee-shot",
+        "caramel",
+        "hazelnut",
+        "chocolate-sauce",
+        "salted-caramel-sauce",
+        "berries"
+      ],
+      "inStock": true
+    },
+    {
+      "id": "iced-spanish-matcha-latte",
+      "categoryId": "iced-matcha",
+      "name": {
+        "en": "Iced Spanish Matcha Latte",
+        "ar": "آيس سبانش ماتشا لاتيه"
+      },
+      "desc": {
+        "en": "Matcha latte with milk and sweetened condensed milk.",
+        "ar": "ماتشا لاتيه بالحليب والحليب المكثف المحلى."
+      },
+      "price": 140,
+      "sizes": [
+        {
+          "id": "regular",
+          "name": {
+            "en": "Regular",
+            "ar": "عادي"
+          },
+          "mode": "delta",
+          "value": 0
+        },
+        {
+          "id": "large",
+          "name": {
+            "en": "Large",
+            "ar": "كبير"
+          },
+          "mode": "delta",
+          "value": 15
+        }
+      ],
+      "baristaWay": {
+        "enabled": true,
+        "addOns": [
+          "oat-milk",
+          "vanilla"
+        ]
+      },
+      "oftenOrderedWith": [
+        "classic-cookies",
+        "kinder-cookies",
+        "tiramisu-cake"
+      ],
+      "excludedAddOns": [
+        "extra-coffee-shot",
+        "caramel",
+        "hazelnut",
+        "chocolate-sauce",
+        "salted-caramel-sauce",
+        "berries"
+      ],
+      "inStock": true
+    },
+    {
+      "id": "iced-coconut-matcha-latte",
+      "categoryId": "iced-matcha",
+      "name": {
+        "en": "Iced Coconut Matcha Latte",
+        "ar": "آيس كوكونت ماتشا لاتيه"
+      },
+      "desc": {
+        "en": "Matcha latte with coconut for a tropical taste.",
+        "ar": "ماتشا لاتيه بجوز الهند لطعم استوائي."
+      },
+      "price": 140,
+      "sizes": [
+        {
+          "id": "regular",
+          "name": {
+            "en": "Regular",
+            "ar": "عادي"
+          },
+          "mode": "delta",
+          "value": 0
+        },
+        {
+          "id": "large",
+          "name": {
+            "en": "Large",
+            "ar": "كبير"
+          },
+          "mode": "delta",
+          "value": 15
+        }
+      ],
+      "baristaWay": {
+        "enabled": true,
+        "addOns": [
+          "oat-milk",
+          "vanilla"
+        ]
+      },
+      "oftenOrderedWith": [
+        "classic-cookies",
+        "kinder-cookies",
+        "tiramisu-cake"
+      ],
+      "excludedAddOns": [
+        "coconut-milk",
+        "extra-coffee-shot",
+        "caramel",
+        "hazelnut",
+        "chocolate-sauce",
+        "salted-caramel-sauce",
+        "berries"
+      ],
+      "inStock": true
+    },
+    {
+      "id": "iced-mango-matcha-latte",
+      "categoryId": "iced-matcha",
+      "name": {
+        "en": "Iced Mango Matcha Latte",
+        "ar": "آيس مانجو ماتشا لاتيه"
+      },
+      "desc": {
+        "en": "Iced matcha latte with milk and mango.",
+        "ar": "ماتشا لاتيه مثلج بالحليب والمانجو."
+      },
+      "price": 130,
+      "sizes": [
+        {
+          "id": "regular",
+          "name": {
+            "en": "Regular",
+            "ar": "عادي"
+          },
+          "mode": "delta",
+          "value": 0
+        },
+        {
+          "id": "large",
+          "name": {
+            "en": "Large",
+            "ar": "كبير"
+          },
+          "mode": "delta",
+          "value": 15
+        }
+      ],
+      "baristaWay": {
+        "enabled": true,
+        "addOns": [
+          "oat-milk",
+          "vanilla"
+        ]
+      },
+      "oftenOrderedWith": [
+        "classic-cookies",
+        "kinder-cookies",
+        "tiramisu-cake"
+      ],
+      "excludedAddOns": [
+        "extra-coffee-shot",
+        "caramel",
+        "hazelnut",
+        "chocolate-sauce",
+        "salted-caramel-sauce",
+        "berries"
+      ],
+      "inStock": true,
+      "badge": "new"
+    },
+    {
+      "id": "iced-strawberry-matcha-latte",
+      "categoryId": "iced-matcha",
+      "name": {
+        "en": "Iced Strawberry Matcha Latte",
+        "ar": "آيس ستروبيري ماتشا لاتيه"
+      },
+      "desc": {
+        "en": "Iced matcha latte with strawberry and milk.",
+        "ar": "ماتشا لاتيه مثلج بالفراولة والحليب."
+      },
+      "price": 130,
+      "sizes": [
+        {
+          "id": "regular",
+          "name": {
+            "en": "Regular",
+            "ar": "عادي"
+          },
+          "mode": "delta",
+          "value": 0
+        },
+        {
+          "id": "large",
+          "name": {
+            "en": "Large",
+            "ar": "كبير"
+          },
+          "mode": "delta",
+          "value": 15
+        }
+      ],
+      "baristaWay": {
+        "enabled": true,
+        "addOns": [
+          "oat-milk",
+          "vanilla"
+        ]
+      },
+      "oftenOrderedWith": [
+        "classic-cookies",
+        "kinder-cookies",
+        "tiramisu-cake"
+      ],
+      "excludedAddOns": [
+        "extra-coffee-shot",
+        "caramel",
+        "hazelnut",
+        "chocolate-sauce",
+        "salted-caramel-sauce",
+        "strawberry",
+        "berries"
+      ],
+      "inStock": true
+    },
+    {
+      "id": "salted-pecan-cloud-matcha",
+      "categoryId": "iced-matcha",
+      "name": {
+        "en": "Salted Pecan Cloud Matcha",
+        "ar": "سولتد بيكان كلاود ماتشا"
+      },
+      "desc": {
+        "en": "Matcha topped with a creamy salted pecan cloud.",
+        "ar": "ماتشا تعلوها سحابة بيكان مملحة كريمية."
+      },
+      "price": 140,
+      "sizes": [
+        {
+          "id": "regular",
+          "name": {
+            "en": "Regular",
+            "ar": "عادي"
+          },
+          "mode": "delta",
+          "value": 0
+        },
+        {
+          "id": "large",
+          "name": {
+            "en": "Large",
+            "ar": "كبير"
+          },
+          "mode": "delta",
+          "value": 15
+        }
+      ],
+      "baristaWay": {
+        "enabled": true,
+        "addOns": [
+          "oat-milk",
+          "vanilla"
+        ]
+      },
+      "oftenOrderedWith": [
+        "classic-cookies",
+        "kinder-cookies",
+        "tiramisu-cake"
+      ],
+      "excludedAddOns": [
+        "extra-coffee-shot",
+        "caramel",
+        "hazelnut",
+        "chocolate-sauce",
+        "salted-caramel-sauce",
+        "berries"
+      ],
+      "inStock": true,
+      "badge": "new"
+    },
+    {
+      "id": "iced-strawberry-cloud-matcha",
+      "categoryId": "iced-matcha",
+      "name": {
+        "en": "Iced Strawberry Cloud Matcha",
+        "ar": "آيس ستروبيري كلاود ماتشا"
+      },
+      "desc": {
+        "en": "Iced matcha with strawberry flavor.",
+        "ar": "ماتشا مثلجة بنكهة الفراولة."
+      },
+      "price": 140,
+      "sizes": [
+        {
+          "id": "regular",
+          "name": {
+            "en": "Regular",
+            "ar": "عادي"
+          },
+          "mode": "delta",
+          "value": 0
+        },
+        {
+          "id": "large",
+          "name": {
+            "en": "Large",
+            "ar": "كبير"
+          },
+          "mode": "delta",
+          "value": 15
+        }
+      ],
+      "baristaWay": {
+        "enabled": true,
+        "addOns": [
+          "oat-milk",
+          "vanilla"
+        ]
+      },
+      "oftenOrderedWith": [
+        "classic-cookies",
+        "kinder-cookies",
+        "tiramisu-cake"
+      ],
+      "excludedAddOns": [
+        "extra-coffee-shot",
+        "caramel",
+        "hazelnut",
+        "chocolate-sauce",
+        "salted-caramel-sauce",
+        "strawberry",
+        "berries"
+      ],
+      "inStock": true
+    },
+    {
+      "id": "ube-matcha",
+      "categoryId": "iced-matcha",
+      "name": {
+        "en": "Ube Matcha",
+        "ar": "أوبي ماتشا"
+      },
+      "desc": {
+        "en": "Ube with a light sweet taste and rich antioxidants.",
+        "ar": "أوبي بطعم حلو خفيف وغني بمضادات الأكسدة."
+      },
+      "price": 150,
+      "sizes": [
+        {
+          "id": "regular",
+          "name": {
+            "en": "Regular",
+            "ar": "عادي"
+          },
+          "mode": "delta",
+          "value": 0
+        },
+        {
+          "id": "large",
+          "name": {
+            "en": "Large",
+            "ar": "كبير"
+          },
+          "mode": "delta",
+          "value": 15
+        }
+      ],
+      "baristaWay": {
+        "enabled": true,
+        "addOns": [
+          "oat-milk",
+          "vanilla"
+        ]
+      },
+      "oftenOrderedWith": [
+        "classic-cookies",
+        "kinder-cookies",
+        "tiramisu-cake"
+      ],
+      "excludedAddOns": [
+        "extra-coffee-shot",
+        "caramel",
+        "hazelnut",
+        "chocolate-sauce",
+        "salted-caramel-sauce",
+        "berries"
+      ],
+      "inStock": true,
+      "badge": "top"
+    },
+    {
+      "id": "matcha-apple-pie",
+      "categoryId": "iced-matcha",
+      "name": {
+        "en": "Matcha Apple Pie",
+        "ar": "ماتشا آبل باي"
+      },
+      "desc": {
+        "en": "Japanese matcha with sweet apple flavor, served cold with ice.",
+        "ar": "ماتشا يابانية بنكهة التفاح الحلوة، تُقدم باردة مع الثلج."
+      },
+      "price": 150,
+      "sizes": [
+        {
+          "id": "regular",
+          "name": {
+            "en": "Regular",
+            "ar": "عادي"
+          },
+          "mode": "delta",
+          "value": 0
+        },
+        {
+          "id": "large",
+          "name": {
+            "en": "Large",
+            "ar": "كبير"
+          },
+          "mode": "delta",
+          "value": 15
+        }
+      ],
+      "baristaWay": {
+        "enabled": true,
+        "addOns": [
+          "oat-milk",
+          "vanilla"
+        ]
+      },
+      "oftenOrderedWith": [
+        "classic-cookies",
+        "kinder-cookies",
+        "tiramisu-cake"
+      ],
+      "excludedAddOns": [
+        "extra-coffee-shot",
+        "caramel",
+        "hazelnut",
+        "chocolate-sauce",
+        "salted-caramel-sauce",
+        "berries"
+      ],
+      "inStock": true,
+      "badge": "new"
+    },
+    {
+      "id": "matcha-salted-vanilla",
+      "categoryId": "iced-matcha",
+      "name": {
+        "en": "Matcha Salted Vanilla",
+        "ar": "ماتشا سولتد فانيلا"
+      },
+      "desc": {
+        "en": "Iced matcha with salted vanilla flavor.",
+        "ar": "ماتشا مثلجة بنكهة الفانيلا المملحة."
+      },
+      "price": 140,
+      "sizes": [
+        {
+          "id": "regular",
+          "name": {
+            "en": "Regular",
+            "ar": "عادي"
+          },
+          "mode": "delta",
+          "value": 0
+        },
+        {
+          "id": "large",
+          "name": {
+            "en": "Large",
+            "ar": "كبير"
+          },
+          "mode": "delta",
+          "value": 15
+        }
+      ],
+      "baristaWay": {
+        "enabled": true,
+        "addOns": [
+          "oat-milk",
+          "vanilla"
+        ]
+      },
+      "oftenOrderedWith": [
+        "classic-cookies",
+        "kinder-cookies",
+        "tiramisu-cake"
+      ],
+      "excludedAddOns": [
+        "extra-coffee-shot",
+        "vanilla",
+        "caramel",
+        "hazelnut",
+        "chocolate-sauce",
+        "salted-caramel-sauce",
+        "berries"
+      ],
+      "inStock": true
+    },
+    {
+      "id": "cortado",
+      "categoryId": "hot-coffee",
+      "name": {
+        "en": "Cortado",
+        "ar": "كورتادو"
+      },
+      "desc": {
+        "en": "Espresso with milk.",
+        "ar": "إسبريسو مع الحليب."
+      },
+      "price": 90,
+      "sizes": [
+        {
+          "id": "regular",
+          "name": {
+            "en": "Regular",
+            "ar": "عادي"
+          },
+          "mode": "delta",
+          "value": 0
+        },
+        {
+          "id": "large",
+          "name": {
+            "en": "Large",
+            "ar": "كبير"
+          },
+          "mode": "delta",
+          "value": 15
+        }
+      ],
+      "baristaWay": {
+        "enabled": true,
+        "addOns": [
+          "oat-milk",
+          "vanilla"
+        ]
+      },
+      "oftenOrderedWith": [
+        "classic-cookies",
+        "kinder-cookies",
+        "tiramisu-cake"
+      ],
+      "excludedAddOns": [
+        "strawberry",
+        "berries",
+        "blueberry-sauce"
+      ],
+      "inStock": true
+    },
+    {
+      "id": "latte",
+      "categoryId": "hot-coffee",
+      "name": {
+        "en": "Latte",
+        "ar": "لاتيه"
+      },
+      "desc": {
+        "en": "Smooth coffee with warm milk for a balanced taste.",
+        "ar": "قهوة ناعمة مع حليب دافئ لطعم متوازن."
+      },
+      "price": 110,
+      "sizes": [
+        {
+          "id": "regular",
+          "name": {
+            "en": "Regular",
+            "ar": "عادي"
+          },
+          "mode": "delta",
+          "value": 0
+        },
+        {
+          "id": "large",
+          "name": {
+            "en": "Large",
+            "ar": "كبير"
+          },
+          "mode": "delta",
+          "value": 15
+        }
+      ],
+      "baristaWay": {
+        "enabled": true,
+        "addOns": [
+          "oat-milk",
+          "vanilla"
+        ]
+      },
+      "oftenOrderedWith": [
+        "classic-cookies",
+        "kinder-cookies",
+        "tiramisu-cake"
+      ],
+      "excludedAddOns": [
+        "strawberry",
+        "berries",
+        "blueberry-sauce"
+      ],
+      "inStock": true
+    },
+    {
+      "id": "cappuccino",
+      "categoryId": "hot-coffee",
+      "name": {
+        "en": "Cappuccino",
+        "ar": "كابتشينو"
+      },
+      "desc": {
+        "en": "Rich coffee blended with milk and light foam.",
+        "ar": "قهوة غنية ممزوجة بالحليب ورغوة خفيفة."
+      },
+      "price": 110,
+      "sizes": [
+        {
+          "id": "regular",
+          "name": {
+            "en": "Regular",
+            "ar": "عادي"
+          },
+          "mode": "delta",
+          "value": 0
+        },
+        {
+          "id": "large",
+          "name": {
+            "en": "Large",
+            "ar": "كبير"
+          },
+          "mode": "delta",
+          "value": 15
+        }
+      ],
+      "baristaWay": {
+        "enabled": true,
+        "addOns": [
+          "oat-milk",
+          "vanilla"
+        ]
+      },
+      "oftenOrderedWith": [
+        "classic-cookies",
+        "kinder-cookies",
+        "tiramisu-cake"
+      ],
+      "excludedAddOns": [
+        "strawberry",
+        "berries",
+        "blueberry-sauce"
+      ],
+      "inStock": true,
+      "badge": "top"
+    },
+    {
+      "id": "flat-white",
+      "categoryId": "hot-coffee",
+      "name": {
+        "en": "Flat White",
+        "ar": "فلات وايت"
+      },
+      "desc": {
+        "en": "Espresso with a velvety milk layer and smooth texture.",
+        "ar": "إسبريسو بطبقة حليب مخملية وقوام ناعم."
+      },
+      "price": 110,
+      "sizes": [
+        {
+          "id": "regular",
+          "name": {
+            "en": "Regular",
+            "ar": "عادي"
+          },
+          "mode": "delta",
+          "value": 0
+        },
+        {
+          "id": "large",
+          "name": {
+            "en": "Large",
+            "ar": "كبير"
+          },
+          "mode": "delta",
+          "value": 15
+        }
+      ],
+      "baristaWay": {
+        "enabled": true,
+        "addOns": [
+          "oat-milk",
+          "vanilla"
+        ]
+      },
+      "oftenOrderedWith": [
+        "classic-cookies",
+        "kinder-cookies",
+        "tiramisu-cake"
+      ],
+      "excludedAddOns": [
+        "strawberry",
+        "berries",
+        "blueberry-sauce"
+      ],
+      "inStock": true
+    },
+    {
+      "id": "americano",
+      "categoryId": "hot-coffee",
+      "name": {
+        "en": "Americano",
+        "ar": "أمريكانو"
+      },
+      "desc": {
+        "en": "Espresso diluted with hot water.",
+        "ar": "إسبريسو مخفف بالماء الساخن."
+      },
+      "price": 85,
+      "sizes": [
+        {
+          "id": "regular",
+          "name": {
+            "en": "Regular",
+            "ar": "عادي"
+          },
+          "mode": "delta",
+          "value": 0
+        },
+        {
+          "id": "large",
+          "name": {
+            "en": "Large",
+            "ar": "كبير"
+          },
+          "mode": "delta",
+          "value": 15
+        }
+      ],
+      "baristaWay": {
+        "enabled": true,
+        "addOns": [
+          "oat-milk",
+          "vanilla"
+        ]
+      },
+      "oftenOrderedWith": [
+        "classic-cookies",
+        "kinder-cookies",
+        "tiramisu-cake"
+      ],
+      "excludedAddOns": [
+        "oat-milk",
+        "almond-milk",
+        "coconut-milk",
+        "strawberry",
+        "berries",
+        "blueberry-sauce"
+      ],
+      "inStock": true
+    },
+    {
+      "id": "spanish-latte",
+      "categoryId": "hot-coffee",
+      "name": {
+        "en": "Spanish Latte",
+        "ar": "سبانش لاتيه"
+      },
+      "desc": {
+        "en": "Sweetened latte with a distinctive Spanish flavor.",
+        "ar": "لاتيه محلى بنكهة إسبانية مميزة."
+      },
+      "price": 130,
+      "sizes": [
+        {
+          "id": "regular",
+          "name": {
+            "en": "Regular",
+            "ar": "عادي"
+          },
+          "mode": "delta",
+          "value": 0
+        },
+        {
+          "id": "large",
+          "name": {
+            "en": "Large",
+            "ar": "كبير"
+          },
+          "mode": "delta",
+          "value": 15
+        }
+      ],
+      "baristaWay": {
+        "enabled": true,
+        "addOns": [
+          "oat-milk",
+          "vanilla"
+        ]
+      },
+      "oftenOrderedWith": [
+        "classic-cookies",
+        "kinder-cookies",
+        "tiramisu-cake"
+      ],
+      "excludedAddOns": [
+        "strawberry",
+        "berries",
+        "blueberry-sauce"
+      ],
+      "inStock": true
+    },
+    {
+      "id": "salted-caramel-latte",
+      "categoryId": "hot-coffee",
+      "name": {
+        "en": "Salted Caramel Latte",
+        "ar": "سولتد كراميل لاتيه"
+      },
+      "desc": {
+        "en": "Latte with espresso, steamed milk, salted caramel syrup, and sea salt.",
+        "ar": "لاتيه بالإسبريسو والحليب المبخر وشراب الكراميل المملح وملح البحر."
+      },
+      "price": 130,
+      "sizes": [
+        {
+          "id": "regular",
+          "name": {
+            "en": "Regular",
+            "ar": "عادي"
+          },
+          "mode": "delta",
+          "value": 0
+        },
+        {
+          "id": "large",
+          "name": {
+            "en": "Large",
+            "ar": "كبير"
+          },
+          "mode": "delta",
+          "value": 15
+        }
+      ],
+      "baristaWay": {
+        "enabled": true,
+        "addOns": [
+          "oat-milk",
+          "vanilla"
+        ]
+      },
+      "oftenOrderedWith": [
+        "classic-cookies",
+        "kinder-cookies",
+        "tiramisu-cake"
+      ],
+      "excludedAddOns": [
+        "caramel",
+        "salted-caramel-sauce",
+        "strawberry",
+        "berries",
+        "blueberry-sauce"
+      ],
+      "inStock": true
+    },
+    {
+      "id": "hot-mocha",
+      "categoryId": "hot-coffee",
+      "name": {
+        "en": "Hot Mocha",
+        "ar": "هوت موكا"
+      },
+      "desc": {
+        "en": "Hot coffee with chocolate.",
+        "ar": "قهوة ساخنة مع الشوكولاتة."
+      },
+      "price": 125,
+      "sizes": [
+        {
+          "id": "regular",
+          "name": {
+            "en": "Regular",
+            "ar": "عادي"
+          },
+          "mode": "delta",
+          "value": 0
+        },
+        {
+          "id": "large",
+          "name": {
+            "en": "Large",
+            "ar": "كبير"
+          },
+          "mode": "delta",
+          "value": 15
+        }
+      ],
+      "baristaWay": {
+        "enabled": true,
+        "addOns": [
+          "oat-milk",
+          "vanilla"
+        ]
+      },
+      "oftenOrderedWith": [
+        "classic-cookies",
+        "kinder-cookies",
+        "tiramisu-cake"
+      ],
+      "excludedAddOns": [
+        "chocolate-sauce",
+        "strawberry",
+        "berries",
+        "blueberry-sauce"
+      ],
+      "inStock": true
+    },
+    {
+      "id": "french-coffee",
+      "categoryId": "hot-coffee",
+      "name": {
+        "en": "French Coffee",
+        "ar": "قهوة فرنساوي"
+      },
+      "desc": {
+        "en": "Strong, dark roast coffee and milk.",
+        "ar": "قهوة داكنة قوية مع الحليب."
+      },
+      "price": 75,
+      "sizes": [
+        {
+          "id": "regular",
+          "name": {
+            "en": "Regular",
+            "ar": "عادي"
+          },
+          "mode": "delta",
+          "value": 0
+        },
+        {
+          "id": "large",
+          "name": {
+            "en": "Large",
+            "ar": "كبير"
+          },
+          "mode": "delta",
+          "value": 15
+        }
+      ],
+      "baristaWay": {
+        "enabled": true,
+        "addOns": [
+          "oat-milk",
+          "vanilla"
+        ]
+      },
+      "oftenOrderedWith": [
+        "classic-cookies",
+        "kinder-cookies",
+        "tiramisu-cake"
+      ],
+      "excludedAddOns": [
+        "strawberry",
+        "berries",
+        "blueberry-sauce"
+      ],
+      "inStock": true
+    },
+    {
+      "id": "chai-latte",
+      "categoryId": "hot-coffee",
+      "name": {
+        "en": "Chai Latte",
+        "ar": "شاي لاتيه"
+      },
+      "desc": {
+        "en": "Warm latte with cinnamon flavor, creamy milk, espresso, and fresh cinnamon.",
+        "ar": "لاتيه دافئ بنكهة القرفة والحليب الكريمي والإسبريسو والقرفة الطازجة."
+      },
+      "price": 110,
+      "sizes": [
+        {
+          "id": "regular",
+          "name": {
+            "en": "Regular",
+            "ar": "عادي"
+          },
+          "mode": "delta",
+          "value": 0
+        },
+        {
+          "id": "large",
+          "name": {
+            "en": "Large",
+            "ar": "كبير"
+          },
+          "mode": "delta",
+          "value": 15
+        }
+      ],
+      "baristaWay": {
+        "enabled": true,
+        "addOns": [
+          "oat-milk",
+          "vanilla"
+        ]
+      },
+      "oftenOrderedWith": [
+        "classic-cookies",
+        "kinder-cookies",
+        "tiramisu-cake"
+      ],
+      "excludedAddOns": [
+        "strawberry",
+        "berries",
+        "blueberry-sauce"
+      ],
+      "inStock": true
+    },
+    {
+      "id": "blended-classic-coffee",
+      "categoryId": "blended-coffee",
+      "name": {
+        "en": "Blended Classic Coffee",
+        "ar": "بليندد كلاسيك كوفي"
+      },
+      "desc": {
+        "en": "Espresso, creamy milk, caramel drizzle, and aromatic cocoa.",
+        "ar": "إسبريسو وحليب كريمي وقطرات كراميل وكاكاو عطري."
+      },
+      "price": 110,
+      "sizes": [
+        {
+          "id": "regular",
+          "name": {
+            "en": "Regular",
+            "ar": "عادي"
+          },
+          "mode": "delta",
+          "value": 0
+        },
+        {
+          "id": "large",
+          "name": {
+            "en": "Large",
+            "ar": "كبير"
+          },
+          "mode": "delta",
+          "value": 15
+        }
+      ],
+      "baristaWay": {
+        "enabled": true,
+        "addOns": [
+          "oat-milk",
+          "vanilla"
+        ]
+      },
+      "oftenOrderedWith": [
+        "classic-cookies",
+        "kinder-cookies",
+        "tiramisu-cake"
+      ],
+      "excludedAddOns": [
+        "strawberry",
+        "berries",
+        "blueberry-sauce"
+      ],
+      "inStock": true
+    },
+    {
+      "id": "blended-coconut-coffee",
+      "categoryId": "blended-coffee",
+      "name": {
+        "en": "Blended Coconut Coffee",
+        "ar": "بليندد كوكونت كوفي"
+      },
+      "desc": {
+        "en": "Coffee blended with coconut milk and ice.",
+        "ar": "قهوة مخفوقة مع حليب جوز الهند والثلج."
+      },
+      "price": 130,
+      "sizes": [
+        {
+          "id": "regular",
+          "name": {
+            "en": "Regular",
+            "ar": "عادي"
+          },
+          "mode": "delta",
+          "value": 0
+        },
+        {
+          "id": "large",
+          "name": {
+            "en": "Large",
+            "ar": "كبير"
+          },
+          "mode": "delta",
+          "value": 15
+        }
+      ],
+      "baristaWay": {
+        "enabled": true,
+        "addOns": [
+          "oat-milk",
+          "vanilla"
+        ]
+      },
+      "oftenOrderedWith": [
+        "classic-cookies",
+        "kinder-cookies",
+        "tiramisu-cake"
+      ],
+      "excludedAddOns": [
+        "coconut-milk",
+        "strawberry",
+        "berries",
+        "blueberry-sauce"
+      ],
+      "inStock": true
+    },
+    {
+      "id": "dark-blended-mocha",
+      "categoryId": "blended-coffee",
+      "name": {
+        "en": "Dark Blended Mocha",
+        "ar": "دارك بليندد موكا"
+      },
+      "desc": {
+        "en": "Iced coffee blended with dark chocolate.",
+        "ar": "قهوة مثلجة مخفوقة مع الشوكولاتة الداكنة."
+      },
+      "price": 130,
+      "sizes": [
+        {
+          "id": "regular",
+          "name": {
+            "en": "Regular",
+            "ar": "عادي"
+          },
+          "mode": "delta",
+          "value": 0
+        },
+        {
+          "id": "large",
+          "name": {
+            "en": "Large",
+            "ar": "كبير"
+          },
+          "mode": "delta",
+          "value": 15
+        }
+      ],
+      "baristaWay": {
+        "enabled": true,
+        "addOns": [
+          "oat-milk",
+          "vanilla"
+        ]
+      },
+      "oftenOrderedWith": [
+        "classic-cookies",
+        "kinder-cookies",
+        "tiramisu-cake"
+      ],
+      "excludedAddOns": [
+        "chocolate-sauce",
+        "strawberry",
+        "berries",
+        "blueberry-sauce"
+      ],
+      "inStock": true
+    },
+    {
+      "id": "blended-white-mocha",
+      "categoryId": "blended-coffee",
+      "name": {
+        "en": "Blended White Mocha",
+        "ar": "بليندد وايت موكا"
+      },
+      "desc": {
+        "en": "Espresso, milk, and white chocolate.",
+        "ar": "إسبريسو وحليب وشوكولاتة بيضاء."
+      },
+      "price": 130,
+      "sizes": [
+        {
+          "id": "regular",
+          "name": {
+            "en": "Regular",
+            "ar": "عادي"
+          },
+          "mode": "delta",
+          "value": 0
+        },
+        {
+          "id": "large",
+          "name": {
+            "en": "Large",
+            "ar": "كبير"
+          },
+          "mode": "delta",
+          "value": 15
+        }
+      ],
+      "baristaWay": {
+        "enabled": true,
+        "addOns": [
+          "oat-milk",
+          "vanilla"
+        ]
+      },
+      "oftenOrderedWith": [
+        "classic-cookies",
+        "kinder-cookies",
+        "tiramisu-cake"
+      ],
+      "excludedAddOns": [
+        "chocolate-sauce",
+        "strawberry",
+        "berries",
+        "blueberry-sauce"
+      ],
+      "inStock": true
+    },
+    {
+      "id": "spanish-blended-latte",
+      "categoryId": "blended-coffee",
+      "name": {
+        "en": "Spanish Blended Latte",
+        "ar": "سبانش بليندد لاتيه"
+      },
+      "desc": {
+        "en": "Espresso, milk, condensed milk, and ice.",
+        "ar": "إسبريسو وحليب وحليب مكثف وثلج."
+      },
+      "price": 130,
+      "sizes": [
+        {
+          "id": "regular",
+          "name": {
+            "en": "Regular",
+            "ar": "عادي"
+          },
+          "mode": "delta",
+          "value": 0
+        },
+        {
+          "id": "large",
+          "name": {
+            "en": "Large",
+            "ar": "كبير"
+          },
+          "mode": "delta",
+          "value": 15
+        }
+      ],
+      "baristaWay": {
+        "enabled": true,
+        "addOns": [
+          "oat-milk",
+          "vanilla"
+        ]
+      },
+      "oftenOrderedWith": [
+        "classic-cookies",
+        "kinder-cookies",
+        "tiramisu-cake"
+      ],
+      "excludedAddOns": [
+        "strawberry",
+        "berries",
+        "blueberry-sauce"
+      ],
+      "inStock": true
+    },
+    {
+      "id": "salted-caramel-blend",
+      "categoryId": "blended-coffee",
+      "name": {
+        "en": "Salted Caramel Blend",
+        "ar": "سولتد كراميل بليند"
+      },
+      "desc": {
+        "en": "Espresso, steamed milk, and salted caramel syrup.",
+        "ar": "إسبريسو وحليب مبخر وشراب الكراميل المملح."
+      },
+      "price": 130,
+      "sizes": [
+        {
+          "id": "regular",
+          "name": {
+            "en": "Regular",
+            "ar": "عادي"
+          },
+          "mode": "delta",
+          "value": 0
+        },
+        {
+          "id": "large",
+          "name": {
+            "en": "Large",
+            "ar": "كبير"
+          },
+          "mode": "delta",
+          "value": 15
+        }
+      ],
+      "baristaWay": {
+        "enabled": true,
+        "addOns": [
+          "oat-milk",
+          "vanilla"
+        ]
+      },
+      "oftenOrderedWith": [
+        "classic-cookies",
+        "kinder-cookies",
+        "tiramisu-cake"
+      ],
+      "excludedAddOns": [
+        "caramel",
+        "salted-caramel-sauce",
+        "strawberry",
+        "berries",
+        "blueberry-sauce"
+      ],
+      "inStock": true
+    },
+    {
+      "id": "strawberry-crunch-shake",
+      "categoryId": "crunch-shake",
+      "name": {
+        "en": "Strawberry Crunch Shake",
+        "ar": "ستروبيري كرنش شيك"
+      },
+      "desc": {
+        "en": "Fresh strawberry milkshake.",
+        "ar": "ميلك شيك فراولة طازجة."
+      },
+      "price": 125,
+      "sizes": [
+        {
+          "id": "regular",
+          "name": {
+            "en": "Regular",
+            "ar": "عادي"
+          },
+          "mode": "delta",
+          "value": 0
+        },
+        {
+          "id": "large",
+          "name": {
+            "en": "Large",
+            "ar": "كبير"
+          },
+          "mode": "delta",
+          "value": 15
+        }
+      ],
+      "baristaWay": {
+        "enabled": false,
+        "addOns": [
+          "oat-milk",
+          "vanilla"
+        ]
+      },
+      "oftenOrderedWith": [
+        "classic-cookies",
+        "kinder-cookies",
+        "tiramisu-cake"
+      ],
+      "excludedAddOns": [
+        "oat-milk",
+        "almond-milk",
+        "coconut-milk",
+        "extra-coffee-shot",
+        "strawberry",
+        "berries"
+      ],
+      "inStock": true,
+      "badge": "new"
+    },
+    {
+      "id": "crunch-shake-salted-caramel",
+      "categoryId": "crunch-shake",
+      "name": {
+        "en": "Crunch Shake Salted Caramel",
+        "ar": "كرنش شيك سولتد كراميل"
+      },
+      "desc": {
+        "en": "Rich salted caramel milkshake.",
+        "ar": "ميلك شيك كراميل مملح غني."
+      },
+      "price": 125,
+      "sizes": [
+        {
+          "id": "regular",
+          "name": {
+            "en": "Regular",
+            "ar": "عادي"
+          },
+          "mode": "delta",
+          "value": 0
+        },
+        {
+          "id": "large",
+          "name": {
+            "en": "Large",
+            "ar": "كبير"
+          },
+          "mode": "delta",
+          "value": 15
+        }
+      ],
+      "baristaWay": {
+        "enabled": false,
+        "addOns": [
+          "oat-milk",
+          "vanilla"
+        ]
+      },
+      "oftenOrderedWith": [
+        "classic-cookies",
+        "kinder-cookies",
+        "tiramisu-cake"
+      ],
+      "excludedAddOns": [
+        "oat-milk",
+        "almond-milk",
+        "coconut-milk",
+        "extra-coffee-shot",
+        "caramel",
+        "salted-caramel-sauce",
+        "berries"
+      ],
+      "inStock": true
+    },
+    {
+      "id": "chocolate-crunch-shake",
+      "categoryId": "crunch-shake",
+      "name": {
+        "en": "Chocolate Crunch Shake",
+        "ar": "شوكولاتة كرنش شيك"
+      },
+      "desc": {
+        "en": "Classic chocolate milkshake.",
+        "ar": "ميلك شيك شوكولاتة كلاسيكي."
+      },
+      "price": 125,
+      "sizes": [
+        {
+          "id": "regular",
+          "name": {
+            "en": "Regular",
+            "ar": "عادي"
+          },
+          "mode": "delta",
+          "value": 0
+        },
+        {
+          "id": "large",
+          "name": {
+            "en": "Large",
+            "ar": "كبير"
+          },
+          "mode": "delta",
+          "value": 15
+        }
+      ],
+      "baristaWay": {
+        "enabled": false,
+        "addOns": [
+          "oat-milk",
+          "vanilla"
+        ]
+      },
+      "oftenOrderedWith": [
+        "classic-cookies",
+        "kinder-cookies",
+        "tiramisu-cake"
+      ],
+      "excludedAddOns": [
+        "oat-milk",
+        "almond-milk",
+        "coconut-milk",
+        "extra-coffee-shot",
+        "berries"
+      ],
+      "inStock": true
+    },
+    {
+      "id": "crunch-shake-kinder",
+      "categoryId": "crunch-shake",
+      "name": {
+        "en": "Crunch Shake Kinder",
+        "ar": "كرنش شيك كيندر"
+      },
+      "desc": {
+        "en": "Kinder Bueno chocolate, milk, and whipped cream.",
+        "ar": "شوكولاتة كيندر بوينو وحليب وكريمة مخفوقة."
+      },
+      "price": 130,
+      "sizes": [
+        {
+          "id": "regular",
+          "name": {
+            "en": "Regular",
+            "ar": "عادي"
+          },
+          "mode": "delta",
+          "value": 0
+        },
+        {
+          "id": "large",
+          "name": {
+            "en": "Large",
+            "ar": "كبير"
+          },
+          "mode": "delta",
+          "value": 15
+        }
+      ],
+      "baristaWay": {
+        "enabled": false,
+        "addOns": [
+          "oat-milk",
+          "vanilla"
+        ]
+      },
+      "oftenOrderedWith": [
+        "classic-cookies",
+        "kinder-cookies",
+        "tiramisu-cake"
+      ],
+      "excludedAddOns": [
+        "oat-milk",
+        "almond-milk",
+        "coconut-milk",
+        "extra-coffee-shot",
+        "berries"
+      ],
+      "inStock": true
+    },
+    {
+      "id": "classic-mojito",
+      "categoryId": "mojitos",
+      "name": {
+        "en": "Classic Mojito",
+        "ar": "موهيتو كلاسيك"
+      },
+      "desc": {
+        "en": "Refreshing mojito with mint and lemon.",
+        "ar": "موهيتو منعش بالنعناع والليمون."
+      },
+      "price": 95,
+      "sizes": [
+        {
+          "id": "regular",
+          "name": {
+            "en": "Regular",
+            "ar": "عادي"
+          },
+          "mode": "delta",
+          "value": 0
+        },
+        {
+          "id": "large",
+          "name": {
+            "en": "Large",
+            "ar": "كبير"
+          },
+          "mode": "delta",
+          "value": 15
+        }
+      ],
+      "baristaWay": {
+        "enabled": false,
+        "addOns": [
+          "oat-milk",
+          "vanilla"
+        ]
+      },
+      "oftenOrderedWith": [
+        "classic-cookies",
+        "kinder-cookies",
+        "tiramisu-cake"
+      ],
+      "excludedAddOns": [
+        "oat-milk",
+        "almond-milk",
+        "coconut-milk",
+        "extra-coffee-shot",
+        "vanilla",
+        "caramel",
+        "hazelnut",
+        "chocolate-sauce",
+        "salted-caramel-sauce"
+      ],
+      "inStock": true
+    },
+    {
+      "id": "classic-red-bull-mojito",
+      "categoryId": "mojitos",
+      "name": {
+        "en": "Classic Red Bull Mojito",
+        "ar": "موهيتو ريد بول كلاسيك"
+      },
+      "desc": {
+        "en": "Classic Red Bull mojito for energy and freshness.",
+        "ar": "موهيتو ريد بول كلاسيك للطاقة والانتعاش."
+      },
+      "price": 120,
+      "sizes": [
+        {
+          "id": "regular",
+          "name": {
+            "en": "Regular",
+            "ar": "عادي"
+          },
+          "mode": "delta",
+          "value": 0
+        },
+        {
+          "id": "large",
+          "name": {
+            "en": "Large",
+            "ar": "كبير"
+          },
+          "mode": "delta",
+          "value": 15
+        }
+      ],
+      "baristaWay": {
+        "enabled": false,
+        "addOns": [
+          "oat-milk",
+          "vanilla"
+        ]
+      },
+      "oftenOrderedWith": [
+        "classic-cookies",
+        "kinder-cookies",
+        "tiramisu-cake"
+      ],
+      "excludedAddOns": [
+        "oat-milk",
+        "almond-milk",
+        "coconut-milk",
+        "extra-coffee-shot",
+        "vanilla",
+        "caramel",
+        "hazelnut",
+        "chocolate-sauce",
+        "salted-caramel-sauce"
+      ],
+      "inStock": true
+    },
+    {
+      "id": "blueberry-red-bull-mojito",
+      "categoryId": "mojitos",
+      "name": {
+        "en": "Blueberry Red Bull Mojito",
+        "ar": "موهيتو ريد بول بلوبيري"
+      },
+      "desc": {
+        "en": "Red Bull infused with blueberry flavor.",
+        "ar": "ريد بول بنكهة التوت الأزرق."
+      },
+      "price": 120,
+      "sizes": [
+        {
+          "id": "regular",
+          "name": {
+            "en": "Regular",
+            "ar": "عادي"
+          },
+          "mode": "delta",
+          "value": 0
+        },
+        {
+          "id": "large",
+          "name": {
+            "en": "Large",
+            "ar": "كبير"
+          },
+          "mode": "delta",
+          "value": 15
+        }
+      ],
+      "baristaWay": {
+        "enabled": false,
+        "addOns": [
+          "oat-milk",
+          "vanilla"
+        ]
+      },
+      "oftenOrderedWith": [
+        "classic-cookies",
+        "kinder-cookies",
+        "tiramisu-cake"
+      ],
+      "excludedAddOns": [
+        "oat-milk",
+        "almond-milk",
+        "coconut-milk",
+        "extra-coffee-shot",
+        "vanilla",
+        "caramel",
+        "hazelnut",
+        "chocolate-sauce",
+        "salted-caramel-sauce",
+        "berries",
+        "blueberry-sauce"
+      ],
+      "inStock": true
+    },
+    {
+      "id": "classic-raspberry-mojito",
+      "categoryId": "mojitos",
+      "name": {
+        "en": "Classic Raspberry Mojito",
+        "ar": "موهيتو راسبيري كلاسيك"
+      },
+      "desc": {
+        "en": "Mojito with fresh raspberries, mint, and lime.",
+        "ar": "موهيتو بتوت العليق الطازج والنعناع والليمون الأخضر."
+      },
+      "price": 95,
+      "sizes": [
+        {
+          "id": "regular",
+          "name": {
+            "en": "Regular",
+            "ar": "عادي"
+          },
+          "mode": "delta",
+          "value": 0
+        },
+        {
+          "id": "large",
+          "name": {
+            "en": "Large",
+            "ar": "كبير"
+          },
+          "mode": "delta",
+          "value": 15
+        }
+      ],
+      "baristaWay": {
+        "enabled": false,
+        "addOns": [
+          "oat-milk",
+          "vanilla"
+        ]
+      },
+      "oftenOrderedWith": [
+        "classic-cookies",
+        "kinder-cookies",
+        "tiramisu-cake"
+      ],
+      "excludedAddOns": [
+        "oat-milk",
+        "almond-milk",
+        "coconut-milk",
+        "extra-coffee-shot",
+        "vanilla",
+        "caramel",
+        "hazelnut",
+        "chocolate-sauce",
+        "salted-caramel-sauce",
+        "berries"
+      ],
+      "inStock": true
+    },
+    {
+      "id": "classic-passion-fruit-mojito",
+      "categoryId": "mojitos",
+      "name": {
+        "en": "Classic Passion Fruit Mojito",
+        "ar": "موهيتو باشن فروت كلاسيك"
+      },
+      "desc": {
+        "en": "Tropical mojito with passion fruit.",
+        "ar": "موهيتو استوائي بالباشن فروت."
+      },
+      "price": 95,
+      "sizes": [
+        {
+          "id": "regular",
+          "name": {
+            "en": "Regular",
+            "ar": "عادي"
+          },
+          "mode": "delta",
+          "value": 0
+        },
+        {
+          "id": "large",
+          "name": {
+            "en": "Large",
+            "ar": "كبير"
+          },
+          "mode": "delta",
+          "value": 15
+        }
+      ],
+      "baristaWay": {
+        "enabled": false,
+        "addOns": [
+          "oat-milk",
+          "vanilla"
+        ]
+      },
+      "oftenOrderedWith": [
+        "classic-cookies",
+        "kinder-cookies",
+        "tiramisu-cake"
+      ],
+      "excludedAddOns": [
+        "oat-milk",
+        "almond-milk",
+        "coconut-milk",
+        "extra-coffee-shot",
+        "vanilla",
+        "caramel",
+        "hazelnut",
+        "chocolate-sauce",
+        "salted-caramel-sauce"
+      ],
+      "inStock": true
+    },
+    {
+      "id": "iced-hibiscus-mix",
+      "categoryId": "mojitos",
+      "name": {
+        "en": "Iced Hibiscus Mix",
+        "ar": "آيس كركديه ميكس"
+      },
+      "desc": {
+        "en": "Refreshing ruby-red drink with a bright, tart flavor.",
+        "ar": "مشروب منعش أحمر ياقوتي بنكهة لاذعة مشرقة."
+      },
+      "price": 90,
+      "sizes": [
+        {
+          "id": "regular",
+          "name": {
+            "en": "Regular",
+            "ar": "عادي"
+          },
+          "mode": "delta",
+          "value": 0
+        },
+        {
+          "id": "large",
+          "name": {
+            "en": "Large",
+            "ar": "كبير"
+          },
+          "mode": "delta",
+          "value": 15
+        }
+      ],
+      "baristaWay": {
+        "enabled": false,
+        "addOns": [
+          "oat-milk",
+          "vanilla"
+        ]
+      },
+      "oftenOrderedWith": [
+        "classic-cookies",
+        "kinder-cookies",
+        "tiramisu-cake"
+      ],
+      "excludedAddOns": [
+        "oat-milk",
+        "almond-milk",
+        "coconut-milk",
+        "extra-coffee-shot",
+        "vanilla",
+        "caramel",
+        "hazelnut",
+        "chocolate-sauce",
+        "salted-caramel-sauce",
+        "strawberry"
+      ],
+      "inStock": true
+    },
+    {
+      "id": "blueberry-coconut-smoothie",
+      "categoryId": "smoothies",
+      "name": {
+        "en": "Blueberry Coconut Smoothie",
+        "ar": "سموذي بلوبيري وجوز الهند"
+      },
+      "desc": {
+        "en": "Smoothie blended with blueberries and coconut.",
+        "ar": "سموذي مخفوق بالتوت الأزرق وجوز الهند."
+      },
+      "price": 120,
+      "sizes": [
+        {
+          "id": "regular",
+          "name": {
+            "en": "Regular",
+            "ar": "عادي"
+          },
+          "mode": "delta",
+          "value": 0
+        },
+        {
+          "id": "large",
+          "name": {
+            "en": "Large",
+            "ar": "كبير"
+          },
+          "mode": "delta",
+          "value": 15
+        }
+      ],
+      "baristaWay": {
+        "enabled": false,
+        "addOns": [
+          "oat-milk",
+          "vanilla"
+        ]
+      },
+      "oftenOrderedWith": [
+        "classic-cookies",
+        "kinder-cookies",
+        "tiramisu-cake"
+      ],
+      "excludedAddOns": [
+        "oat-milk",
+        "almond-milk",
+        "coconut-milk",
+        "extra-coffee-shot",
+        "vanilla",
+        "caramel",
+        "hazelnut",
+        "chocolate-sauce",
+        "salted-caramel-sauce",
+        "berries",
+        "blueberry-sauce"
+      ],
+      "inStock": true
+    },
+    {
+      "id": "mango-kiwi-smoothie",
+      "categoryId": "smoothies",
+      "name": {
+        "en": "Mango Kiwi Smoothie",
+        "ar": "سموذي مانجو وكيوي"
+      },
+      "desc": {
+        "en": "Blended smoothie made with mango and kiwi.",
+        "ar": "سموذي مخفوق بالمانجو والكيوي."
+      },
+      "price": 130,
+      "sizes": [
+        {
+          "id": "regular",
+          "name": {
+            "en": "Regular",
+            "ar": "عادي"
+          },
+          "mode": "delta",
+          "value": 0
+        },
+        {
+          "id": "large",
+          "name": {
+            "en": "Large",
+            "ar": "كبير"
+          },
+          "mode": "delta",
+          "value": 15
+        }
+      ],
+      "baristaWay": {
+        "enabled": false,
+        "addOns": [
+          "oat-milk",
+          "vanilla"
+        ]
+      },
+      "oftenOrderedWith": [
+        "classic-cookies",
+        "kinder-cookies",
+        "tiramisu-cake"
+      ],
+      "excludedAddOns": [
+        "oat-milk",
+        "almond-milk",
+        "extra-coffee-shot",
+        "vanilla",
+        "caramel",
+        "hazelnut",
+        "chocolate-sauce",
+        "salted-caramel-sauce"
+      ],
+      "inStock": true,
+      "badge": "new"
+    },
+    {
+      "id": "mango-strawberry-smoothie",
+      "categoryId": "smoothies",
+      "name": {
+        "en": "Mango Strawberry Smoothie",
+        "ar": "سموذي مانجو وفراولة"
+      },
+      "desc": {
+        "en": "Smoothie blended with mango and fresh strawberries.",
+        "ar": "سموذي مخفوق بالمانجو والفراولة الطازجة."
+      },
+      "price": 130,
+      "sizes": [
+        {
+          "id": "regular",
+          "name": {
+            "en": "Regular",
+            "ar": "عادي"
+          },
+          "mode": "delta",
+          "value": 0
+        },
+        {
+          "id": "large",
+          "name": {
+            "en": "Large",
+            "ar": "كبير"
+          },
+          "mode": "delta",
+          "value": 15
+        }
+      ],
+      "baristaWay": {
+        "enabled": false,
+        "addOns": [
+          "oat-milk",
+          "vanilla"
+        ]
+      },
+      "oftenOrderedWith": [
+        "classic-cookies",
+        "kinder-cookies",
+        "tiramisu-cake"
+      ],
+      "excludedAddOns": [
+        "oat-milk",
+        "almond-milk",
+        "extra-coffee-shot",
+        "vanilla",
+        "caramel",
+        "hazelnut",
+        "chocolate-sauce",
+        "salted-caramel-sauce",
+        "strawberry",
+        "berries"
+      ],
+      "inStock": true
+    },
+    {
+      "id": "peach-and-passion-smoothie",
+      "categoryId": "smoothies",
+      "name": {
+        "en": "Peach and Passion Smoothie",
+        "ar": "سموذي خوخ وباشن فروت"
+      },
+      "desc": {
+        "en": "Smoothie blended with peaches and passion fruit.",
+        "ar": "سموذي مخفوق بالخوخ والباشن فروت."
+      },
+      "price": 125,
+      "sizes": [
+        {
+          "id": "regular",
+          "name": {
+            "en": "Regular",
+            "ar": "عادي"
+          },
+          "mode": "delta",
+          "value": 0
+        },
+        {
+          "id": "large",
+          "name": {
+            "en": "Large",
+            "ar": "كبير"
+          },
+          "mode": "delta",
+          "value": 15
+        }
+      ],
+      "baristaWay": {
+        "enabled": false,
+        "addOns": [
+          "oat-milk",
+          "vanilla"
+        ]
+      },
+      "oftenOrderedWith": [
+        "classic-cookies",
+        "kinder-cookies",
+        "tiramisu-cake"
+      ],
+      "excludedAddOns": [
+        "oat-milk",
+        "almond-milk",
+        "extra-coffee-shot",
+        "vanilla",
+        "caramel",
+        "hazelnut",
+        "chocolate-sauce",
+        "salted-caramel-sauce"
+      ],
+      "inStock": true
+    },
+    {
+      "id": "classic-matcha-latte",
+      "categoryId": "hot-matcha",
+      "name": {
+        "en": "Classic Matcha Latte",
+        "ar": "ماتشا لاتيه كلاسيك"
+      },
+      "desc": {
+        "en": "Classic matcha latte with rich matcha tea flavor.",
+        "ar": "ماتشا لاتيه كلاسيكي بنكهة شاي الماتشا الغنية."
+      },
+      "price": 125,
+      "sizes": [
+        {
+          "id": "regular",
+          "name": {
+            "en": "Regular",
+            "ar": "عادي"
+          },
+          "mode": "delta",
+          "value": 0
+        },
+        {
+          "id": "large",
+          "name": {
+            "en": "Large",
+            "ar": "كبير"
+          },
+          "mode": "delta",
+          "value": 15
+        }
+      ],
+      "baristaWay": {
+        "enabled": true,
+        "addOns": [
+          "oat-milk",
+          "vanilla"
+        ]
+      },
+      "oftenOrderedWith": [
+        "classic-cookies",
+        "kinder-cookies",
+        "tiramisu-cake"
+      ],
+      "excludedAddOns": [
+        "extra-coffee-shot",
+        "caramel",
+        "hazelnut",
+        "chocolate-sauce",
+        "salted-caramel-sauce",
+        "berries"
+      ],
+      "inStock": true
+    },
+    {
+      "id": "coconut-matcha-latte",
+      "categoryId": "hot-matcha",
+      "name": {
+        "en": "Coconut Matcha Latte",
+        "ar": "كوكونت ماتشا لاتيه"
+      },
+      "desc": {
+        "en": "Coconut matcha latte with a tropical taste.",
+        "ar": "ماتشا لاتيه بجوز الهند لطعم استوائي."
+      },
+      "price": 140,
+      "sizes": [
+        {
+          "id": "regular",
+          "name": {
+            "en": "Regular",
+            "ar": "عادي"
+          },
+          "mode": "delta",
+          "value": 0
+        },
+        {
+          "id": "large",
+          "name": {
+            "en": "Large",
+            "ar": "كبير"
+          },
+          "mode": "delta",
+          "value": 15
+        }
+      ],
+      "baristaWay": {
+        "enabled": true,
+        "addOns": [
+          "oat-milk",
+          "vanilla"
+        ]
+      },
+      "oftenOrderedWith": [
+        "classic-cookies",
+        "kinder-cookies",
+        "tiramisu-cake"
+      ],
+      "excludedAddOns": [
+        "coconut-milk",
+        "extra-coffee-shot",
+        "caramel",
+        "hazelnut",
+        "chocolate-sauce",
+        "salted-caramel-sauce",
+        "berries"
+      ],
+      "inStock": true
+    },
+    {
+      "id": "classic-hot-chocolate",
+      "categoryId": "hot-chocolate",
+      "name": {
+        "en": "Classic Hot Chocolate",
+        "ar": "هوت شوكليت كلاسيك"
+      },
+      "desc": {
+        "en": "A warm cup of hot chocolate.",
+        "ar": "كوب دافئ من الشوكولاتة الساخنة."
+      },
+      "price": 120,
+      "sizes": [
+        {
+          "id": "regular",
+          "name": {
+            "en": "Regular",
+            "ar": "عادي"
+          },
+          "mode": "delta",
+          "value": 0
+        },
+        {
+          "id": "large",
+          "name": {
+            "en": "Large",
+            "ar": "كبير"
+          },
+          "mode": "delta",
+          "value": 15
+        }
+      ],
+      "baristaWay": {
+        "enabled": true,
+        "addOns": [
+          "oat-milk",
+          "vanilla"
+        ]
+      },
+      "oftenOrderedWith": [
+        "classic-cookies",
+        "kinder-cookies",
+        "tiramisu-cake"
+      ],
+      "excludedAddOns": [
+        "extra-coffee-shot",
+        "strawberry",
+        "berries",
+        "blueberry-sauce"
+      ],
+      "inStock": true
+    },
+    {
+      "id": "creamy-cloud-foam",
+      "categoryId": "hot-chocolate",
+      "name": {
+        "en": "Creamy Cloud Foam",
+        "ar": "كريمي كلاود فوم"
+      },
+      "desc": {
+        "en": "Light creamy foam with a soft and velvety texture.",
+        "ar": "رغوة كريمية خفيفة بقوام ناعم كالمخمل."
+      },
+      "price": 130,
+      "sizes": [
+        {
+          "id": "regular",
+          "name": {
+            "en": "Regular",
+            "ar": "عادي"
+          },
+          "mode": "delta",
+          "value": 0
+        },
+        {
+          "id": "large",
+          "name": {
+            "en": "Large",
+            "ar": "كبير"
+          },
+          "mode": "delta",
+          "value": 15
+        }
+      ],
+      "baristaWay": {
+        "enabled": true,
+        "addOns": [
+          "oat-milk",
+          "vanilla"
+        ]
+      },
+      "oftenOrderedWith": [
+        "classic-cookies",
+        "kinder-cookies",
+        "tiramisu-cake"
+      ],
+      "excludedAddOns": [
+        "extra-coffee-shot",
+        "strawberry",
+        "berries",
+        "blueberry-sauce"
+      ],
+      "inStock": true
+    },
+    {
+      "id": "coconut-cloud-foam",
+      "categoryId": "hot-chocolate",
+      "name": {
+        "en": "Coconut Cloud Foam",
+        "ar": "كوكونت كلاود فوم"
+      },
+      "desc": {
+        "en": "Light coconut foam with a smooth creamy touch.",
+        "ar": "رغوة جوز الهند الخفيفة بلمسة كريمية ناعمة."
+      },
+      "price": 140,
+      "sizes": [
+        {
+          "id": "regular",
+          "name": {
+            "en": "Regular",
+            "ar": "عادي"
+          },
+          "mode": "delta",
+          "value": 0
+        },
+        {
+          "id": "large",
+          "name": {
+            "en": "Large",
+            "ar": "كبير"
+          },
+          "mode": "delta",
+          "value": 15
+        }
+      ],
+      "baristaWay": {
+        "enabled": true,
+        "addOns": [
+          "oat-milk",
+          "vanilla"
+        ]
+      },
+      "oftenOrderedWith": [
+        "classic-cookies",
+        "kinder-cookies",
+        "tiramisu-cake"
+      ],
+      "excludedAddOns": [
+        "coconut-milk",
+        "extra-coffee-shot",
+        "strawberry",
+        "berries",
+        "blueberry-sauce"
+      ],
+      "inStock": true
+    },
+    {
+      "id": "creamy-hazelnut",
+      "categoryId": "hot-chocolate",
+      "name": {
+        "en": "Creamy Hazelnut",
+        "ar": "كريمي هيزلنت"
+      },
+      "desc": {
+        "en": "Latte made with espresso, steamed milk, and creamy hazelnut flavor.",
+        "ar": "لاتيه بالإسبريسو والحليب المبخر ونكهة البندق الكريمية."
+      },
+      "price": 140,
+      "sizes": [
+        {
+          "id": "regular",
+          "name": {
+            "en": "Regular",
+            "ar": "عادي"
+          },
+          "mode": "delta",
+          "value": 0
+        },
+        {
+          "id": "large",
+          "name": {
+            "en": "Large",
+            "ar": "كبير"
+          },
+          "mode": "delta",
+          "value": 15
+        }
+      ],
+      "baristaWay": {
+        "enabled": true,
+        "addOns": [
+          "oat-milk",
+          "vanilla"
+        ]
+      },
+      "oftenOrderedWith": [
+        "classic-cookies",
+        "kinder-cookies",
+        "tiramisu-cake"
+      ],
+      "excludedAddOns": [
+        "extra-coffee-shot",
+        "hazelnut",
+        "strawberry",
+        "berries",
+        "blueberry-sauce"
+      ],
+      "inStock": true
+    },
+    {
+      "id": "v60",
+      "categoryId": "pour-over",
+      "name": {
+        "en": "V60",
+        "ar": "V60"
+      },
+      "desc": {
+        "en": "Brewed filtered coffee with a pure, balanced flavor.",
+        "ar": "قهوة مفلترة بنكهة نقية ومتوازنة."
+      },
+      "price": null,
+      "sizes": [],
+      "baristaWay": {
+        "enabled": false,
+        "addOns": [
+          "oat-milk",
+          "vanilla"
+        ]
+      },
+      "oftenOrderedWith": [
+        "classic-cookies",
+        "kinder-cookies",
+        "tiramisu-cake"
+      ],
+      "excludedAddOns": [
+        "oat-milk",
+        "almond-milk",
+        "coconut-milk",
+        "extra-coffee-shot",
+        "vanilla",
+        "caramel",
+        "hazelnut",
+        "chocolate-sauce",
+        "salted-caramel-sauce",
+        "strawberry",
+        "berries",
+        "blueberry-sauce"
+      ],
+      "inStock": true
+    },
+    {
+      "id": "classic-cookies",
+      "categoryId": "cookies",
+      "name": {
+        "en": "Classic Cookies",
+        "ar": "كوكيز كلاسيك"
+      },
+      "desc": {
+        "en": "Classic cookies dipped in delicious chocolate chip pieces.",
+        "ar": "كوكيز كلاسيك بقطع الشوكولاتة اللذيذة."
+      },
+      "price": 70,
+      "sizes": [],
+      "baristaWay": {
+        "enabled": false,
+        "addOns": [
+          "oat-milk",
+          "vanilla"
+        ]
+      },
+      "oftenOrderedWith": [
+        "iced-latte",
+        "latte",
+        "americano"
+      ],
+      "excludedAddOns": [
+        "strawberry",
+        "berries",
+        "blueberry-sauce"
+      ],
+      "inStock": true,
+      "badge": "top"
+    },
+    {
+      "id": "red-velvet-cookies",
+      "categoryId": "cookies",
+      "name": {
+        "en": "Red Velvet Cookies",
+        "ar": "كوكيز ريد فيلفت"
+      },
+      "desc": {
+        "en": "Cookies loaded with white chocolate chips and filled with white chocolate cream.",
+        "ar": "كوكيز بقطع الشوكولاتة البيضاء ومحشوة بكريمة الشوكولاتة البيضاء."
+      },
+      "price": 70,
+      "sizes": [],
+      "baristaWay": {
+        "enabled": false,
+        "addOns": [
+          "oat-milk",
+          "vanilla"
+        ]
+      },
+      "oftenOrderedWith": [
+        "iced-latte",
+        "latte",
+        "americano"
+      ],
+      "excludedAddOns": [
+        "strawberry",
+        "berries",
+        "blueberry-sauce"
+      ],
+      "inStock": true
+    },
+    {
+      "id": "kinder-cookies",
+      "categoryId": "cookies",
+      "name": {
+        "en": "Kinder Cookies",
+        "ar": "كوكيز كيندر"
+      },
+      "desc": {
+        "en": "Cookies filled with Kinder cream, topped with crunchy Kinder pieces.",
+        "ar": "كوكيز محشوة بكريمة كيندر ومغطاة بقطع كيندر المقرمشة."
+      },
+      "price": 75,
+      "sizes": [],
+      "baristaWay": {
+        "enabled": false,
+        "addOns": [
+          "oat-milk",
+          "vanilla"
+        ]
+      },
+      "oftenOrderedWith": [
+        "iced-latte",
+        "latte",
+        "americano"
+      ],
+      "excludedAddOns": [
+        "strawberry",
+        "berries",
+        "blueberry-sauce"
+      ],
+      "inStock": true
+    },
+    {
+      "id": "oreo-cookies",
+      "categoryId": "cookies",
+      "name": {
+        "en": "Oreo Cookies",
+        "ar": "كوكيز أوريو"
+      },
+      "desc": {
+        "en": "Cookies filled with Oreo cream and topped with crunchy Oreo cookie pieces.",
+        "ar": "كوكيز محشوة بكريمة أوريو ومغطاة بقطع أوريو المقرمشة."
+      },
+      "price": 70,
+      "sizes": [],
+      "baristaWay": {
+        "enabled": false,
+        "addOns": [
+          "oat-milk",
+          "vanilla"
+        ]
+      },
+      "oftenOrderedWith": [
+        "iced-latte",
+        "latte",
+        "americano"
+      ],
+      "excludedAddOns": [
+        "strawberry",
+        "berries",
+        "blueberry-sauce"
+      ],
+      "inStock": true
+    },
+    {
+      "id": "double-chocolate-cookies",
+      "categoryId": "cookies",
+      "name": {
+        "en": "Double Chocolate Cookies",
+        "ar": "كوكيز دبل شوكولاتة"
+      },
+      "desc": {
+        "en": "Extra chocolate cookies with milk chocolate chunks and white chocolate chips.",
+        "ar": "كوكيز بشوكولاتة إضافية وقطع شوكولاتة بالحليب وشوكولاتة بيضاء."
+      },
+      "price": 70,
+      "sizes": [],
+      "baristaWay": {
+        "enabled": false,
+        "addOns": [
+          "oat-milk",
+          "vanilla"
+        ]
+      },
+      "oftenOrderedWith": [
+        "iced-latte",
+        "latte",
+        "americano"
+      ],
+      "excludedAddOns": [
+        "strawberry",
+        "berries",
+        "blueberry-sauce"
+      ],
+      "inStock": true
+    },
+    {
+      "id": "lotus-cookies",
+      "categoryId": "cookies",
+      "name": {
+        "en": "Lotus Cookies",
+        "ar": "كوكيز لوتس"
+      },
+      "desc": {
+        "en": "Cookies filled with Lotus cream, topped with crunchy Lotus biscuit pieces.",
+        "ar": "كوكيز محشوة بكريمة لوتس ومغطاة بقطع بسكويت لوتس المقرمشة."
+      },
+      "price": 70,
+      "sizes": [],
+      "baristaWay": {
+        "enabled": false,
+        "addOns": [
+          "oat-milk",
+          "vanilla"
+        ]
+      },
+      "oftenOrderedWith": [
+        "iced-latte",
+        "latte",
+        "americano"
+      ],
+      "excludedAddOns": [
+        "strawberry",
+        "berries",
+        "blueberry-sauce"
+      ],
+      "inStock": true,
+      "badge": "new"
+    },
+    {
+      "id": "salted-caramel-cookies",
+      "categoryId": "cookies",
+      "name": {
+        "en": "Salted Caramel Cookies",
+        "ar": "كوكيز سولتد كراميل"
+      },
+      "desc": {
+        "en": "Cookies with a balanced sweet and salty taste, with added pecan pieces.",
+        "ar": "كوكيز بتوازن الحلو والمالح مع قطع البيكان."
+      },
+      "price": 75,
+      "sizes": [],
+      "baristaWay": {
+        "enabled": false,
+        "addOns": [
+          "oat-milk",
+          "vanilla"
+        ]
+      },
+      "oftenOrderedWith": [
+        "iced-latte",
+        "latte",
+        "americano"
+      ],
+      "excludedAddOns": [
+        "salted-caramel-sauce",
+        "strawberry",
+        "berries",
+        "blueberry-sauce"
+      ],
+      "inStock": true
+    },
+    {
+      "id": "tiramisu-cake",
+      "categoryId": "desserts",
+      "name": {
+        "en": "Tiramisu Cake",
+        "ar": "تيراميسو كيك"
+      },
+      "desc": {
+        "en": "Italian dessert with coffee-soaked ladyfingers, mascarpone, and cocoa.",
+        "ar": "حلوى إيطالية بأصابع الليدي المنقوعة في القهوة والماسكربوني والكاكاو."
+      },
+      "price": 120,
+      "sizes": [],
+      "baristaWay": {
+        "enabled": false,
+        "addOns": [
+          "oat-milk",
+          "vanilla"
+        ]
+      },
+      "oftenOrderedWith": [
+        "iced-latte",
+        "latte",
+        "americano"
+      ],
+      "excludedAddOns": [
+        "nutella",
+        "white-sauce",
+        "strawberry",
+        "blueberry-sauce"
+      ],
+      "inStock": true,
+      "badge": "top"
+    },
+    {
+      "id": "brownies",
+      "categoryId": "desserts",
+      "name": {
+        "en": "Brownies",
+        "ar": "براونيز"
+      },
+      "desc": {
+        "en": "Rich dark chocolate brownies with a moist, soft texture.",
+        "ar": "براونيز شوكولاتة داكنة غنية بقوام طري ورطب."
+      },
+      "price": 160,
+      "sizes": [],
+      "baristaWay": {
+        "enabled": false,
+        "addOns": [
+          "oat-milk",
+          "vanilla"
+        ]
+      },
+      "oftenOrderedWith": [
+        "iced-latte",
+        "latte",
+        "americano"
+      ],
+      "excludedAddOns": [],
+      "inStock": true,
+      "badge": "top"
+    },
+    {
+      "id": "san-sebastian-cheesecake",
+      "categoryId": "desserts",
+      "name": {
+        "en": "San Sebastian Cheesecake",
+        "ar": "سان سيباستيان تشيز كيك"
+      },
+      "desc": {
+        "en": "Creamy crustless cheesecake with a caramelized top.",
+        "ar": "تشيز كيك كريمي بدون قاعدة بوجه مكرمل."
+      },
+      "price": 140,
+      "sizes": [],
+      "baristaWay": {
+        "enabled": false,
+        "addOns": [
+          "oat-milk",
+          "vanilla"
+        ]
+      },
+      "oftenOrderedWith": [
+        "iced-latte",
+        "latte",
+        "americano"
+      ],
+      "excludedAddOns": [
+        "nutella",
+        "white-sauce",
+        "chocolate-sauce"
+      ],
+      "inStock": true
+    },
+    {
+      "id": "kinder-tart-cookies",
+      "categoryId": "desserts",
+      "name": {
+        "en": "Kinder Tart Cookies",
+        "ar": "كيندر تارت كوكيز"
+      },
+      "desc": {
+        "en": "Delicious tart cookies available in various flavors.",
+        "ar": "تارت كوكيز لذيذة متوفرة بنكهات متنوعة."
+      },
+      "price": 130,
+      "sizes": [],
+      "baristaWay": {
+        "enabled": false,
+        "addOns": [
+          "oat-milk",
+          "vanilla"
+        ]
+      },
+      "oftenOrderedWith": [
+        "iced-latte",
+        "latte",
+        "americano"
+      ],
+      "excludedAddOns": [
+        "strawberry",
+        "berries",
+        "blueberry-sauce"
+      ],
+      "inStock": true
+    },
+    {
+      "id": "nutella-tart-cookies",
+      "categoryId": "desserts",
+      "name": {
+        "en": "Nutella Tart Cookies",
+        "ar": "نوتيلا تارت كوكيز"
+      },
+      "desc": {
+        "en": "Crispy outside, soft inside, with rich chocolate and hazelnut flavor.",
+        "ar": "مقرمشة من الخارج وطرية من الداخل بطعم الشوكولاتة والبندق الغني."
+      },
+      "price": 115,
+      "sizes": [],
+      "baristaWay": {
+        "enabled": false,
+        "addOns": [
+          "oat-milk",
+          "vanilla"
+        ]
+      },
+      "oftenOrderedWith": [
+        "iced-latte",
+        "latte",
+        "americano"
+      ],
+      "excludedAddOns": [
+        "nutella",
+        "strawberry",
+        "berries",
+        "blueberry-sauce"
+      ],
+      "inStock": true,
+      "badge": "new"
+    }
+  ],
+  "signatures": [
+    "ube-matcha",
+    "matcha-apple-pie",
+    "up-iced-latte",
+    "salted-pecan-cloud-matcha",
+    "sea-salt-latte"
+  ],
+  "pairings": [
+    {
+      "id": "iced-latte-oreo-cookies",
+      "items": [
+        "iced-latte",
+        "oreo-cookies"
+      ],
+      "bundlePrice": 150
+    },
+    {
+      "id": "latte-brownies",
+      "items": [
+        "latte",
+        "brownies"
+      ],
+      "bundlePrice": null
+    },
+    {
+      "id": "iced-spanish-latte-tiramisu-cake",
+      "items": [
+        "iced-spanish-latte",
+        "tiramisu-cake"
+      ],
+      "bundlePrice": 220
+    },
+    {
+      "id": "cappuccino-kinder-cookies",
+      "items": [
+        "cappuccino",
+        "kinder-cookies"
+      ],
+      "bundlePrice": null
+    },
+    {
+      "id": "iced-matcha-latte-san-sebastian-cheesecake",
+      "items": [
+        "iced-matcha-latte",
+        "san-sebastian-cheesecake"
+      ],
+      "bundlePrice": 240
+    }
+  ],
+  "popup": {
+    "enabled": true,
+    "image": "src/assets/popup/popup.webp",
+    "title": {
+      "en": "",
+      "ar": ""
+    },
+    "body": {
+      "en": "",
+      "ar": ""
+    },
+    "ctaLabel": {
+      "en": "",
+      "ar": ""
+    },
+    "ctaUrl": "",
+    "delaySeconds": 1
+  }
+}

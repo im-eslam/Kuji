@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-11T01:11:56.307Z",
+  "updatedAt": "2026-10-11T01:12:26.152Z",
   "categories": [
     {
       "id": "crunch-shake",
@@ -3732,6 +3732,7 @@
     }
   ],
   "signatures": [
+    "nutella-tart-cookies",
     "ube-matcha",
     "matcha-apple-pie",
     "up-iced-latte",

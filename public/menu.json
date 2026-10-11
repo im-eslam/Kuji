@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-11T01:11:18.025Z",
+  "updatedAt": "2026-10-11T01:11:56.307Z",
   "categories": [
     {
       "id": "crunch-shake",
@@ -18,7 +18,7 @@
         "ar": ""
       },
       "image": "src/assets/categories/crunch-shake.webp",
-      "isPopular": false
+      "isPopular": true
     },
     {
       "id": "iced-coffee",

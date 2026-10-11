@@ -2,6 +2,7 @@ import {
   createContext,
   useCallback,
   useContext,
+  useEffect,
   useMemo,
   useRef,
   useState,
@@ -9,7 +10,16 @@ import {
 } from 'react'
 import useSWR from 'swr'
 import { buildSeedMenu } from '../data/seed'
-import { MENU_SCHEMA_VERSION, type MenuData } from '../data/types'
+import {
+  MENU_SCHEMA_VERSION,
+  type AddOn,
+  type Item,
+  type MenuCategory,
+  type MenuData,
+  type Offer,
+  type PromoPopupConfig,
+} from '../data/types'
+import { setCatalog, useCatalog } from '../lib/catalog'
 
 // ---------------------------------------------------------------------------
 // GitHub REST configuration. These VITE_ variables are compiled into the bundle.
@@ -107,6 +117,17 @@ async function loadMenu(): Promise<Snapshot> {
   return { menu: buildSeedMenu(), sha: null, source: 'seed' }
 }
 
+const isMenuDocument = (raw: unknown): raw is Partial<MenuData> =>
+  typeof raw === 'object' && raw !== null && Array.isArray((raw as MenuData).categories) && Array.isArray((raw as MenuData).products)
+
+/** The published menu, fetched with a cache-buster so a fresh commit is never hidden behind the CDN. */
+async function fetchPublishedMenu(signal: AbortSignal): Promise<MenuData | null> {
+  const res = await fetch(`${import.meta.env.BASE_URL}menu.json?t=${Date.now()}`, { cache: 'no-store', signal })
+  if (!res.ok) return null
+  const raw: unknown = await res.json()
+  return isMenuDocument(raw) ? normalizeMenu(raw) : null
+}
+
 async function saveMenu(menu: MenuData, sha: string | null, message: string): Promise<string> {
   const res = await fetch(CONTENTS_URL, {
     method: 'PUT',
@@ -137,7 +158,19 @@ export interface Toast {
 // Context
 // ---------------------------------------------------------------------------
 interface MenuContextValue {
+  /** Public menu, always the published copy (or the bundled fallback). */
+  categories: MenuCategory[]
+  items: Item[]
+  addons: AddOn[]
+  offers: Offer[]
+  popup: PromoPopupConfig
+  isLoading: boolean
+  isSaving: boolean
+  updateMenuData: (recipe: (draft: MenuData) => MenuData) => void
+  /** Admin working copy. Null until the admin data has loaded. */
   menu: MenuData | null
+  /** Number of individual edits waiting to be committed. */
+  pendingChanges: number
   status: 'loading' | 'ready' | 'error'
   error: string | null
   source: Source | null
@@ -169,12 +202,32 @@ export function useLoadedMenu(): Omit<MenuContextValue, 'menu'> & { menu: MenuDa
   return ctx as Omit<MenuContextValue, 'menu'> & { menu: MenuData }
 }
 
-export function MenuProvider({ children }: { children: ReactNode }) {
-  const { data, error, isLoading, mutate } = useSWR<Snapshot>('kuji:menu', loadMenu, {
+export function MenuProvider({ children, admin = false }: { children: ReactNode; admin?: boolean }) {
+  const { data, error, isLoading: adminLoading, mutate } = useSWR<Snapshot>(admin ? 'kuji:menu' : null, loadMenu, {
     revalidateOnFocus: false,
     revalidateOnReconnect: false,
     shouldRetryOnError: false,
   })
+
+  // Public site: fetch the published menu.json once on mount, fall back to the bundled copy if it is unavailable.
+  const [publicLoading, setPublicLoading] = useState(!admin)
+  useEffect(() => {
+    if (admin) return
+    const controller = new AbortController()
+    fetchPublishedMenu(controller.signal)
+      .then((published) => {
+        if (published) setCatalog(published)
+      })
+      .catch((e: unknown) => {
+        if (!(e instanceof DOMException && e.name === 'AbortError')) setCatalog(buildSeedMenu())
+      })
+      .finally(() => {
+        if (!controller.signal.aborted) setPublicLoading(false)
+      })
+    return () => controller.abort()
+  }, [admin])
+  const catalog = useCatalog()
+  const isLoading = admin ? adminLoading : publicLoading
 
   const [draft, setDraft] = useState<MenuData | null>(null)
   const [saving, setSaving] = useState(false)
@@ -252,6 +305,15 @@ export function MenuProvider({ children }: { children: ReactNode }) {
 
   const value = useMemo<MenuContextValue>(
     () => ({
+      categories: catalog.categories,
+      items: catalog.items,
+      addons: catalog.addOns,
+      offers: catalog.offers,
+      popup: catalog.menu.popup,
+      isLoading,
+      isSaving: saving,
+      updateMenuData: update,
+      pendingChanges: dirty ? 1 : 0,
       menu,
       status: error ? 'error' : isLoading || !menu ? 'loading' : 'ready',
       error: error instanceof Error ? error.message : error ? 'Could not load the menu.' : null,
@@ -267,7 +329,7 @@ export function MenuProvider({ children }: { children: ReactNode }) {
       notify,
       dismissToast,
     }),
-    [menu, error, isLoading, data?.source, dirty, saving, update, discard, commit, reload, toasts, notify, dismissToast],
+    [catalog, menu, error, isLoading, data?.source, dirty, saving, update, discard, commit, reload, toasts, notify, dismissToast],
   )
 
   return <MenuContext.Provider value={value}>{children}</MenuContext.Provider>

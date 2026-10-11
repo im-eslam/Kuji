@@ -208,7 +208,7 @@ function AdminGate() {
 
 export default function AdminDashboard() {
   return (
-    <MenuProvider>
+    <MenuProvider admin>
       <AdminGate />
     </MenuProvider>
   )

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { ITEM_BY_ID, OFTEN_ORDERED } from '../../data/menu'
+import { getCatalog, getItem } from '../../lib/catalog'
 import type { Item } from '../../data/types'
 import { useOptions } from '../../hooks/useOptions'
 import { LINE_QTY_MAX, SHEET_QTY_MAX, defaultPart, itemUnit, makeLine } from '../../lib/pricing'
@@ -21,7 +21,7 @@ export function ItemSheet({ itemId, editKey, instant }: Props) {
   const { pick, t } = useLang()
   const order = useOrder()
   const ui = useUI()
-  const item = ITEM_BY_ID[itemId]
+  const item = getItem(itemId)!
   const editing = editKey ? order.lines.find((l) => l.key === editKey) : undefined
   const initial = editing?.parts[0]
   const opts = useOptions(item.profile, initial && { sizeId: initial.sizeId, addOnIds: initial.addOnIds })
@@ -88,8 +88,8 @@ export function ItemSheet({ itemId, editKey, instant }: Props) {
           <section aria-label={t('oftenOrdered')} className="flex flex-col gap-2">
             <h3 className="px-4 text-body font-bold">{t('oftenOrdered')}</h3>
             <div className="no-scrollbar flex gap-2 overflow-x-auto px-4">
-              {OFTEN_ORDERED[item.kind].filter((id) => id !== item.id).map((id) => (
-                <OftenOrderedCard key={id} item={ITEM_BY_ID[id]} addedCount={added[id] ?? 0} done={flash === id} onQuickAdd={quickAdd} />
+              {(getCatalog().oftenOrdered[item.id] ?? []).filter((id) => id !== item.id).map((id) => (
+                <OftenOrderedCard key={id} item={getItem(id)!} addedCount={added[id] ?? 0} done={flash === id} onQuickAdd={quickAdd} />
               ))}
             </div>
           </section>

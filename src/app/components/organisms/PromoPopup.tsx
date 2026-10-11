@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useRef, useState, type KeyboardEvent } from 'react'
-import { POPUP, popupImageUrl } from '../../data/popup'
+import { POPUP } from '../../data/popup'
+import { useCatalog } from '../../lib/catalog'
 import { useLang } from '../../state/LangContext'
 import { EXIT_MS, useUI } from '../../state/UIContext'
 import { cx } from '../../lib/cx'
@@ -13,7 +14,13 @@ type Phase = 'hidden' | 'open' | 'closing'
 export function PromoPopup() {
   const { lang, pick } = useLang()
   const { overlay } = useUI()
-  const url = popupImageUrl()
+  const { menu } = useCatalog()
+  const config = menu.popup
+  const image = config.image.trim()
+  const remote = /^(https?:)?\/\//.test(image) || image.startsWith('/')
+  const url = image ? (remote ? image : POPUP.image) : undefined
+  const alt = config.title.en || config.title.ar ? config.title : POPUP.alt
+  const delayMs = Math.max(0, config.delaySeconds) * 1000
   const [phase, setPhase] = useState<Phase>('hidden')
   const dialog = useRef<HTMLDivElement>(null)
   const closeBtn = useRef<HTMLDivElement>(null)
@@ -24,9 +31,9 @@ export function PromoPopup() {
 
   // Page fully loaded -> wait the delay (while the picture preloads) -> open. Runs once.
   useEffect(() => {
-    if (!POPUP.enabled) return
+    if (!config.enabled) return
     if (!url) {
-      if (import.meta.env.DEV) console.warn(`PromoPopup: "${POPUP.image}" is empty, so the popup is skipped.`)
+      if (import.meta.env.DEV) console.warn(`PromoPopup: "${config.image}" is empty, so the popup is skipped.`)
       return
     }
     let alive = true
@@ -35,7 +42,7 @@ export function PromoPopup() {
       const img = new Image()
       const loaded = new Promise<boolean>((resolve) => { img.onload = () => resolve(true); img.onerror = () => resolve(false) })
       img.src = url
-      const waited = new Promise<void>((resolve) => { delay = window.setTimeout(resolve, POPUP.delayMs) })
+      const waited = new Promise<void>((resolve) => { delay = window.setTimeout(resolve, delayMs) })
       // Opens only once both are done, so it never appears as an empty frame; a broken image means no popup at all.
       void Promise.all([loaded, waited]).then(([ok]) => {
         if (alive && ok && overlayType.current === 'none') setPhase('open')
@@ -48,7 +55,7 @@ export function PromoPopup() {
       window.clearTimeout(delay)
       window.removeEventListener('load', start)
     }
-  }, [url])
+  }, [url, config.enabled, delayMs])
 
   useEffect(() => () => window.clearTimeout(exitTimer.current), [])
 
@@ -92,10 +99,10 @@ export function PromoPopup() {
       )}
     >
       <div className="absolute inset-0 bg-scrim" onClick={close} aria-hidden="true" />
-      <div ref={dialog} role="dialog" aria-modal="true" aria-label={pick(POPUP.alt)} tabIndex={-1} onKeyDown={onKeyDown} className="relative animate-reveal outline-none">
+      <div ref={dialog} role="dialog" aria-modal="true" aria-label={pick(alt)} tabIndex={-1} onKeyDown={onKeyDown} className="relative animate-reveal outline-none">
         <img
           src={url}
-          alt={pick(POPUP.alt)}
+          alt={pick(alt)}
           draggable={false}
           className="block h-auto w-auto max-h-[80dvh] max-w-[min(24rem,calc(100vw-2rem))] rounded-lg bg-white object-contain"
         />

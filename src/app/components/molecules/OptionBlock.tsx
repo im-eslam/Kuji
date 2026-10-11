@@ -23,7 +23,7 @@ export function OptionBlock({ item, opts, withProductRow }: Props) {
       {opts.showSize && <SizePicker sizes={opts.sizes} value={opts.sizeId} onChange={opts.setSizeId} />}
       {/* The Barista's Way is a preset of add-ons, so it sits right above them. */}
       {opts.showBarista && (
-        <div className="px-4"><BaristaWayToggle on={opts.baristaOn} onToggle={opts.toggleBarista} /></div>
+        <div className="px-4"><BaristaWayToggle on={opts.baristaOn} onToggle={opts.toggleBarista} profile={item.profile} /></div>
       )}
       {opts.showAddOns && <AddOnList addOns={opts.addOns} selected={opts.addOnIds} onToggle={opts.toggleAddOn} />}
     </section>

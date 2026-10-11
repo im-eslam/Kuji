@@ -1,6 +1,6 @@
 import { memo, useMemo, useState, type CSSProperties } from 'react'
 import { useIdle } from '../../hooks/useIdle'
-import { ITEM_BY_ID } from '../../data/menu'
+import { getItem } from '../../lib/catalog'
 import type { Section } from '../../data/types'
 import { FIRST_VISIBLE, sortCategory } from '../../lib/sort'
 import { cx } from '../../lib/cx'
@@ -40,7 +40,7 @@ export const CategorySection = memo(function CategorySection({ section }: { sect
   const { openItem } = useUI()
   const [all, setAll] = useState(false)
   const idle = useIdle()
-  const items = useMemo(() => sortCategory(section.itemIds.map((id) => ITEM_BY_ID[id])), [section])
+  const items = useMemo(() => sortCategory(section.itemIds.flatMap((id) => { const i = getItem(id); return i ? [i] : [] })), [section])
   const first = items.slice(0, FIRST_VISIBLE)
   const rest = items.slice(FIRST_VISIBLE)
   // The cards behind "Show all" are hidden, so they mount just after the first paint (a third to a half fewer

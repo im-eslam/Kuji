@@ -8,7 +8,15 @@ export type AddOnScope = 'drinks' | 'bakery' | 'all'
 
 export interface Size { id: SizeId; name: L10n; upcharge: number }
 export interface AddOn { id: AddOnId; name: L10n; price: number; scope: AddOnScope }
-export interface Profile { sizes: SizeId[]; addOns: AddOnId[]; baristaWay: boolean }
+export interface Profile {
+  sizes: SizeId[]
+  addOns: AddOnId[]
+  baristaWay: boolean
+  /** Per-product size definitions resolved from menu.json (name and upcharge differ per product). */
+  sizeDefs?: Size[]
+  /** Per-product Barista's Way preset resolved from menu.json. */
+  baristaAddOns?: AddOnId[]
+}
 export interface Preset { id: string; name: L10n; addOns: AddOnId[] }
 
 export interface Item {
@@ -20,6 +28,7 @@ export interface Item {
   badge?: BadgeKind
   profile: Profile
   categoryId: string
+  inStock?: boolean
 }
 
 export interface Offer { id: string; items: [ItemId, ItemId]; offerPrice?: number }

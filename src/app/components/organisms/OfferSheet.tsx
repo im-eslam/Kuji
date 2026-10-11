@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import { ITEM_BY_ID } from '../../data/menu'
+import { getItem, getOffer } from '../../lib/catalog'
 import { useOptions } from '../../hooks/useOptions'
-import { LINE_QTY_MAX, OFFER_BY_ID, SHEET_QTY_MAX, defaultPart, makeLine, offerIsDiscounted, offerSavings, offerUnit } from '../../lib/pricing'
+import { LINE_QTY_MAX, SHEET_QTY_MAX, defaultPart, makeLine, offerIsDiscounted, offerSavings, offerUnit } from '../../lib/pricing'
 import { useLang } from '../../state/LangContext'
 import { useOrder } from '../../state/OrderContext'
 import { useUI } from '../../state/UIContext'
@@ -18,8 +18,8 @@ export function OfferSheet({ offerId, editKey, instant }: Props) {
   const { pick, t, money } = useLang()
   const order = useOrder()
   const ui = useUI()
-  const offer = OFFER_BY_ID[offerId]
-  const [a, b] = offer.items.map((id) => ITEM_BY_ID[id])
+  const offer = getOffer(offerId)!
+  const [a, b] = offer.items.map((id) => getItem(id)!)
   const editing = editKey ? order.lines.find((l) => l.key === editKey) : undefined
   const optsA = useOptions(a.profile, editing && { sizeId: editing.parts[0].sizeId, addOnIds: editing.parts[0].addOnIds })
   const optsB = useOptions(b.profile, editing && { sizeId: editing.parts[1].sizeId, addOnIds: editing.parts[1].addOnIds })

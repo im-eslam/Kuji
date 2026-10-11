@@ -13,7 +13,7 @@ export function useOptions(profile: Profile, initial?: OptionsInitial) {
   const [addOnIds, setAddOnIds] = useState<AddOnId[]>(initial?.addOnIds ?? [])
 
   const toggle = useCallback((id: AddOnId) => setAddOnIds((s) => toggleAddOn(s, id)), [])
-  const toggleBaristaWay = useCallback(() => setAddOnIds((s) => toggleBarista(s)), [])
+  const toggleBaristaWay = useCallback(() => setAddOnIds((s) => toggleBarista(s, profile)), [profile])
 
   return useMemo(
     () => ({
@@ -22,7 +22,7 @@ export function useOptions(profile: Profile, initial?: OptionsInitial) {
       addOnIds,
       toggleAddOn: toggle,
       toggleBarista: toggleBaristaWay,
-      baristaOn: isBaristaOn(addOnIds),
+      baristaOn: isBaristaOn(addOnIds, profile),
       sizes: profileSizes(profile),
       addOns: profileAddOns(profile),
       showSize: showSizeBlock(profile),

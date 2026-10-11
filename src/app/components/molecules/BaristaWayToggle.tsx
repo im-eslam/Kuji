@@ -1,12 +1,13 @@
 import { BARISTAS_WAY } from '../../data/addons'
+import type { Profile } from '../../data/types'
 import { useLang } from '../../state/LangContext'
-import { baristaPrice, ADDON_BY_ID } from '../../lib/options'
+import { baristaNames, baristaPrice } from '../../lib/options'
 import { cx } from '../../lib/cx'
 import { Icon } from '../atoms/Icon'
 
-export function BaristaWayToggle({ on, onToggle }: { on: boolean; onToggle: () => void }) {
+export function BaristaWayToggle({ on, onToggle, profile }: { on: boolean; onToggle: () => void; profile: Profile }) {
   const { t, pick, money } = useLang()
-  const names = BARISTAS_WAY.addOns.map((id) => pick(ADDON_BY_ID.get(id)!.name)).join(' + ')
+  const names = baristaNames(profile).map((n) => pick(n)).join(' + ')
   return (
     <button
       type="button"
@@ -20,7 +21,7 @@ export function BaristaWayToggle({ on, onToggle }: { on: boolean; onToggle: () =
       <Icon name="sparkle" size={24} />
       <span className="flex min-w-0 flex-1 flex-col">
         <span className="text-small font-bold">{pick(BARISTAS_WAY.name)}</span>
-        <span className="text-caption font-medium">{t('baristaSub', { names, price: money(baristaPrice(), { plus: true }) })}</span>
+        <span className="text-caption font-medium">{t('baristaSub', { names, price: money(baristaPrice(profile), { plus: true }) })}</span>
       </span>
       <span
         aria-hidden="true"
